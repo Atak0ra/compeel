@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Compeel — Studio technologique africain',
   description:
-    'Compeel est un studio technologique africain. Nous construisons des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
+    'Compeel construit des produits IA appliqués à des problèmes concrets en Afrique. Agents autonomes, systèmes de recherche, traitement de données.',
 }
 
 export default function HomePage() {
@@ -14,15 +14,15 @@ export default function HomePage() {
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-muted">
-            Dakar, Sénégal — Studio technologique
+            Dakar, Sénégal
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Nous construisons des produits IA pour l&apos;Afrique.
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Compeel est un studio technologique africain. Nous construisons des produits IA —
-            agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.
-            Chaque produit part d&apos;un vrai problème, pas d&apos;une tendance.
+            Compeel est un studio technologique africain. Nous construisons des produits IA
+            appliqués à des problèmes concrets dans des domaines comme la santé, la mobilité
+            et le droit. Chaque produit part d&apos;un vrai problème, pas d&apos;une tendance.
           </p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function HomePage() {
             </p>
             <p className="text-sm text-muted leading-relaxed">
               Chaque soignant enregistre sa voix sur le dossier d&apos;un patient. Tout est transcrit,
-              centralisé et consultable. 100% on-premise — aucune donnée ne quitte la structure.
+              centralisé et consultable. 100% on-premise, aucune donnée ne quitte la structure.
             </p>
             <p className="mt-6 text-xs text-muted/60">
               Pour les structures médicales en Afrique de l&apos;Ouest
@@ -97,7 +97,7 @@ export default function HomePage() {
         </blockquote>
         <p className="mt-8 text-sm text-muted leading-relaxed">
           Nous ne construisons pas pour un marché abstrait. Nous construisons pour des gens précis,
-          dans des villes précises, avec des langues précises. C&apos;est ce qui rend nos produits utiles.
+          dans des villes précises, avec des contraintes précises. C&apos;est ce qui rend nos produits utiles.
         </p>
       </section>
 

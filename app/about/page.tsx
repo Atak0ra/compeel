@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'À propos',
   description:
-    'Compeel est un studio technologique africain qui construit des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
+    'Compeel est un studio technologique africain qui construit des produits IA appliqués à des problèmes concrets en Afrique.',
 }
 
 export default function AboutPage() {
@@ -61,25 +61,22 @@ export default function AboutPage() {
               et une conviction renforcée par six ans de recul.
             </p>
             <p>
-              Compeel construit des produits IA — agents, systèmes de recherche, interfaces vocales —
-              appliqués à des domaines concrets : la santé, la mobilité, le droit, et d&apos;autres secteurs
-              en Afrique. KUMA et KARA sont les deux premiers. Ils utilisent la voix et les langues locales.
-              Mais ce n&apos;est pas la définition de Compeel — c&apos;est le point de départ.
+              Compeel construit des produits IA appliqués à des problèmes concrets : agents autonomes,
+              systèmes de recherche dans des corpus complexes, traitement intelligent de données non structurées.
+              Dans des domaines comme la santé, la mobilité, le droit.
             </p>
             <p>
-              L&apos;Afrique de l&apos;Ouest a des langues riches, des contraintes réelles,
-              et des besoins que la tech globale ignore systématiquement. Pas par malveillance —
-              par ignorance. Personne ne construit pour ce marché parce que personne ne le connaît
-              de l&apos;intérieur.
+              KUMA et KARA utilisent la voix parce que le problème l&apos;exige. Mais demain un produit
+              Compeel pourrait n&apos;avoir aucun composant vocal. Ce qui ne change pas, c&apos;est le point
+              de départ : un vrai problème, observé de l&apos;intérieur.
+            </p>
+            <p>
+              L&apos;Afrique de l&apos;Ouest a des contraintes réelles et des besoins que la tech globale
+              ignore systématiquement. Pas par malveillance, par ignorance. Personne ne construit pour
+              ce marché parce que personne ne le connaît de l&apos;intérieur.
             </p>
             <p>
               Nous, si.
-            </p>
-            <p>
-              KUMA est né de l&apos;observation que ma mère ne peut pas commander un taxi
-              dans sa langue maternelle. KARA est né de l&apos;observation que les soignants
-              perdent un temps précieux à remplir des formulaires papier dans des structures
-              sous-équipées. Chaque produit part d&apos;un vrai problème, pas d&apos;une tendance.
             </p>
           </div>
         </div>
@@ -100,16 +97,16 @@ export default function AboutPage() {
                 text: 'On construit à partir de ce qu\'on observe, pas de ce qu\'on imagine. Chaque produit commence par une frustration réelle.',
               },
               {
-                title: 'Langues locales',
-                text: 'Le Mina, l\'Ewe, le Dioula — ce sont des langues vivantes, parlées par des millions de personnes. Elles méritent des outils à leur hauteur.',
-              },
-              {
                 title: 'Contraintes réelles',
                 text: 'Connectivité limitée, infrastructure fragile, données sensibles. On conçoit pour ces contraintes, pas malgré elles.',
               },
               {
                 title: 'Sobriété',
                 text: 'Pas de features inutiles. Pas de complexité pour impressionner. Des outils qui font une chose, bien.',
+              },
+              {
+                title: 'Honnêteté',
+                text: 'On dit ce qu\'on fait. On ne promet pas ce qu\'on ne peut pas livrer. On construit ce qui est utile.',
               },
             ].map(({ title, text }) => (
               <div key={title} className="space-y-2">

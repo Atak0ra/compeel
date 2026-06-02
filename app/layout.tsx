@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: '%s — Compeel',
   },
   description:
-    'Compeel est un studio technologique africain. Nous construisons des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
+    'Compeel construit des produits IA appliqués à des problèmes concrets en Afrique. Agents autonomes, systèmes de recherche, traitement de données.',
   keywords: ['Compeel', 'IA', 'voix', 'Afrique', 'Sénégal', 'KUMA', 'KARA', 'Mina', 'Ewe'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',

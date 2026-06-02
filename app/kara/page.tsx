@@ -24,7 +24,7 @@ const features = [
     icon: Search,
     title: 'Recherche en langage naturel',
     description:
-      'Retrouvez n\'importe quelle information dans les dossiers en posant une question simple. "Patients diabétiques vus ce mois" — KARA répond.',
+      'Retrouvez n\'importe quelle information dans les dossiers en posant une question simple. "Patients diabétiques vus ce mois". KARA répond.',
   },
   {
     icon: Lock,
@@ -90,7 +90,7 @@ export default function KaraPage() {
               Les antécédents d&apos;un patient sont introuvables en urgence.
             </p>
             <p>
-              KARA résout ce problème avec la voix — l&apos;interface la plus naturelle
+              KARA résout ce problème avec la voix, l&apos;interface la plus naturelle
               qui soit pour un soignant en pleine consultation.
             </p>
           </div>
@@ -133,7 +133,7 @@ export default function KaraPage() {
           </h2>
           <p className="text-sm text-muted leading-relaxed max-w-2xl">
             KARA est 100% on-premise. Le modèle de transcription, la base de données,
-            le moteur de recherche — tout tourne sur vos serveurs locaux.
+            le moteur de recherche, tout tourne sur vos serveurs locaux.
             Pas de cloud, pas de synchronisation externe, pas de risque de fuite.
             Vos patients vous font confiance. Nous respectons cette confiance.
           </p>

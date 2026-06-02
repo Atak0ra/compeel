@@ -15,9 +15,9 @@ const pipeline = [
   },
   {
     step: '02',
-    title: 'Reconnaissance & transcription',
+    title: 'Reconnaissance et transcription',
     description:
-      'Le moteur ASR de KUMA transcrit la parole en Mina ou Ewe. Modèles entraînés sur des données collectées localement au Togo.',
+      'Le moteur ASR de KUMA transcrit la parole en Mina ou Ewe. Les modèles ont été entraînés sur des données collectées localement au Togo.',
   },
   {
     step: '03',
@@ -108,7 +108,7 @@ export default function KumaPage() {
             </p>
           </div>
           <div className="rounded border border-border bg-surface p-6 font-mono">
-            <p className="text-muted mb-3 text-xs">// Entrée audio → Mina</p>
+            <p className="text-muted mb-3 text-xs">// Entrée audio, Mina</p>
             <p className="text-foreground/50 mb-6 italic text-xs">
               &ldquo;M&apos;amener Tokoin, akpe&rdquo;
             </p>
@@ -155,11 +155,11 @@ export default function KumaPage() {
               Intégrer KUMA dans votre application
             </h2>
             <p className="text-sm text-muted">
-              Documentation, accès API et support disponibles sur kuma.compeel.com
+              Documentation, accès API et support disponibles sur kuma.atakora.pro
             </p>
           </div>
           <a
-            href="https://kuma.compeel.com"
+            href="https://kuma.atakora.pro"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
