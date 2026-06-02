@@ -2,6 +2,10 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import readingTime from 'reading-time'
+import { remark } from 'remark'
+import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
 
 const postsDirectory = path.join(process.cwd(), 'posts')
 
@@ -76,6 +80,15 @@ export function getPostBySlug(slug: string): Post | null {
     readingTime: stats.text,
     content,
   }
+}
+
+export async function markdownToHtml(content: string): Promise<string> {
+  const result = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(content)
+  return result.toString()
 }
 
 export function formatDate(dateString: string): string {

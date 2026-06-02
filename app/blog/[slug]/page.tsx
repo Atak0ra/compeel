@@ -1,10 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { evaluate } from '@mdx-js/mdx'
-import * as runtime from 'react/jsx-runtime'
-import remarkGfm from 'remark-gfm'
-import { getAllPosts, getPostBySlug, formatDate } from '@/lib/mdx'
+import { getAllPosts, getPostBySlug, markdownToHtml, formatDate } from '@/lib/mdx'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -40,10 +37,7 @@ export default async function BlogPostPage({ params }: Props) {
     notFound()
   }
 
-  const { default: MDXContent } = await evaluate(post.content, {
-    ...runtime,
-    remarkPlugins: [remarkGfm],
-  })
+  const contentHtml = await markdownToHtml(post.content)
 
   return (
     <div className="mx-auto max-w-5xl px-6">
@@ -79,7 +73,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           <div className="flex items-center gap-3 text-xs text-muted">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
-            <span className="text-border">·</span>
+            <span>·</span>
             <span>{post.readingTime}</span>
           </div>
         </div>
@@ -89,9 +83,10 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Content */}
       <section className="py-16">
-        <div className="prose max-w-2xl">
-          <MDXContent />
-        </div>
+        <div
+          className="prose max-w-2xl"
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+        />
       </section>
 
       <div className="border-t border-border" />
