@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import { evaluate } from '@mdx-js/mdx'
+import * as runtime from 'react/jsx-runtime'
+import remarkGfm from 'remark-gfm'
 import { getAllPosts, getPostBySlug, formatDate } from '@/lib/mdx'
 
 interface Props {
@@ -37,6 +39,11 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) {
     notFound()
   }
+
+  const { default: MDXContent } = await evaluate(post.content, {
+    ...runtime,
+    remarkPlugins: [remarkGfm],
+  })
 
   return (
     <div className="mx-auto max-w-5xl px-6">
@@ -83,7 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Content */}
       <section className="py-16">
         <div className="prose max-w-2xl">
-          <MDXRemote source={post.content} />
+          <MDXContent />
         </div>
       </section>
 

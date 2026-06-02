@@ -25,8 +25,8 @@ export function getAllPosts(): PostMeta[] {
 
   const fileNames = fs.readdirSync(postsDirectory)
   const allPosts = fileNames
-    .filter((name) => name.endsWith('.mdx') || name.endsWith('.md'))
-    .map((fileName) => {
+    .filter((name: string) => name.endsWith('.mdx') || name.endsWith('.md'))
+    .map((fileName: string) => {
       const slug = fileName.replace(/\.(mdx|md)$/, '')
       const fullPath = path.join(postsDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
@@ -43,7 +43,7 @@ export function getAllPosts(): PostMeta[] {
       } as PostMeta
     })
 
-  return allPosts.sort((a, b) => {
+  return allPosts.sort((a: PostMeta, b: PostMeta) => {
     if (a.date < b.date) return 1
     if (a.date > b.date) return -1
     return 0
