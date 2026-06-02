@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'À propos',
   description:
-    'L\'histoire de Compeel — un studio technologique africain fondé à Lomé, Togo.',
+    'Compeel est un studio technologique africain qui construit des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
 }
 
 export default function AboutPage() {
@@ -12,11 +12,11 @@ export default function AboutPage() {
       {/* Header */}
       <section className="py-32 sm:py-40">
         <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent">
+          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
             À propos
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
-            Un studio né à Lomé.
+            Un studio africain.
           </h1>
         </div>
       </section>
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       <div className="border-t border-border" />
 
-      {/* Reprise */}
+      {/* Aujourd'hui */}
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
@@ -59,6 +59,12 @@ export default function AboutPage() {
             <p>
               Le projet reprend. Avec une vision plus claire, des produits plus précis,
               et une conviction renforcée par six ans de recul.
+            </p>
+            <p>
+              Compeel construit des produits IA — agents, systèmes de recherche, interfaces vocales —
+              appliqués à des domaines concrets : la santé, la mobilité, le droit, et d&apos;autres secteurs
+              en Afrique. KUMA et KARA sont les deux premiers. Ils utilisent la voix et les langues locales.
+              Mais ce n&apos;est pas la définition de Compeel — c&apos;est le point de départ.
             </p>
             <p>
               L&apos;Afrique de l&apos;Ouest a des langues riches, des contraintes réelles,
@@ -73,11 +79,7 @@ export default function AboutPage() {
               KUMA est né de l&apos;observation que ma mère ne peut pas commander un taxi
               dans sa langue maternelle. KARA est né de l&apos;observation que les soignants
               perdent un temps précieux à remplir des formulaires papier dans des structures
-              sous-équipées.
-            </p>
-            <p>
-              Ce ne sont pas des problèmes abstraits. Ce sont des problèmes que je vois
-              chaque fois que je rentre à Lomé.
+              sous-équipées. Chaque produit part d&apos;un vrai problème, pas d&apos;une tendance.
             </p>
           </div>
         </div>
@@ -85,7 +87,7 @@ export default function AboutPage() {
 
       <div className="border-t border-border" />
 
-      {/* Valeurs */}
+      {/* Principes */}
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>

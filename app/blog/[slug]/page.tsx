@@ -5,7 +5,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllPosts, getPostBySlug, formatDate } from '@/lib/mdx'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug)
+  const { slug } = await params
+  const post = getPostBySlug(slug)
   if (!post) return {}
 
   return {
@@ -29,8 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug)
+export default async function BlogPostPage({ params }: Props) {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
 
   if (!post) {
     notFound()
@@ -49,11 +51,11 @@ export default function BlogPostPage({ params }: Props) {
             Blog
           </Link>
 
-          <div className="flex flex-wrap items-center gap-3 mb-6">
+          <div className="flex flex-wrap items-center gap-2 mb-6 mt-2">
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs uppercase tracking-wider text-accent"
+                className="text-xs text-muted border border-border rounded px-2 py-0.5"
               >
                 {tag}
               </span>
@@ -68,9 +70,9 @@ export default function BlogPostPage({ params }: Props) {
             {post.description}
           </p>
 
-          <div className="flex items-center gap-4 text-xs text-muted">
+          <div className="flex items-center gap-3 text-xs text-muted">
             <time dateTime={post.date}>{formatDate(post.date)}</time>
-            <span>·</span>
+            <span className="text-border">·</span>
             <span>{post.readingTime}</span>
           </div>
         </div>
@@ -80,7 +82,7 @@ export default function BlogPostPage({ params }: Props) {
 
       {/* Content */}
       <section className="py-16">
-        <div className="prose prose-invert max-w-2xl">
+        <div className="prose max-w-2xl">
           <MDXRemote source={post.content} />
         </div>
       </section>

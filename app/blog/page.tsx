@@ -16,7 +16,7 @@ export default function BlogPage() {
       {/* Header */}
       <section className="py-32 sm:py-40">
         <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent">
+          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
             Blog
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
@@ -42,24 +42,24 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="block">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex-1 max-w-2xl">
-                      <h2 className="font-serif text-xl sm:text-2xl text-foreground leading-snug mb-3 group-hover:text-accent transition-colors">
+                      <h2 className="font-serif text-xl sm:text-2xl text-foreground leading-snug mb-3 group-hover:opacity-60 transition-opacity">
                         {post.title}
                       </h2>
                       <p className="text-sm text-muted leading-relaxed mb-4">
                         {post.description}
                       </p>
-                      <div className="flex flex-wrap items-center gap-3">
+                      <div className="flex flex-wrap items-center gap-2">
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-xs uppercase tracking-wider text-muted/60 border border-border rounded px-2 py-0.5"
+                            className="text-xs text-muted border border-border rounded px-2 py-0.5"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
                     </div>
-                    <div className="flex flex-row items-center gap-4 sm:flex-col sm:items-end sm:gap-2 shrink-0">
+                    <div className="flex flex-row items-center gap-4 sm:flex-col sm:items-end sm:gap-1.5 shrink-0">
                       <time className="text-xs text-muted" dateTime={post.date}>
                         {formatDate(post.date)}
                       </time>

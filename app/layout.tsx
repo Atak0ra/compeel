@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     template: '%s — Compeel',
   },
   description:
-    'Compeel est un studio technologique africain qui construit des produits vocaux et IA pour l\'Afrique de l\'Ouest.',
-  keywords: ['Compeel', 'IA', 'voix', 'Afrique', 'Togo', 'KUMA', 'KARA', 'Mina', 'Ewe'],
+    'Compeel est un studio technologique africain. Nous construisons des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
+  keywords: ['Compeel', 'IA', 'voix', 'Afrique', 'Sénégal', 'KUMA', 'KARA', 'Mina', 'Ewe'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     siteName: 'Compeel',
     title: 'Compeel — Studio technologique africain',
     description:
-      'Produits vocaux et IA pour l\'Afrique de l\'Ouest. KUMA, KARA.',
+      'Produits IA pour l\'Afrique — agents, systèmes de recherche, interfaces vocales. KUMA, KARA.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Compeel — Studio technologique africain',
-    description: 'Produits vocaux et IA pour l\'Afrique de l\'Ouest.',
+    description: 'Produits IA pour l\'Afrique — agents, systèmes de recherche, interfaces vocales.',
   },
   robots: {
     index: true,
@@ -56,7 +56,7 @@ export default function RootLayout({
     <html lang="fr" className={`${inter.variable} ${dmSerif.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <Nav />
-        <main className="pt-[65px]">{children}</main>
+        <main className="pt-[61px]">{children}</main>
         <Footer />
       </body>
     </html>

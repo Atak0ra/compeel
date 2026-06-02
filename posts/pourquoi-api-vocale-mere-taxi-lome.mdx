@@ -5,25 +5,11 @@ description: "L'histoire derrière KUMA — une API de détection d'intention vo
 tags: ["KUMA", "voix", "Mina", "Lomé", "IA"]
 ---
 
-Il y a quelques mois, j'étais à Lomé pour les fêtes. Ma mère voulait rentrer chez elle depuis le marché de Hédzranawoé. Elle a sorti son téléphone, ouvert l'application Gozem, et s'est arrêtée.
+Quand je vais à Lomé, je me déplace avec Gozem — l'application de mobilité la plus utilisée en ville. Ma mère, elle, a un taxi attitré. Quand il n'est pas disponible, elle marche jusqu'à la voie principale pour en trouver un autre.
 
-Elle ne sait pas lire le français. Pas vraiment. Elle comprend quelques mots, elle reconnaît des icônes. Mais remplir un champ de destination dans une interface conçue à Paris ou à Dakar — c'est une autre histoire.
+Je lui ai installé Gozem, je l'ai encouragée à l'utiliser. Mais elle ne peut pas. Elle ne sait pas lire le français, elle en connaît quelques mots mais pas assez pour naviguer dans l'application. Alors c'est moi qui commande pour elle quand je suis là.
 
-Elle m'a tendu le téléphone. "Fais-le pour moi."
-
-J'ai tapé l'adresse. Le taxi est arrivé. Et j'ai passé le reste de la journée à penser à ce moment.
-
----
-
-## Ce que j'ai vu ce jour-là
-
-Ma mère parle Mina couramment. C'est sa langue. Elle l'a apprise avant le français, elle pense dedans, elle rêve dedans. Quand elle est fatiguée ou émue, c'est en Mina qu'elle parle.
-
-Et pourtant, aucune application de mobilité urbaine à Lomé ne comprend le Mina.
-
-Ce n'est pas un problème de technologie. C'est un problème de priorité. Les équipes qui construisent ces applications ne parlent pas Mina. Elles ne connaissent pas Lomé de l'intérieur. Elles construisent pour un utilisateur imaginaire — éduqué, francophone, à l'aise avec les interfaces numériques.
-
-Ma mère n'est pas cet utilisateur. Et elle n'est pas seule.
+De retour en France, j'ai demandé à ma petite sœur de prendre le relais. Mais ça m'a fait réfléchir. Pourquoi ma mère ne peut pas simplement commander un taxi dans sa propre langue — le Mina ou l'Ewe ?
 
 ---
 
@@ -39,7 +25,7 @@ Parce que personne n'a jugé utile de les collecter.
 
 ## L'idée de KUMA
 
-Je suis rentré en France avec une idée simple : construire une API qui comprend ce qu'un locuteur Mina ou Ewe veut faire.
+Je me suis dit que si je pouvais créer une plateforme capable de détecter l'intention dans un enregistrement vocal en Mina ou Ewe, il me suffirait de mettre en place une API et de la proposer à Gozem.
 
 Pas une transcription complète. Pas un assistant vocal général. Juste : **détecter l'intention**.
 
@@ -62,30 +48,10 @@ Cette approche a un avantage énorme : elle est intégrable dans n'importe quell
 
 ## Ce que ça a demandé
 
-Construire KUMA n'a pas été simple. Le principal obstacle : les données.
+J'ai commencé mes recherches. Il existait des datasets Ewe, mais je voulais quelque chose de plus proche de la réalité — les gens qui commandent un taxi ne parlent pas comme dans un corpus académique, ils parlent naturellement.
 
-Il n'existe pas de corpus audio annoté en Mina. Pas de dataset de phrases de mobilité urbaine enregistrées par des locuteurs natifs. Rien.
-
-J'ai dû collecter. Avec des gens à Lomé, des amis, des membres de ma famille, des inconnus dans des marchés qui ont bien voulu répéter des phrases dans un micro. Des centaines d'heures de travail pour quelques milliers d'exemples.
-
-C'est lent. C'est manuel. C'est exactement le genre de travail que les grandes entreprises tech ne font pas parce que le ROI n'est pas immédiat.
-
-Mais c'est le seul chemin.
+J'ai mandaté mon grand frère pour m'aider à constituer un dataset. Nous avons aujourd'hui près de 3000 enregistrements. Les entraînements commencent bientôt.
 
 ---
 
-## Pourquoi ça compte
-
-Je ne construis pas KUMA pour lever des fonds ou pour impressionner des investisseurs. Je le construis parce que ma mère mérite de pouvoir commander un taxi dans sa langue.
-
-C'est une phrase simple. Mais elle contient tout ce que je pense de la technologie en Afrique.
-
-La tech n'est pas neutre. Chaque interface, chaque modèle, chaque dataset est le reflet des priorités de ceux qui l'ont construit. Si ces gens ne ressemblent pas aux utilisateurs, si ils ne parlent pas leurs langues, si ils ne connaissent pas leurs villes — alors la technologie les exclut, même sans le vouloir.
-
-KUMA est ma réponse à ça. Petite, imparfaite, mais réelle.
-
----
-
-Ma mère n'a pas encore utilisé KUMA. L'intégration avec les apps de mobilité à Lomé est en cours. Mais la prochaine fois que je rentre, j'espère qu'elle pourra tendre son téléphone, parler en Mina, et que le taxi arrive.
-
-Sans avoir besoin de moi.
+Maman n'a pas encore commandé son taxi. Vivement ce jour-là.

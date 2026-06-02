@@ -14,16 +14,16 @@ export default function Nav() {
   const pathname = usePathname()
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-serif text-lg font-normal tracking-wide text-foreground transition-opacity hover:opacity-70"
+          className="font-serif text-base font-normal tracking-tight text-foreground transition-opacity hover:opacity-60"
         >
           Compeel
         </Link>
 
-        <ul className="flex items-center gap-8">
+        <ul className="flex items-center gap-7">
           {links.map(({ href, label }) => {
             const isActive = pathname === href || pathname.startsWith(href + '/')
             return (

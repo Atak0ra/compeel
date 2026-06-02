@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'KUMA — API vocale en Mina et Ewe',
   description:
-    'KUMA est une API de détection d\'intention vocale en Mina et Ewe. Cas d\'usage principal : la mobilité urbaine à Lomé, Togo.',
+    'KUMA est une API de détection d\'intention vocale en Mina et Ewe. Cas d\'usage principal : la mobilité urbaine à Lomé.',
 }
 
 const pipeline = [
@@ -18,7 +17,7 @@ const pipeline = [
     step: '02',
     title: 'Reconnaissance & transcription',
     description:
-      'Le moteur ASR de KUMA transcrit la parole en Mina ou Ewe. Modèles entraînés sur des données collectées localement à Lomé.',
+      'Le moteur ASR de KUMA transcrit la parole en Mina ou Ewe. Modèles entraînés sur des données collectées localement au Togo.',
   },
   {
     step: '03',
@@ -49,7 +48,7 @@ export default function KumaPage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent">
+          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
             Produit · API vocale
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -73,16 +72,16 @@ export default function KumaPage() {
         <p className="mb-12 text-xs uppercase tracking-widest text-muted">
           Pipeline technique
         </p>
-        <div className="grid gap-0">
+        <div>
           {pipeline.map(({ step, title, description }, index) => (
             <div
               key={step}
-              className={`grid gap-8 py-10 sm:grid-cols-[80px_1fr] ${
+              className={`grid gap-8 py-10 sm:grid-cols-[64px_1fr] ${
                 index < pipeline.length - 1 ? 'border-b border-border' : ''
               }`}
             >
-              <div className="flex items-start">
-                <span className="font-serif text-4xl text-border leading-none">{step}</span>
+              <div>
+                <span className="text-sm font-mono text-muted">{step}</span>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
@@ -95,9 +94,9 @@ export default function KumaPage() {
 
       <div className="border-t border-border" />
 
-      {/* Exemple de réponse */}
+      {/* Exemple */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_1fr]">
+        <div className="grid gap-16 sm:grid-cols-2">
           <div>
             <p className="mb-4 text-xs uppercase tracking-widest text-muted">Exemple</p>
             <h2 className="font-serif text-2xl text-foreground mb-4">
@@ -108,9 +107,9 @@ export default function KumaPage() {
               une intention structurée, prête à être consommée.
             </p>
           </div>
-          <div className="rounded-lg bg-surface border border-border p-6 font-mono text-sm">
-            <p className="text-muted mb-4 text-xs">// Entrée audio → Mina</p>
-            <p className="text-foreground/60 mb-6 italic text-xs">
+          <div className="rounded border border-border bg-surface p-6 font-mono">
+            <p className="text-muted mb-3 text-xs">// Entrée audio → Mina</p>
+            <p className="text-foreground/50 mb-6 italic text-xs">
               &ldquo;M&apos;amener Tokoin, akpe&rdquo;
             </p>
             <p className="text-muted mb-2 text-xs">// Réponse JSON</p>
@@ -136,10 +135,10 @@ export default function KumaPage() {
         <p className="mb-12 text-xs uppercase tracking-widest text-muted">
           Cas d&apos;usage
         </p>
-        <div className="grid gap-6 sm:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-3">
           {useCases.map(({ label, text }) => (
-            <div key={label} className="rounded-lg border border-border bg-surface p-6">
-              <p className="mb-3 text-xs uppercase tracking-wider text-accent">{label}</p>
+            <div key={label} className="rounded border border-border bg-surface p-6">
+              <p className="mb-3 text-xs uppercase tracking-wider text-foreground font-medium">{label}</p>
               <p className="text-sm text-muted leading-relaxed">{text}</p>
             </div>
           ))}
@@ -163,7 +162,7 @@ export default function KumaPage() {
             href="https://kuma.atakora.pro"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-accent px-6 py-3 text-sm text-accent transition-all hover:bg-accent hover:text-foreground"
+            className="inline-flex shrink-0 items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
           >
             Accéder à KUMA
             <span>↗</span>

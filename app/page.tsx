@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Compeel — Studio technologique africain',
   description:
-    'Compeel construit des produits vocaux et IA pour l\'Afrique de l\'Ouest. KUMA, KARA.',
+    'Compeel est un studio technologique africain. Nous construisons des produits IA — agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.',
 }
 
 export default function HomePage() {
@@ -13,16 +13,16 @@ export default function HomePage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent">
-            Lomé, Togo — Studio technologique
+          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+            Dakar, Sénégal — Studio technologique
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
-            Nous construisons des produits vocaux pour l&apos;Afrique.
+            Nous construisons des produits IA pour l&apos;Afrique.
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Compeel est un studio technologique africain. Nous créons des outils qui comprennent
-            les langues locales, respectent les contraintes du terrain, et servent les gens
-            là où ils sont.
+            Compeel est un studio technologique africain. Nous construisons des produits IA —
+            agents, systèmes de recherche, interfaces vocales — adaptés aux réalités du terrain africain.
+            Chaque produit part d&apos;un vrai problème, pas d&apos;une tendance.
           </p>
         </div>
       </section>
@@ -35,19 +35,19 @@ export default function HomePage() {
         <p className="mb-12 text-xs uppercase tracking-widest text-muted">
           Produits
         </p>
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2">
           {/* KUMA */}
           <Link
             href="/kuma"
-            className="group block rounded-lg border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/40 hover:bg-surface-2"
+            className="group block rounded border border-border bg-surface p-8 transition-colors hover:border-foreground/20 hover:bg-surface-2"
           >
-            <div className="mb-6 flex items-start justify-between">
+            <div className="mb-8 flex items-start justify-between">
               <span className="font-serif text-2xl text-foreground">KUMA</span>
-              <span className="text-muted transition-transform duration-300 group-hover:translate-x-1">
+              <span className="text-muted transition-transform duration-200 group-hover:translate-x-0.5">
                 →
               </span>
             </div>
-            <p className="mb-4 text-sm text-accent uppercase tracking-wider">
+            <p className="mb-3 text-xs uppercase tracking-wider text-muted">
               API vocale · Mina & Ewe
             </p>
             <p className="text-sm text-muted leading-relaxed">
@@ -62,15 +62,15 @@ export default function HomePage() {
           {/* KARA */}
           <Link
             href="/kara"
-            className="group block rounded-lg border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/40 hover:bg-surface-2"
+            className="group block rounded border border-border bg-surface p-8 transition-colors hover:border-foreground/20 hover:bg-surface-2"
           >
-            <div className="mb-6 flex items-start justify-between">
+            <div className="mb-8 flex items-start justify-between">
               <span className="font-serif text-2xl text-foreground">KARA</span>
-              <span className="text-muted transition-transform duration-300 group-hover:translate-x-1">
+              <span className="text-muted transition-transform duration-200 group-hover:translate-x-0.5">
                 →
               </span>
             </div>
-            <p className="mb-4 text-sm text-accent uppercase tracking-wider">
+            <p className="mb-3 text-xs uppercase tracking-wider text-muted">
               Dossier patient vocal · Santé
             </p>
             <p className="text-sm text-muted leading-relaxed">
@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded border border-border px-5 py-2.5 text-sm text-foreground transition-all hover:border-accent hover:text-accent"
+            className="inline-flex items-center gap-2 rounded border border-border px-5 py-2.5 text-sm text-foreground transition-colors hover:bg-surface"
           >
             Lire le blog
             <span>→</span>

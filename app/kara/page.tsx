@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Mic, FileText, Search, Lock, LayoutGrid, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'KARA — Dossier patient vocal',
@@ -8,37 +9,37 @@ export const metadata: Metadata = {
 
 const features = [
   {
-    icon: '🎙',
+    icon: Mic,
     title: 'Enregistrement vocal',
     description:
       'Chaque soignant enregistre sa voix directement sur le dossier du patient. Pas de clavier, pas de formulaire. Juste la voix.',
   },
   {
-    icon: '📝',
+    icon: FileText,
     title: 'Transcription automatique',
     description:
       'Tout est transcrit automatiquement en temps réel. Les notes vocales deviennent du texte structuré, consultable et archivé.',
   },
   {
-    icon: '🔍',
+    icon: Search,
     title: 'Recherche en langage naturel',
     description:
       'Retrouvez n\'importe quelle information dans les dossiers en posant une question simple. "Patients diabétiques vus ce mois" — KARA répond.',
   },
   {
-    icon: '🔒',
+    icon: Lock,
     title: '100% on-premise',
     description:
       'Aucune donnée ne quitte la structure. KARA tourne entièrement sur vos serveurs locaux. Conformité totale avec les exigences de confidentialité médicale.',
   },
   {
-    icon: '📊',
+    icon: LayoutGrid,
     title: 'Dossier centralisé',
     description:
       'Tous les soignants d\'une structure accèdent au même dossier patient. Fin des informations dispersées entre services.',
   },
   {
-    icon: '⚡',
+    icon: Zap,
     title: 'Faible infrastructure',
     description:
       'Conçu pour fonctionner avec une connectivité limitée et du matériel standard. Pas besoin de serveurs cloud ou de connexion permanente.',
@@ -51,7 +52,7 @@ export default function KaraPage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent">
+          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
             Produit · Santé
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -103,13 +104,15 @@ export default function KaraPage() {
         <p className="mb-12 text-xs uppercase tracking-widest text-muted">
           Fonctionnalités
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map(({ icon, title, description }) => (
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="rounded-lg border border-border bg-surface p-6 space-y-3"
+              className="rounded border border-border bg-surface p-6 space-y-4"
             >
-              <span className="text-2xl">{icon}</span>
+              <div className="flex h-7 w-7 items-center justify-center rounded border border-border bg-background">
+                <Icon size={14} className="text-foreground" strokeWidth={1.5} />
+              </div>
               <h3 className="text-sm font-medium text-foreground">{title}</h3>
               <p className="text-sm text-muted leading-relaxed">{description}</p>
             </div>
@@ -121,8 +124,8 @@ export default function KaraPage() {
 
       {/* On-premise highlight */}
       <section className="py-24">
-        <div className="rounded-lg border border-border bg-surface p-10 sm:p-12">
-          <p className="mb-4 text-xs uppercase tracking-widest text-accent">
+        <div className="rounded border border-border bg-surface p-10 sm:p-12">
+          <p className="mb-4 text-xs uppercase tracking-widest text-muted">
             Confidentialité
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-6 max-w-xl">
@@ -154,7 +157,7 @@ export default function KaraPage() {
             href="https://kara.compeel.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-accent px-6 py-3 text-sm text-accent transition-all hover:bg-accent hover:text-foreground"
+            className="inline-flex shrink-0 items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
           >
             En savoir plus
             <span>↗</span>
