@@ -5,53 +5,43 @@ description: "L'histoire derrière KUMA — une API de détection d'intention vo
 tags: ["KUMA", "voix", "Mina", "Lomé", "IA"]
 ---
 
-Quand je vais à Lomé, je me déplace avec Gozem — l'application de mobilité la plus utilisée en ville. Ma mère, elle, a un taxi attitré. Quand il n'est pas disponible, elle marche jusqu'à la voie principale pour en trouver un autre.
+Quand je vais à Lomé, je me déplace avec Gozem. Ma mère, elle, a un taxi attitré. Quand il n'est pas disponible, elle marche jusqu'à la voie principale pour en happer un autre.
 
-Je lui ai installé Gozem, je l'ai encouragée à l'utiliser. Mais elle ne peut pas. Elle ne sait pas lire le français, elle en connaît quelques mots mais pas assez pour naviguer dans l'application. Alors c'est moi qui commande pour elle quand je suis là.
+Je lui ai installé Gozem. Je lui ai montré comment ça marche. Mais elle ne peut pas l'utiliser : elle ne lit pas le français, et l'interface n'existe pas en Mina. Alors c'est moi qui commande pour elle quand je suis là, et ma petite sœur quand je ne le suis pas.
 
-De retour en France, j'ai demandé à ma petite sœur de prendre le relais. Mais ça m'a fait réfléchir. Pourquoi ma mère ne peut pas simplement commander un taxi dans sa propre langue — le Mina ou l'Ewe ?
+À un moment, j'ai arrêté de trouver ça normal.
 
----
+## Pourquoi ce problème est plus dur qu'il n'y paraît
 
-## Le Mina, une langue vivante et ignorée
+Le Mina, aussi appelé Gengbe, est parlé par environ 1,5 million de personnes au Togo et au Bénin. L'Ewe, sa langue sœur, par plusieurs millions de plus au Ghana, au Togo et au Bénin. Ce sont des langues tonales, avec une phonologie riche et une grammaire qui ne ressemble à rien dans les familles indo-européennes.
 
-Le Mina — aussi appelé Gengbe — est parlé par environ 1,5 million de personnes au Togo et au Bénin. L'Ewe, sa langue sœur, par plusieurs millions de plus au Ghana, au Togo et au Bénin.
+Des datasets existent, notamment pour l'Ewe. Mais ils reflètent une langue académique, propre, bien articulée. Pas le Mina tel qu'il est parlé dans la rue à Lomé : rapide, mélangé au français, truffé de contractions. C'est ce gap-là que je voulais combler.
 
-Ce sont des langues tonales, riches, avec une grammaire complexe et une littérature orale dense. Elles ne sont pas "primitives" ou "simples". Elles sont juste absentes des datasets d'entraînement des grands modèles de langage.
+Whisper d'OpenAI supporte l'Ewe de façon expérimentale. Les résultats sur du Mina naturel, parlé rapidement, avec des contractions et des emprunts au français, sont inutilisables.
 
-Parce que personne n'a jugé utile de les collecter.
+## Ce que j'ai décidé de construire
 
----
+Je n'avais pas besoin d'un modèle de transcription généraliste. Ce qu'il me fallait était beaucoup plus ciblé : **détecter l'intention dans un enregistrement vocal**.
 
-## L'idée de KUMA
-
-Je me suis dit que si je pouvais créer une plateforme capable de détecter l'intention dans un enregistrement vocal en Mina ou Ewe, il me suffirait de mettre en place une API et de la proposer à Gozem.
-
-Pas une transcription complète. Pas un assistant vocal général. Juste : **détecter l'intention**.
-
-Si quelqu'un dit *"M'amener Tokoin, akpe"* — "Emmène-moi à Tokoin, s'il te plaît" — l'API doit retourner :
+Si quelqu'un dit *"moudji be mayi asigamé"*, ce qui signifie "je voudrais aller au grand marché", l'API doit retourner :
 
 ```json
 {
   "intent": "book_ride",
-  "destination": "Tokoin",
+  "destination": "Grand marché de Lomé",
   "language": "mina",
   "confidence": 0.94
 }
 ```
 
-C'est tout. Le reste, c'est l'application qui s'en charge.
+C'est tout. Le reste, c'est l'application qui s'en charge. Cette contrainte de scope n'est pas une limitation, c'est une décision d'architecture. Un modèle entraîné sur un domaine étroit et des données réelles battra toujours un modèle généraliste sur ce domaine précis. Et surtout, cette approche est intégrable dans n'importe quelle app existante sans refonte d'interface.
 
-Cette approche a un avantage énorme : elle est intégrable dans n'importe quelle app existante. Gozem n'a pas besoin de refaire son interface. Il suffit d'ajouter un bouton micro, d'appeler l'API KUMA, et de traiter la réponse comme n'importe quelle autre entrée utilisateur.
+## Construire le dataset
 
----
+Le vrai problème n'était pas le modèle. C'était les données.
 
-## Ce que ça a demandé
+Il existait des corpus Ewe académiques, mais les gens qui commandent un taxi ne parlent pas comme dans un corpus académique. Ils parlent vite, ils mélangent les langues, ils abrègent. J'avais besoin d'enregistrements réels, dans des conditions réelles.
 
-J'ai commencé mes recherches. Il existait des datasets Ewe, mais je voulais quelque chose de plus proche de la réalité — les gens qui commandent un taxi ne parlent pas comme dans un corpus académique, ils parlent naturellement.
-
-J'ai mandaté mon grand frère pour m'aider à constituer un dataset. Nous avons aujourd'hui près de 3000 enregistrements. Les entraînements commencent bientôt.
-
----
+J'ai mandaté mon grand frère à Lomé pour constituer ce dataset. Nous avons aujourd'hui près de 3000 enregistrements. Les entraînements commencent bientôt.
 
 Maman n'a pas encore commandé son taxi. Vivement ce jour-là.
