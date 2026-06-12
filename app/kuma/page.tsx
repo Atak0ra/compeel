@@ -110,7 +110,7 @@ export default function KumaPage() {
           <div className="rounded border border-border bg-surface p-6 font-mono">
             <p className="text-muted mb-3 text-xs">// Entrée audio, Mina</p>
             <p className="text-foreground/50 mb-6 italic text-xs">
-              &ldquo;M&apos;amener Tokoin, akpe&rdquo;
+              &ldquo;Moudji be mayi Tokoin&rdquo;
             </p>
             <p className="text-muted mb-2 text-xs">// Réponse JSON</p>
             <pre className="text-foreground text-xs leading-relaxed overflow-auto">
