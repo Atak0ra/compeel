@@ -31,7 +31,7 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
-              Compeel a été fondé en 2016 avec Alexis Sambou. L&apos;idée était simple :
+              Compeel a été fondé en 2016 avec Alexis Sambou et Beny Marel Pambou. L&apos;idée était simple :
               construire des outils technologiques qui répondent aux réalités africaines,
               pas aux fantasmes qu&apos;on projette sur elles depuis l&apos;extérieur.
             </p>
@@ -40,8 +40,9 @@ export default function AboutPage() {
               cherché. Puis la vie a imposé une pause. Six ans.
             </p>
             <p>
-              Alexis n&apos;est plus là pour voir la suite. Cette absence est réelle,
+              Alex n&apos;est plus là pour voir la suite. Cette absence est réelle,
               et elle est présente dans chaque ligne de code qu&apos;on écrit aujourd&apos;hui.
+              Marel, lui, a pris une autre route.
             </p>
           </div>
         </div>

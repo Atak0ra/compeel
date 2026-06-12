@@ -14,7 +14,7 @@ Déployé sur Vercel. Domaine : compeel.com
 API de détection d'intention vocale en Mina et Ewe.
 Pipeline : audio Mina/Ewe → Whisper ASR → transcription française → LLM → JSON structuré.
 Cas d'usage principal : mobilité urbaine à Lomé, Togo (Gozem, livraison).
-En production sur : kuma.atakora.pro
+En production sur : kuma.compeel.prcomo
 
 **KARA**
 Système de dossier patient vocal pour les structures médicales en Afrique de l'Ouest.
