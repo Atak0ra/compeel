@@ -3,6 +3,7 @@ import { Inter, DM_Serif_Display } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
+import JsonLd from '@/components/JsonLd'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,6 +19,7 @@ const dmSerif = DM_Serif_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://compeel.com'),
   title: {
     default: 'Compeel — Studio technologique africain',
     template: '%s — Compeel',
@@ -47,6 +49,23 @@ export const metadata: Metadata = {
   },
 }
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Compeel',
+  url: 'https://compeel.com',
+  description:
+    'Studio technologique africain. Produits IA appliqués à des problèmes concrets en Afrique.',
+  founder: {
+    '@type': 'Person',
+    name: 'Williams de Souza',
+  },
+  foundingLocation: {
+    '@type': 'Place',
+    name: 'Dakar, Sénégal',
+  },
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -55,6 +74,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${dmSerif.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
+        <JsonLd data={organizationSchema} />
         <Nav />
         <main className="pt-[61px]">{children}</main>
         <Footer />
