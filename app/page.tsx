@@ -25,7 +25,7 @@ export default function HomePage() {
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-muted">
-            Dakar, Sénégal
+            Paris, France
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Nous construisons des produits IA pour l&apos;Afrique.

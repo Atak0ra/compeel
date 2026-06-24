@@ -60,9 +60,9 @@ const organizationSchema = {
     '@type': 'Person',
     name: 'Williams de Souza',
   },
-  foundingLocation: {
+  location: {
     '@type': 'Place',
-    name: 'Dakar, Sénégal',
+    name: 'Paris, France',
   },
 }
 
