@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'Compeel — Studio technologique africain',
@@ -7,9 +8,19 @@ export const metadata: Metadata = {
     'Compeel construit des produits IA appliqués à des problèmes concrets en Afrique. Agents autonomes, systèmes de recherche, traitement de données.',
 }
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Compeel',
+  url: 'https://compeel.com',
+  description:
+    'Studio technologique africain. Produits IA appliqués à des problèmes concrets en Afrique.',
+}
+
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
+      <JsonLd data={websiteSchema} />
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">

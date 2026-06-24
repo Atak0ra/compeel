@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getAllPosts, getPostBySlug, markdownToHtml, formatDate } from '@/lib/mdx'
+import JsonLd from '@/components/JsonLd'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -39,8 +40,27 @@ export default async function BlogPostPage({ params }: Props) {
 
   const contentHtml = await markdownToHtml(post.content)
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Williams de Souza',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Compeel',
+      url: 'https://compeel.com',
+    },
+    url: `https://compeel.com/blog/${post.slug}`,
+  }
+
   return (
     <div className="mx-auto max-w-5xl px-6">
+      <JsonLd data={articleSchema} />
       {/* Header */}
       <section className="py-24 sm:py-32">
         <div className="max-w-2xl">

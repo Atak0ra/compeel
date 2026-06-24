@@ -1,10 +1,25 @@
 import type { Metadata } from 'next'
 import { Mic, FileText, Search, Lock, LayoutGrid, Zap } from 'lucide-react'
+import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'KARA — Dossier patient vocal',
   description:
     'KARA est un système de dossier patient vocal pour les structures médicales en Afrique de l\'Ouest. 100% on-premise.',
+}
+
+const karaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'KARA',
+  description:
+    "Système de dossier patient vocal pour les structures médicales en Afrique de l'Ouest. Transcription automatique, recherche en langage naturel. 100% on-premise.",
+  brand: {
+    '@type': 'Organization',
+    name: 'Compeel',
+  },
+  category: 'Logiciel médical',
+  url: 'https://compeel.com/kara',
 }
 
 const features = [
@@ -49,6 +64,7 @@ const features = [
 export default function KaraPage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
+      <JsonLd data={karaSchema} />
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">

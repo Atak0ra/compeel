@@ -1,9 +1,24 @@
 import type { Metadata } from 'next'
+import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
   title: 'KUMA — API vocale en Mina et Ewe',
   description:
     'KUMA est une API de détection d\'intention vocale en Mina et Ewe. Cas d\'usage principal : la mobilité urbaine à Lomé.',
+}
+
+const kumaSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'KUMA',
+  description:
+    "API de détection d'intention vocale en Mina et Ewe. Pipeline audio → ASR → NLU → JSON structuré. Cas d'usage principal : mobilité urbaine à Lomé, Togo.",
+  brand: {
+    '@type': 'Organization',
+    name: 'Compeel',
+  },
+  category: 'API vocale',
+  url: 'https://compeel.com/kuma',
 }
 
 const pipeline = [
@@ -45,6 +60,7 @@ const useCases = [
 export default function KumaPage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
+      <JsonLd data={kumaSchema} />
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
