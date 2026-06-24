@@ -171,11 +171,11 @@ export default function KumaPage() {
               Intégrer KUMA dans votre application
             </h2>
             <p className="text-sm text-muted">
-              Documentation, accès API et support disponibles sur kuma.atakora.pro
+              Documentation, accès API et support disponibles sur kuma.compeel.com
             </p>
           </div>
           <a
-            href="https://kuma.atakora.pro"
+            href="https://kuma.compeel.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex shrink-0 items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
