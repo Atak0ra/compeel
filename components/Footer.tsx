@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 flex flex-col gap-2 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} Compeel. Dakar, Sénégal.
+            © {new Date().getFullYear()} Compeel. Paris, France.
           </p>
           <p className="text-xs text-muted italic">
             In memory of Alexis Sambou, co-founder.
