@@ -124,23 +124,47 @@ export default function AlexisPage() {
               des tests qui passent, une PR prête à relire — et le coût tracé.
             </p>
           </div>
-          <div className="rounded border border-border bg-surface p-6 font-mono">
-            <p className="text-muted mb-3 text-xs">// Ticket en entrée</p>
-            <pre className="text-foreground/50 mb-6 text-xs leading-relaxed">
-{`SHOP-89
-"Filtre par catégorie
- sur le catalogue"`}
-            </pre>
-            <p className="text-muted mb-2 text-xs">// Résultat</p>
-            <pre className="text-foreground text-xs leading-relaxed overflow-auto">
-{`{
-  "branch": "feat/shop-89-category-filter",
-  "tests": "passed",
-  "pr": "github.com/.../pull/34",
-  "status": "ready_for_review",
-  "cost_eur": 2.39
-}`}
-            </pre>
+          {/* Dashboard mockup */}
+          <div className="rounded border border-border bg-surface overflow-hidden">
+            {/* Window bar */}
+            <div className="flex items-center gap-2 border-b border-border px-4 py-3">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+              <span className="ml-3 font-mono text-xs text-muted">alexis · tableau de bord</span>
+            </div>
+            <div className="p-5">
+              {/* Stats */}
+              <div className="grid grid-cols-3 gap-3 mb-5">
+                <div className="rounded border border-border bg-green-50 p-3 text-center">
+                  <p className="text-xl font-semibold text-green-600">47</p>
+                  <p className="text-xs text-muted mt-0.5">Résolus</p>
+                </div>
+                <div className="rounded border border-border bg-amber-50 p-3 text-center">
+                  <p className="text-xl font-semibold text-amber-500">3</p>
+                  <p className="text-xs text-muted mt-0.5">En cours</p>
+                </div>
+                <div className="rounded border border-border p-3 text-center">
+                  <p className="text-xl font-semibold text-foreground">131 €</p>
+                  <p className="text-xs text-muted mt-0.5">Coût</p>
+                </div>
+              </div>
+              {/* Ticket list */}
+              <div className="divide-y divide-border">
+                {[
+                  { id: 'KARA-142', title: 'Pagination côté serveur sur /admin/users', cost: '3,15 €', color: 'bg-green-500' },
+                  { id: 'KARA-145', title: 'Webhooks GitHub pour les événements PR', cost: '1,10 €', color: 'bg-amber-400' },
+                  { id: 'SHOP-89',  title: 'Filtre par catégorie sur le catalogue',   cost: '2,39 €', color: 'bg-green-500' },
+                ].map(({ id, title, cost, color }) => (
+                  <div key={id} className="flex items-center gap-3 py-2.5">
+                    <span className={`h-2 w-2 shrink-0 rounded-full ${color}`} />
+                    <span className="font-mono text-xs text-muted w-20 shrink-0">{id}</span>
+                    <span className="text-xs text-foreground flex-1 truncate">{title}</span>
+                    <span className="text-xs text-muted shrink-0">{cost}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
