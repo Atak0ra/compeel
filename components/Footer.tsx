@@ -27,6 +27,9 @@ export default function Footer() {
             <Link href="/kara" className="text-sm text-muted transition-colors hover:text-foreground">
               KARA
             </Link>
+            <Link href="/alexis" className="text-sm text-muted transition-colors hover:text-foreground">
+              Alexis
+            </Link>
           </div>
 
           <div className="flex flex-col gap-2">

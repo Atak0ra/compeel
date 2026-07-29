@@ -46,7 +46,7 @@ export default function HomePage() {
         <p className="mb-12 text-xs uppercase tracking-widest text-muted">
           Produits
         </p>
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {/* KUMA */}
           <Link
             href="/kuma"
@@ -90,6 +90,29 @@ export default function HomePage() {
             </p>
             <p className="mt-6 text-xs text-muted/60">
               Pour les structures médicales en Afrique de l&apos;Ouest
+            </p>
+          </Link>
+
+          {/* Alexis */}
+          <Link
+            href="/alexis"
+            className="group block rounded border border-border bg-surface p-8 transition-colors hover:border-foreground/20 hover:bg-surface-2"
+          >
+            <div className="mb-8 flex items-start justify-between">
+              <span className="font-serif text-2xl text-foreground">Alexis</span>
+              <span className="text-muted transition-transform duration-200 group-hover:translate-x-0.5">
+                →
+              </span>
+            </div>
+            <p className="mb-3 text-xs uppercase tracking-wider text-muted">
+              Agent de développement
+            </p>
+            <p className="text-sm text-muted leading-relaxed">
+              Un agent qui prend un ticket, rédige une spec, écrit le code, lance les tests
+              et livre le résultat sur votre dépôt GitHub ou GitLab.
+            </p>
+            <p className="mt-6 text-xs text-muted/60">
+              Pour solopreneurs et agences
             </p>
           </Link>
         </div>
