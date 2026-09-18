@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { Bot, Scale, Stethoscope } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
+import ScrollCue from '@/components/ScrollCue'
 
 export const metadata: Metadata = {
   title: 'Réalisations',
@@ -17,7 +19,8 @@ const realisationsSchema = {
 const realisations = [
   {
     domain: 'Droit · Conformité réglementaire',
-    title: 'Recherche et analyse de corpus juridiques',
+    icon: Scale,
+    title: 'DameJustice · Recherche et analyse de corpus juridiques',
     constat:
       'L\'accès, l\'analyse croisée et la maîtrise des corpus juridiques et réglementaires en Afrique (textes nationaux, jurisprudence, droit OHADA) se heurtent à la dispersion des sources et à la hiérarchie des normes. Pour les professionnels du droit, exploiter rapidement cette masse documentaire est un défi opérationnel permanent.',
     solution:
@@ -30,7 +33,8 @@ const realisations = [
   },
   {
     domain: 'Développement logiciel · Automatisation',
-    title: 'Exécution supervisée de tickets de développement',
+    icon: Bot,
+    title: 'Alexis · Un agent qui livre du code, sous contrôle humain',
     constat:
       'Solopreneurs et agences gèrent plusieurs dépôts et backlogs en parallèle. Le triage, la relecture et le suivi de coût des tickets bien cadrés consomment un temps mieux investi ailleurs.',
     solution:
@@ -43,7 +47,8 @@ const realisations = [
   },
   {
     domain: 'Santé · Souveraineté des données',
-    title: 'Dossier patient à saisie vocale, on-premise',
+    icon: Stethoscope,
+    title: 'KARA · Dossier patient à saisie vocale, qui reste dans la structure',
     constat:
       'Dans les structures médicales ouest-africaines, la saisie manuelle des dossiers patients est lente et incomplète. Les solutions cloud existantes posent une question non négociable : où vont les données de santé.',
     solution:
@@ -61,7 +66,7 @@ export default function RealisationsPage() {
       <JsonLd data={realisationsSchema} />
 
       {/* Hero */}
-      <section className="py-32 sm:py-40">
+      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
         <div className="max-w-2xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Réalisations
@@ -74,39 +79,44 @@ export default function RealisationsPage() {
             toute ligne de code. Ce ne sont pas des produits sur étagère.
           </p>
         </div>
+        <ScrollCue />
       </section>
 
       <div className="border-t border-border" />
 
-      {realisations.map(({ domain, title, constat, solution, architecture }, index) => (
+      {realisations.map(({ domain, title, constat, solution, architecture, icon: Icon }, index) => (
         <div key={title}>
           <section className="py-24">
-            <p className="mb-8 text-xs uppercase tracking-widest text-accent-deep">{domain}</p>
-            <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-12 max-w-2xl">
-              {title}
-            </h2>
-
-            <div className="grid gap-12 sm:grid-cols-2">
-              <div>
-                <p className="mb-3 text-xs uppercase tracking-wider text-muted/60">Le constat</p>
-                <p className="text-sm text-muted leading-relaxed">{constat}</p>
+            <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+              <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
+                {Icon && (
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
+                    <Icon size={18} className="text-accent-deep" strokeWidth={1.5} />
+                  </div>
+                )}
+                <p className="text-xs uppercase tracking-widest text-accent-deep">{domain}</p>
               </div>
-              <div>
-                <p className="mb-3 text-xs uppercase tracking-wider text-muted/60">La réponse</p>
-                <p className="text-sm text-muted leading-relaxed">{solution}</p>
-              </div>
-            </div>
+              <div className="max-w-2xl">
+                <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-8">
+                  {title}
+                </h2>
+                <div className="space-y-6 text-base text-muted leading-relaxed">
+                  <p>{constat}</p>
+                  <p>{solution}</p>
+                </div>
 
-            <div className="mt-10 rounded border border-border border-l-4 border-l-accent bg-surface p-6">
-              <p className="mb-4 text-xs uppercase tracking-wider text-accent-deep">Architecture</p>
-              <ul className="space-y-3">
-                {architecture.map((line) => (
-                  <li key={line} className="text-sm text-muted leading-relaxed flex gap-3">
-                    <span className="text-accent">·</span>
-                    <span>{line}</span>
-                  </li>
-                ))}
-              </ul>
+                <div className="mt-10 rounded border border-border border-l-4 border-l-accent bg-surface p-6">
+                  <p className="mb-4 text-xs uppercase tracking-wider text-accent-deep">Architecture</p>
+                  <ul className="space-y-3">
+                    {architecture.map((line) => (
+                      <li key={line} className="text-sm text-muted leading-relaxed flex gap-3">
+                        <span className="text-accent">·</span>
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
           {index < realisations.length - 1 && <div className="border-t border-border" />}

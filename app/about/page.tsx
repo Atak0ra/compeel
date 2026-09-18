@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ScrollCue from '@/components/ScrollCue'
 
 export const metadata: Metadata = {
   title: 'À propos',
@@ -10,7 +11,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
       {/* Header */}
-      <section className="py-32 sm:py-40">
+      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
         <div className="max-w-2xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             À propos
@@ -19,6 +20,7 @@ export default function AboutPage() {
             Un studio africain.
           </h1>
         </div>
+        <ScrollCue />
       </section>
 
       <div className="border-t border-border" />

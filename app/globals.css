@@ -16,6 +16,12 @@
     text-rendering: optimizeLegibility;
   }
 
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     background-color: #F5F4F0;
     color: #1A1A1A;

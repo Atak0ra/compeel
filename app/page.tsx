@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
+import ContactForm from '@/components/ContactForm'
+import ScrollCue from '@/components/ScrollCue'
 
 export const metadata: Metadata = {
   title: 'Compeel · Studio d\'ingénierie logicielle',
@@ -35,28 +37,13 @@ const methode = [
   },
 ]
 
-const stack = [
-  {
-    title: 'RAG',
-    text: 'Interroger et structurer une documentation réglementaire ou comptable dense, avec traçabilité de la source citée à chaque réponse.',
-  },
-  {
-    title: 'IA agentique',
-    text: 'Automatiser la tuyauterie administrative (rapprochement, routage, vérification) via des workflows supervisés et déterministes. Jamais un agent en roue libre sur une décision financière.',
-  },
-  {
-    title: 'Garde-fous',
-    text: 'Tests systématiques sur les cas limites avant mise en production. Journalisation de toute action touchant un flux financier. Rejet par défaut face à un cas non prévu.',
-  },
-]
-
 export default function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
       <JsonLd data={websiteSchema} />
 
       {/* Hero */}
-      <section className="py-32 sm:py-40">
+      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
         <div className="max-w-3xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Studio d&apos;ingénierie logicielle
@@ -64,12 +51,28 @@ export default function HomePage() {
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Nous concevons des architectures logicielles pour des environnements exigeants.
           </h1>
-          <p className="text-lg text-muted leading-relaxed max-w-2xl">
+          <p className="text-lg text-muted leading-relaxed max-w-2xl mb-10">
             Conformité, flux financiers, intégrations complexes : des problèmes que les outils standards
             ne couvrent pas bien. Compeel s&apos;en occupe, du diagnostic jusqu&apos;à la mise en
             production.
           </p>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded border border-accent bg-accent px-6 py-3 text-sm text-background transition-colors hover:border-accent-deep hover:bg-accent-deep"
+            >
+              Nous contacter
+              <span>→</span>
+            </a>
+            <Link
+              href="/realisations"
+              className="text-sm text-muted transition-colors hover:text-accent"
+            >
+              Voir les réalisations
+            </Link>
+          </div>
         </div>
+        <ScrollCue />
       </section>
 
       <div className="border-t border-border" />
@@ -128,27 +131,6 @@ export default function HomePage() {
 
       <div className="border-t border-border" />
 
-      {/* Stack */}
-      <section className="py-24">
-        <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">
-          Des outils, pas des gadgets
-        </p>
-        <p className="mb-12 text-sm text-muted leading-relaxed max-w-2xl">
-          Chaque brique technique répond à une friction identifiée en amont, jamais utilisée parce
-          qu&apos;elle est à la mode.
-        </p>
-        <div className="grid gap-4 sm:grid-cols-3">
-          {stack.map(({ title, text }) => (
-            <div key={title} className="rounded border border-border bg-surface p-6 transition-colors hover:border-accent/40">
-              <p className="mb-3 text-sm font-medium text-foreground">{title}</p>
-              <p className="text-sm text-muted leading-relaxed">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="border-t border-border" />
-
       {/* Réalisations teaser */}
       <section className="py-24">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
@@ -170,22 +152,16 @@ export default function HomePage() {
       <div className="border-t border-accent/30" />
 
       {/* CTA final */}
-      <section className="py-24">
+      <section id="contact" className="py-24 scroll-mt-24">
         <div className="max-w-2xl">
           <h2 className="font-serif text-3xl text-foreground leading-snug mb-4">
             Un projet d&apos;envergure à structurer ?
           </h2>
-          <p className="text-base text-muted leading-relaxed mb-8">
+          <p className="text-base text-muted leading-relaxed mb-10">
             Institutions, grands comptes, partenaires qui investissent dans une infrastructure durable
             plutôt que dans un outil de plus. Parlons du problème avant de parler de solution.
           </p>
-          <a
-            href="mailto:contact@compeel.com"
-            className="inline-flex items-center gap-2 rounded border border-accent bg-accent px-6 py-3 text-sm text-background transition-colors hover:border-accent-deep hover:bg-accent-deep"
-          >
-            Nous contacter
-            <span>→</span>
-          </a>
+          <ContactForm />
         </div>
       </section>
     </div>

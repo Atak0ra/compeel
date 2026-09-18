@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { Bot } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
+import ScrollCue from '@/components/ScrollCue'
 
 export const metadata: Metadata = {
   title: 'Alexis · Agent de développement',
@@ -62,11 +64,16 @@ export default function AlexisPage() {
     <div className="mx-auto max-w-5xl px-6">
       <JsonLd data={alexisSchema} />
       {/* Hero */}
-      <section className="py-32 sm:py-40">
+      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
-            Réalisation · Agent de développement
-          </p>
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Bot size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">
+              Réalisation · Agent IA de développement
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Alexis
           </h1>
@@ -80,6 +87,7 @@ export default function AlexisPage() {
             chaque tâche.
           </p>
         </div>
+        <ScrollCue />
       </section>
 
       <div className="border-t border-border" />

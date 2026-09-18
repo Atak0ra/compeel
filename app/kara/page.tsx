@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Mic, FileText, Search, Lock, LayoutGrid, Zap } from 'lucide-react'
+import { Mic, FileText, Search, Lock, LayoutGrid, Zap, Stethoscope } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
+import ScrollCue from '@/components/ScrollCue'
 
 export const metadata: Metadata = {
   title: 'KARA · Dossier patient vocal',
@@ -43,7 +44,7 @@ const features = [
   },
   {
     icon: Lock,
-    title: '100% on-premise',
+    title: 'Tout reste chez vous',
     description:
       'Aucune donnée ne quitte la structure. KARA tourne entièrement sur vos serveurs locaux. Conformité totale avec les exigences de confidentialité médicale.',
   },
@@ -66,11 +67,16 @@ export default function KaraPage() {
     <div className="mx-auto max-w-5xl px-6">
       <JsonLd data={karaSchema} />
       {/* Hero */}
-      <section className="py-32 sm:py-40">
+      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
-            Réalisation · Santé
-          </p>
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Stethoscope size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">
+              Réalisation · Santé
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             KARA
           </h1>
@@ -84,6 +90,7 @@ export default function KaraPage() {
             en langage naturel.
           </p>
         </div>
+        <ScrollCue />
       </section>
 
       <div className="border-t border-border" />
@@ -148,7 +155,7 @@ export default function KaraPage() {
             Aucune donnée médicale ne quitte votre structure.
           </h2>
           <p className="text-sm text-muted leading-relaxed max-w-2xl">
-            KARA est 100% on-premise. Le modèle de transcription, la base de données,
+            Aucune donnée ne sort de vos murs. Le modèle de transcription, la base de données,
             le moteur de recherche, tout tourne sur vos serveurs locaux.
             Pas de cloud, pas de synchronisation externe, pas de risque de fuite.
             Vos patients vous font confiance. Nous respectons cette confiance.
