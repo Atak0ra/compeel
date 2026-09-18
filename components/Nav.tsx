@@ -31,7 +31,7 @@ export default function Nav() {
                   href={href}
                   className={`text-sm transition-colors ${
                     isActive
-                      ? 'text-foreground'
+                      ? 'text-accent'
                       : 'text-muted hover:text-foreground'
                   }`}
                 >

@@ -203,7 +203,7 @@ export default function AlexisPage() {
             href="https://alexis-front.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+            className="inline-flex shrink-0 items-center gap-2 rounded border border-accent bg-accent px-6 py-3 text-sm text-background transition-colors hover:border-accent-deep hover:bg-accent-deep"
           >
             Accéder à Alexis
             <span>↗</span>

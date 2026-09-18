@@ -116,7 +116,7 @@ export default function HomePage() {
               }`}
             >
               <div>
-                <span className="text-sm font-mono text-muted">{step}</span>
+                <span className="text-sm font-mono text-accent">{step}</span>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
@@ -140,33 +140,11 @@ export default function HomePage() {
         </p>
         <div className="grid gap-4 sm:grid-cols-3">
           {stack.map(({ title, text }) => (
-            <div key={title} className="rounded border border-border bg-surface p-6">
+            <div key={title} className="rounded border border-border bg-surface p-6 transition-colors hover:border-accent/40">
               <p className="mb-3 text-sm font-medium text-foreground">{title}</p>
               <p className="text-sm text-muted leading-relaxed">{text}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* Flux financiers */}
-      <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Flux financiers</p>
-          </div>
-          <div className="space-y-6 text-base text-muted leading-relaxed max-w-2xl">
-            <p>
-              Compeel ne devient jamais tiers-collecteur. Les fonds transitent par des passerelles de
-              paiement agréées — Compeel conçoit la couche de routage et de split, sans jamais détenir
-              les flux du client.
-            </p>
-            <p>
-              Le client garde le contrôle total et la titularité juridique de ses flux, à tout moment,
-              avec une traçabilité complète, auditable.
-            </p>
-          </div>
         </div>
       </section>
 
@@ -183,7 +161,7 @@ export default function HomePage() {
           </div>
           <Link
             href="/realisations"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-border px-5 py-2.5 text-sm text-foreground transition-colors hover:bg-surface"
+            className="inline-flex shrink-0 items-center gap-2 rounded border border-border px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             Voir les réalisations
             <span>→</span>
@@ -205,7 +183,7 @@ export default function HomePage() {
           </p>
           <a
             href="mailto:contact@compeel.com"
-            className="inline-flex items-center gap-2 rounded border border-foreground px-6 py-3 text-sm text-foreground transition-colors hover:bg-foreground hover:text-background"
+            className="inline-flex items-center gap-2 rounded border border-accent bg-accent px-6 py-3 text-sm text-background transition-colors hover:border-accent-deep hover:bg-accent-deep"
           >
             Nous contacter
             <span>→</span>

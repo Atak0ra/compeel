@@ -21,13 +21,13 @@ export default function Footer() {
           {/* Links */}
           <div className="flex flex-col gap-2">
             <p className="text-xs uppercase tracking-widest text-muted/60 mb-1">Studio</p>
-            <Link href="/realisations" className="text-sm text-muted transition-colors hover:text-foreground">
+            <Link href="/realisations" className="text-sm text-muted transition-colors hover:text-accent">
               Réalisations
             </Link>
-            <Link href="/about" className="text-sm text-muted transition-colors hover:text-foreground">
+            <Link href="/about" className="text-sm text-muted transition-colors hover:text-accent">
               À propos
             </Link>
-            <Link href="/blog" className="text-sm text-muted transition-colors hover:text-foreground">
+            <Link href="/blog" className="text-sm text-muted transition-colors hover:text-accent">
               Blog
             </Link>
           </div>

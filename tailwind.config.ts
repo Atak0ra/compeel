@@ -14,9 +14,8 @@ const config: Config = {
         'surface-2': '#E5E3DF',
         foreground: '#1A1A1A',
         muted: '#6B6560',
-        accent: '#1A1A1A',
-        'accent-light': '#3D3D3D',
-        'accent-hover': '#000000',
+        accent: '#C17F3F',
+        'accent-deep': '#8B5E3C',
         border: '#D8D5D0',
       },
       fontFamily: {

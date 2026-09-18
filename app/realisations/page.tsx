@@ -53,18 +53,6 @@ const realisations = [
       'Architecture conçue pour la contrainte de souveraineté dès la spécification, pas ajoutée après coup.',
     ],
   },
-  {
-    domain: 'Mobilité urbaine · Langues locales',
-    title: 'Détection d\'intention vocale en langues locales',
-    constat:
-      'À Lomé, une part significative des usagers de la mobilité urbaine et de la livraison s\'exprime plus naturellement en Mina ou en Ewe qu\'en français. Les interfaces vocales standards ne couvrent pas ces langues.',
-    solution:
-      'Un pipeline qui transcrit l\'audio, le traduit en français, puis en extrait une intention structurée exploitable par un système métier existant.',
-    architecture: [
-      'ASR adapté à un contexte linguistique non couvert par les briques standards.',
-      'Sortie structurée, conçue pour s\'intégrer à des systèmes métier tiers sans réécriture.',
-    ],
-  },
 ]
 
 export default function RealisationsPage() {
@@ -114,7 +102,7 @@ export default function RealisationsPage() {
               <ul className="space-y-3">
                 {architecture.map((line) => (
                   <li key={line} className="text-sm text-muted leading-relaxed flex gap-3">
-                    <span className="text-muted/40">—</span>
+                    <span className="text-accent">—</span>
                     <span>{line}</span>
                   </li>
                 ))}
