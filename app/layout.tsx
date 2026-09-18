@@ -21,12 +21,12 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel — Studio technologique africain',
+    default: 'Compeel — Studio d\'ingénierie logicielle',
     template: '%s — Compeel',
   },
   description:
-    'Compeel construit des produits IA appliqués à des problèmes concrets en Afrique. Agents autonomes, systèmes de recherche, traitement de données.',
-  keywords: ['Compeel', 'IA', 'voix', 'Afrique', 'Paris', 'KUMA', 'KARA', 'Mina', 'Ewe'],
+    'Compeel conçoit des architectures logicielles sur-mesure pour des environnements exigeants : conformité, paiements, intégration.',
+  keywords: ['Compeel', 'ingénierie logicielle', 'OHADA', 'conformité', 'paiements', 'Afrique', 'Paris'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel — Studio technologique africain',
+    title: 'Compeel — Studio d\'ingénierie logicielle',
     description:
-      'Produits IA pour l\'Afrique — agents, systèmes de recherche, interfaces vocales. KUMA, KARA.',
+      'Architectures logicielles sur-mesure pour des environnements exigeants : conformité, paiements, intégration.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel — Studio technologique africain',
-    description: 'Produits IA pour l\'Afrique — agents, systèmes de recherche, interfaces vocales.',
+    title: 'Compeel — Studio d\'ingénierie logicielle',
+    description: 'Architectures logicielles sur-mesure pour des environnements exigeants.',
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ const organizationSchema = {
   name: 'Compeel',
   url: 'https://compeel.com',
   description:
-    'Studio technologique africain. Produits IA appliqués à des problèmes concrets en Afrique.',
+    'Studio d\'ingénierie et de conception logicielle. Architectures sur-mesure pour des environnements exigeants.',
   founder: {
     '@type': 'Person',
     name: 'Williams de Souza',

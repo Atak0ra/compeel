@@ -14,26 +14,16 @@ export default function Footer() {
               Compeel
             </Link>
             <p className="text-sm text-muted max-w-xs">
-              Studio technologique africain. Produits IA pour l&apos;Afrique.
+              Studio d&apos;ingénierie et de conception logicielle.
             </p>
           </div>
 
           {/* Links */}
           <div className="flex flex-col gap-2">
-            <p className="text-xs uppercase tracking-widest text-muted/60 mb-1">Produits</p>
-            <Link href="/kuma" className="text-sm text-muted transition-colors hover:text-foreground">
-              KUMA
-            </Link>
-            <Link href="/kara" className="text-sm text-muted transition-colors hover:text-foreground">
-              KARA
-            </Link>
-            <Link href="/alexis" className="text-sm text-muted transition-colors hover:text-foreground">
-              Alexis
-            </Link>
-          </div>
-
-          <div className="flex flex-col gap-2">
             <p className="text-xs uppercase tracking-widest text-muted/60 mb-1">Studio</p>
+            <Link href="/realisations" className="text-sm text-muted transition-colors hover:text-foreground">
+              Réalisations
+            </Link>
             <Link href="/about" className="text-sm text-muted transition-colors hover:text-foreground">
               À propos
             </Link>

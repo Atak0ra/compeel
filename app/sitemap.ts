@@ -12,19 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: 'https://compeel.com/kuma',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://compeel.com/kara',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: 'https://compeel.com/alexis',
+      url: 'https://compeel.com/realisations',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
