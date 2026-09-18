@@ -52,7 +52,7 @@ const config: Config = {
             maxWidth: '72ch',
             '--tw-prose-body': '#1A1A1A',
             '--tw-prose-headings': '#1A1A1A',
-            '--tw-prose-links': '#1A1A1A',
+            '--tw-prose-links': '#C17F3F',
             '--tw-prose-bold': '#1A1A1A',
             '--tw-prose-counters': '#6B6560',
             '--tw-prose-bullets': '#6B6560',
@@ -69,10 +69,10 @@ const config: Config = {
             h2: { fontFamily: 'var(--font-dm-serif), Georgia, serif', letterSpacing: '-0.01em' },
             h3: { fontFamily: 'var(--font-dm-serif), Georgia, serif' },
             a: {
-              color: '#1A1A1A',
+              color: '#C17F3F',
               textDecoration: 'underline',
-              textDecorationColor: '#D8D5D0',
-              '&:hover': { textDecorationColor: '#1A1A1A' },
+              textDecorationColor: '#E0C4A8',
+              '&:hover': { textDecorationColor: '#C17F3F' },
             },
             blockquote: {
               borderLeftColor: '#1A1A1A',

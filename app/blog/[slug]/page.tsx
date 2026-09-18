@@ -66,7 +66,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="max-w-2xl">
           <Link
             href="/blog"
-            className="mb-10 inline-flex items-center gap-2 text-xs text-muted transition-colors hover:text-foreground"
+            className="mb-10 inline-flex items-center gap-2 text-xs text-muted transition-colors hover:text-accent"
           >
             <span>←</span>
             Blog
@@ -76,7 +76,7 @@ export default async function BlogPostPage({ params }: Props) {
             {post.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs text-muted border border-border rounded px-2 py-0.5"
+                className="text-xs text-accent-deep border border-accent/30 rounded px-2 py-0.5"
               >
                 {tag}
               </span>
@@ -115,7 +115,7 @@ export default async function BlogPostPage({ params }: Props) {
       <section className="py-12">
         <Link
           href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
+          className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-accent"
         >
           <span>←</span>
           Retour au blog

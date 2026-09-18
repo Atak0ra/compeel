@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'À propos',
   description:
-    'Compeel est un studio technologique africain qui construit des produits IA appliqués à des problèmes concrets en Afrique.',
+    'Compeel est un studio d\'ingénierie et de conception logicielle ancré en Afrique, qui construit des architectures sur-mesure pour des environnements exigeants.',
 }
 
 export default function AboutPage() {
@@ -58,18 +58,18 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
-              Le projet reprend. Avec une vision plus claire, des produits plus précis,
+              Le studio reprend. Avec une vision plus claire, une méthode plus précise,
               et une conviction renforcée par six ans de recul.
             </p>
             <p>
-              Compeel construit des produits IA appliqués à des problèmes concrets : agents autonomes,
-              systèmes de recherche dans des corpus complexes, traitement intelligent de données non structurées.
+              Compeel conçoit des architectures logicielles sur-mesure pour des frictions de terrain
+              réelles : conformité réglementaire, flux financiers, intégration de systèmes hétérogènes.
               Dans des domaines comme la santé, la mobilité, le droit.
             </p>
             <p>
-              KUMA et KARA utilisent la voix parce que le problème l&apos;exige. Mais demain un produit
-              Compeel pourrait n&apos;avoir aucun composant vocal. Ce qui ne change pas, c&apos;est le point
-              de départ : un vrai problème, observé de l&apos;intérieur.
+              Certaines de nos réalisations utilisent la voix parce que le problème l&apos;exige.
+              D&apos;autres non. Ce qui ne change pas, c&apos;est le point de départ : un vrai problème,
+              observé de l&apos;intérieur.
             </p>
             <p>
               L&apos;Afrique de l&apos;Ouest a des contraintes réelles et des besoins que la tech globale

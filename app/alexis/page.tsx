@@ -65,7 +65,7 @@ export default function AlexisPage() {
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
           <p className="mb-6 text-xs uppercase tracking-widest text-muted">
-            Produit · Agent de développement
+            Réalisation · Agent de développement
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Alexis
@@ -178,7 +178,7 @@ export default function AlexisPage() {
         </p>
         <div className="grid gap-4 sm:grid-cols-3">
           {useCases.map(({ label, text }) => (
-            <div key={label} className="rounded border border-border bg-surface p-6">
+            <div key={label} className="rounded border border-border bg-surface p-6 transition-colors hover:border-accent/40">
               <p className="mb-3 text-xs uppercase tracking-wider text-foreground font-medium">{label}</p>
               <p className="text-sm text-muted leading-relaxed">{text}</p>
             </div>

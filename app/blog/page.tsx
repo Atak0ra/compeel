@@ -5,7 +5,7 @@ import { getAllPosts, formatDate } from '@/lib/mdx'
 export const metadata: Metadata = {
   title: 'Blog',
   description:
-    'Réflexions sur la technologie, les langues africaines, et la construction de produits pour l\'Afrique de l\'Ouest.',
+    'Réflexions sur l\'ingénierie logicielle, les contraintes de terrain, et la construction d\'architectures pour l\'Afrique de l\'Ouest.',
 }
 
 export default function BlogPage() {
@@ -23,8 +23,8 @@ export default function BlogPage() {
             Réflexions.
           </h1>
           <p className="mt-6 text-base text-muted leading-relaxed">
-            Sur la technologie, les langues africaines, et ce que ça veut dire
-            de construire des produits pour des gens qu&apos;on connaît.
+            Sur l&apos;ingénierie logicielle, les contraintes de terrain, et ce que ça veut dire
+            de construire des architectures pour des gens qu&apos;on connaît.
           </p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="block">
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
                     <div className="flex-1 max-w-2xl">
-                      <h2 className="font-serif text-xl sm:text-2xl text-foreground leading-snug mb-3 group-hover:opacity-60 transition-opacity">
+                      <h2 className="font-serif text-xl sm:text-2xl text-foreground leading-snug mb-3 transition-colors group-hover:text-accent">
                         {post.title}
                       </h2>
                       <p className="text-sm text-muted leading-relaxed mb-4">
@@ -52,7 +52,7 @@ export default function BlogPage() {
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="text-xs text-muted border border-border rounded px-2 py-0.5"
+                            className="text-xs text-accent-deep border border-accent/30 rounded px-2 py-0.5"
                           >
                             {tag}
                           </span>
