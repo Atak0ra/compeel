@@ -64,7 +64,7 @@ export default function AlexisPage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Réalisation · Agent de développement
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -86,7 +86,7 @@ export default function AlexisPage() {
 
       {/* Pipeline */}
       <section className="py-24">
-        <p className="mb-12 text-xs uppercase tracking-widest text-muted">
+        <p className="mb-12 text-xs uppercase tracking-widest text-accent-deep">
           Pipeline technique
         </p>
         <div>
@@ -98,7 +98,7 @@ export default function AlexisPage() {
               }`}
             >
               <div>
-                <span className="text-sm font-mono text-muted">{step}</span>
+                <span className="font-serif text-xl text-accent">{step}</span>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
@@ -115,7 +115,7 @@ export default function AlexisPage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-2">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-widest text-muted">Exemple</p>
+            <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">Exemple</p>
             <h2 className="font-serif text-2xl text-foreground mb-4">
               Du ticket au code livré
             </h2>
@@ -173,7 +173,7 @@ export default function AlexisPage() {
 
       {/* Use cases */}
       <section className="py-24">
-        <p className="mb-12 text-xs uppercase tracking-widest text-muted">
+        <p className="mb-12 text-xs uppercase tracking-widest text-accent-deep">
           Cas d&apos;usage
         </p>
         <div className="grid gap-4 sm:grid-cols-3">

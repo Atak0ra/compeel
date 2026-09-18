@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Link
               href="/"
-              className="font-serif text-base text-foreground transition-opacity hover:opacity-60"
+              className="font-serif text-base text-accent-deep transition-opacity hover:opacity-60"
             >
               Compeel
             </Link>
@@ -26,9 +26,6 @@ export default function Footer() {
             </Link>
             <Link href="/about" className="text-sm text-muted transition-colors hover:text-accent">
               À propos
-            </Link>
-            <Link href="/blog" className="text-sm text-muted transition-colors hover:text-accent">
-              Blog
             </Link>
           </div>
         </div>

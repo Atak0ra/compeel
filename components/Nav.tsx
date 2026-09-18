@@ -6,7 +6,6 @@ import { usePathname } from 'next/navigation'
 const links = [
   { href: '/realisations', label: 'Réalisations' },
   { href: '/about', label: 'À propos' },
-  { href: '/blog', label: 'Blog' },
 ]
 
 export default function Nav() {
@@ -17,7 +16,7 @@ export default function Nav() {
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-serif text-base font-normal tracking-tight text-foreground transition-opacity hover:opacity-60"
+          className="font-serif text-base font-normal tracking-tight text-accent-deep transition-opacity hover:opacity-60"
         >
           Compeel
         </Link>

@@ -68,7 +68,7 @@ export default function KaraPage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Réalisation · Santé
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -92,7 +92,7 @@ export default function KaraPage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Le problème</p>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">Le problème</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
@@ -117,7 +117,7 @@ export default function KaraPage() {
 
       {/* Features */}
       <section className="py-24">
-        <p className="mb-12 text-xs uppercase tracking-widest text-muted">
+        <p className="mb-12 text-xs uppercase tracking-widest text-accent-deep">
           Fonctionnalités
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -126,8 +126,8 @@ export default function KaraPage() {
               key={title}
               className="rounded border border-border bg-surface p-6 space-y-4 transition-colors hover:border-accent/40"
             >
-              <div className="flex h-7 w-7 items-center justify-center rounded border border-border bg-background">
-                <Icon size={14} className="text-foreground" strokeWidth={1.5} />
+              <div className="flex h-7 w-7 items-center justify-center rounded border border-accent/30 bg-background">
+                <Icon size={14} className="text-accent-deep" strokeWidth={1.5} />
               </div>
               <h3 className="text-sm font-medium text-foreground">{title}</h3>
               <p className="text-sm text-muted leading-relaxed">{description}</p>
@@ -140,8 +140,8 @@ export default function KaraPage() {
 
       {/* On-premise highlight */}
       <section className="py-24">
-        <div className="rounded border border-border bg-surface p-10 sm:p-12">
-          <p className="mb-4 text-xs uppercase tracking-widest text-muted">
+        <div className="rounded border border-border border-l-4 border-l-accent bg-surface p-10 sm:p-12">
+          <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">
             Confidentialité
           </p>
           <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-6 max-w-xl">

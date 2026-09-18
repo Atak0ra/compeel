@@ -58,7 +58,7 @@ export default function HomePage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Studio d&apos;ingénierie logicielle
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -78,7 +78,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Manifeste</p>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">Manifeste</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed max-w-2xl">
             <p>
@@ -104,7 +104,7 @@ export default function HomePage() {
 
       {/* Méthode */}
       <section className="py-24">
-        <p className="mb-12 text-xs uppercase tracking-widest text-muted">
+        <p className="mb-12 text-xs uppercase tracking-widest text-accent-deep">
           Notre méthode
         </p>
         <div>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
       {/* Stack */}
       <section className="py-24">
-        <p className="mb-4 text-xs uppercase tracking-widest text-muted">
+        <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">
           Des outils, pas des gadgets
         </p>
         <p className="mb-12 text-sm text-muted leading-relaxed max-w-2xl">
@@ -154,7 +154,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="mb-2 text-xs uppercase tracking-widest text-muted">Réalisations</p>
+            <p className="mb-2 text-xs uppercase tracking-widest text-accent-deep">Réalisations</p>
             <h2 className="font-serif text-2xl text-foreground max-w-lg">
               Ce que cette méthode donne, en production.
             </h2>
@@ -168,7 +168,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="border-t border-border" />
+      <div className="border-t border-accent/30" />
 
       {/* CTA final */}
       <section className="py-24">

@@ -63,7 +63,7 @@ export default function RealisationsPage() {
       {/* Hero */}
       <section className="py-32 sm:py-40">
         <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             Réalisations
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
@@ -81,7 +81,7 @@ export default function RealisationsPage() {
       {realisations.map(({ domain, title, constat, solution, architecture }, index) => (
         <div key={title}>
           <section className="py-24">
-            <p className="mb-8 text-xs uppercase tracking-widest text-muted">{domain}</p>
+            <p className="mb-8 text-xs uppercase tracking-widest text-accent-deep">{domain}</p>
             <h2 className="font-serif text-2xl sm:text-3xl text-foreground leading-snug mb-12 max-w-2xl">
               {title}
             </h2>
@@ -97,8 +97,8 @@ export default function RealisationsPage() {
               </div>
             </div>
 
-            <div className="mt-10 rounded border border-border bg-surface p-6">
-              <p className="mb-4 text-xs uppercase tracking-wider text-muted/60">Architecture</p>
+            <div className="mt-10 rounded border border-border border-l-4 border-l-accent bg-surface p-6">
+              <p className="mb-4 text-xs uppercase tracking-wider text-accent-deep">Architecture</p>
               <ul className="space-y-3">
                 {architecture.map((line) => (
                   <li key={line} className="text-sm text-muted leading-relaxed flex gap-3">

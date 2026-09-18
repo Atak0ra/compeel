@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* Header */}
       <section className="py-32 sm:py-40">
         <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-muted">
+          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
             À propos
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
@@ -27,7 +27,7 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Histoire</p>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">Histoire</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
@@ -54,7 +54,7 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Aujourd&apos;hui</p>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">Aujourd&apos;hui</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
           <div>
-            <p className="text-xs uppercase tracking-widest text-muted">Principes</p>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">Principes</p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
             {[
