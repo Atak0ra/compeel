@@ -21,8 +21,8 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel — Studio d\'ingénierie logicielle',
-    template: '%s — Compeel',
+    default: 'Compeel · Studio d\'ingénierie logicielle',
+    template: '%s · Compeel',
   },
   description:
     'Compeel conçoit des architectures logicielles sur-mesure pour des environnements exigeants : conformité, paiements, intégration.',
@@ -34,13 +34,13 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel — Studio d\'ingénierie logicielle',
+    title: 'Compeel · Studio d\'ingénierie logicielle',
     description:
       'Architectures logicielles sur-mesure pour des environnements exigeants : conformité, paiements, intégration.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel — Studio d\'ingénierie logicielle',
+    title: 'Compeel · Studio d\'ingénierie logicielle',
     description: 'Architectures logicielles sur-mesure pour des environnements exigeants.',
   },
   robots: {

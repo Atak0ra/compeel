@@ -3,7 +3,7 @@ import Link from 'next/link'
 import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Compeel — Studio d\'ingénierie logicielle',
+  title: 'Compeel · Studio d\'ingénierie logicielle',
   description:
     'Compeel conçoit des architectures logicielles sur-mesure pour des environnements exigeants : conformité, paiements, intégration. Studio d\'ingénierie, pas catalogue de produits.',
 }
@@ -21,7 +21,7 @@ const methode = [
   {
     step: '01',
     title: 'Diagnostiquer',
-    text: 'On isole la contrainte exacte — réglementaire, financière, opérationnelle — directement chez ceux qui la subissent. Pas de brief générique.',
+    text: 'On isole la contrainte exacte (réglementaire, financière, opérationnelle) directement chez ceux qui la subissent. Pas de brief générique.',
   },
   {
     step: '02',
@@ -42,7 +42,7 @@ const stack = [
   },
   {
     title: 'IA agentique',
-    text: 'Automatiser la tuyauterie administrative — rapprochement, routage, vérification — via des workflows supervisés et déterministes. Jamais un agent en roue libre sur une décision financière.',
+    text: 'Automatiser la tuyauterie administrative (rapprochement, routage, vérification) via des workflows supervisés et déterministes. Jamais un agent en roue libre sur une décision financière.',
   },
   {
     title: 'Garde-fous',
@@ -62,12 +62,12 @@ export default function HomePage() {
             Studio d&apos;ingénierie logicielle
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
-            On ne vend pas de logiciels. On conçoit les architectures qui tiennent quand le terrain résiste.
+            Nous concevons des architectures logicielles pour des environnements exigeants.
           </h1>
           <p className="text-lg text-muted leading-relaxed max-w-2xl">
-            Conformité, flux financiers, intégrations complexes — les problèmes que la tech standard
-            contourne. Compeel les prend de front, depuis le diagnostic jusqu&apos;à l&apos;infrastructure
-            en production.
+            Conformité, flux financiers, intégrations complexes : des problèmes que les outils standards
+            ne couvrent pas bien. Compeel s&apos;en occupe, du diagnostic jusqu&apos;à la mise en
+            production.
           </p>
         </div>
       </section>
@@ -82,19 +82,18 @@ export default function HomePage() {
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed max-w-2xl">
             <p>
-              La tech qui circule vient, presque toujours, d&apos;ailleurs. Conçue pour des marchés où le
-              droit des affaires est stable, où un seul rail de paiement suffit, où le réseau ne tombe
-              jamais. Ce n&apos;est pas notre terrain.
+              La plupart des outils logiciels disponibles viennent de marchés où le droit des affaires
+              est stable, où un seul rail de paiement suffit, où le réseau est fiable. Ce n&apos;est pas
+              toujours le cas sur nos marchés.
             </p>
             <p>
-              Une solution qui ignore le droit OHADA, qui suppose un mode de paiement unique, qui part
-              du principe que la connexion est acquise — cette solution est fragile par construction.
-              Elle marche en démo. Elle casse au contact du réel.
+              Une solution qui suppose un cadre réglementaire unique, un mode de paiement unique ou une
+              connexion permanente tient rarement une fois déployée sur le terrain.
             </p>
             <p>
-              On ne fait pas d&apos;adaptation cosmétique de produits pensés ailleurs. On construit depuis
-              les contraintes réelles vers l&apos;architecture. C&apos;est plus lent. C&apos;est la seule
-              approche qui tient dans la durée.
+              Plutôt que d&apos;adapter à la marge un produit conçu ailleurs, nous partons des contraintes
+              réelles pour construire l&apos;architecture. C&apos;est plus lent, et ça tient mieux dans le
+              temps.
             </p>
           </div>
         </div>
@@ -135,7 +134,7 @@ export default function HomePage() {
           Des outils, pas des gadgets
         </p>
         <p className="mb-12 text-sm text-muted leading-relaxed max-w-2xl">
-          Chaque brique technique répond à une friction identifiée en amont — jamais utilisée parce
+          Chaque brique technique répond à une friction identifiée en amont, jamais utilisée parce
           qu&apos;elle est à la mode.
         </p>
         <div className="grid gap-4 sm:grid-cols-3">

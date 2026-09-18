@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'Alexis — Agent de développement',
+  title: 'Alexis · Agent de développement',
   description:
     'Alexis est un agent de développement qui transforme vos tickets en code livré. Spec, plan, implémentation testée, livraison sur votre dépôt GitHub ou GitLab.',
 }
@@ -26,7 +26,7 @@ const pipeline = [
     step: '01',
     title: 'Du ticket à la spécification',
     description:
-      'Alexis lit le ticket — titre, description, contexte — rédige une spécification technique détaillée, puis décompose le travail en étapes concrètes avant de commencer à coder.',
+      'Alexis lit le ticket (titre, description, contexte), rédige une spécification technique détaillée, puis décompose le travail en étapes concrètes avant de commencer à coder.',
   },
   {
     step: '02',
@@ -121,7 +121,7 @@ export default function AlexisPage() {
             </h2>
             <p className="text-sm text-muted leading-relaxed">
               Un ticket bien décrit entre dans Alexis. En sortie : une branche,
-              des tests qui passent, une PR prête à relire — et le coût tracé.
+              des tests qui passent, une PR prête à relire, et le coût tracé.
             </p>
           </div>
           {/* Dashboard mockup */}

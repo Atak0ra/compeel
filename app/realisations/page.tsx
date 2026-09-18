@@ -4,7 +4,7 @@ import JsonLd from '@/components/JsonLd'
 export const metadata: Metadata = {
   title: 'Réalisations',
   description:
-    'Preuves de méthode : des architectures logicielles conçues par Compeel pour des frictions de terrain réelles — conformité, santé, mobilité, droit.',
+    'Preuves de méthode : des architectures logicielles conçues par Compeel pour des frictions de terrain réelles, en conformité, santé, mobilité et droit.',
 }
 
 const realisationsSchema = {
@@ -19,13 +19,13 @@ const realisations = [
     domain: 'Droit · Conformité réglementaire',
     title: 'Recherche et analyse de corpus juridiques',
     constat:
-      'L\'accès, l\'analyse croisée et la maîtrise des corpus juridiques et réglementaires en Afrique — textes nationaux, jurisprudence, droit OHADA — se heurtent à la dispersion des sources et à la hiérarchie des normes. Pour les professionnels du droit, exploiter rapidement cette masse documentaire est un défi opérationnel permanent.',
+      'L\'accès, l\'analyse croisée et la maîtrise des corpus juridiques et réglementaires en Afrique (textes nationaux, jurisprudence, droit OHADA) se heurtent à la dispersion des sources et à la hiérarchie des normes. Pour les professionnels du droit, exploiter rapidement cette masse documentaire est un défi opérationnel permanent.',
     solution:
       'Une infrastructure logicielle conçue pour automatiser la recherche, l\'analyse et la synthèse de données juridiques denses, avec traçabilité systématique de chaque référence citée.',
     architecture: [
-      'RAG contextuel — interrogation sémantique de corpus juridiques volumineux, avec extraction de références exactes et croisées.',
-      'Workflows agentiques — structuration automatisée des dossiers, veille réglementaire, pré-analyses documentaires.',
-      'Garde-fous — couches de vérification pour la précision terminologique et la conformité des résultats aux exigences de rigueur juridique.',
+      'RAG contextuel : interrogation sémantique de corpus juridiques volumineux, avec extraction de références exactes et croisées.',
+      'Workflows agentiques : structuration automatisée des dossiers, veille réglementaire, pré-analyses documentaires.',
+      'Garde-fous : couches de vérification pour la précision terminologique et la conformité des résultats aux exigences de rigueur juridique.',
     ],
   },
   {
@@ -34,10 +34,10 @@ const realisations = [
     constat:
       'Solopreneurs et agences gèrent plusieurs dépôts et backlogs en parallèle. Le triage, la relecture et le suivi de coût des tickets bien cadrés consomment un temps mieux investi ailleurs.',
     solution:
-      'Un agent qui prend un ticket, rédige une spécification technique, décompose le travail, écrit le code, lance les tests, puis livre le résultat sur le dépôt — avec ou sans relecture avant mise en ligne.',
+      'Un agent qui prend un ticket, rédige une spécification technique, décompose le travail, écrit le code, lance les tests, puis livre le résultat sur le dépôt, avec ou sans relecture avant mise en ligne.',
     architecture: [
-      'Workflow agentique déterministe — spécification, plan, implémentation testée, jamais d\'exécution en roue libre.',
-      'État persisté — un run interrompu reprend au dernier état stable plutôt que de tout recommencer.',
+      'Workflow agentique déterministe : spécification, plan, implémentation testée, jamais d\'exécution en roue libre.',
+      'État persisté : un run interrompu reprend au dernier état stable plutôt que de tout recommencer.',
       'Coût tracé par ticket, visible en continu.',
     ],
   },
@@ -47,7 +47,7 @@ const realisations = [
     constat:
       'Dans les structures médicales ouest-africaines, la saisie manuelle des dossiers patients est lente et incomplète. Les solutions cloud existantes posent une question non négociable : où vont les données de santé.',
     solution:
-      'Les soignants enregistrent leur voix directement sur le dossier patient. Le système transcrit, centralise, rend consultable — sans qu\'aucune donnée ne quitte la structure.',
+      'Les soignants enregistrent leur voix directement sur le dossier patient. Le système transcrit, centralise, rend consultable, sans qu\'aucune donnée ne quitte la structure.',
     architecture: [
       'Transcription et indexation locales, sans dépendance à un cloud externe.',
       'Architecture conçue pour la contrainte de souveraineté dès la spécification, pas ajoutée après coup.',
@@ -67,11 +67,11 @@ export default function RealisationsPage() {
             Réalisations
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
-            Des preuves de méthode, pas un catalogue.
+            Des architectures livrées pour des frictions de terrain réelles.
           </h1>
           <p className="text-lg text-muted leading-relaxed">
-            Chaque architecture ci-dessous part d&apos;une friction de terrain réelle, documentée avant
-            toute ligne de code. Aucune n&apos;a été conçue pour être vendue en kit.
+            Chaque cas ci-dessous part d&apos;un problème identifié sur le terrain, documenté avant
+            toute ligne de code. Ce ne sont pas des produits sur étagère.
           </p>
         </div>
       </section>
@@ -102,7 +102,7 @@ export default function RealisationsPage() {
               <ul className="space-y-3">
                 {architecture.map((line) => (
                   <li key={line} className="text-sm text-muted leading-relaxed flex gap-3">
-                    <span className="text-accent">—</span>
+                    <span className="text-accent">·</span>
                     <span>{line}</span>
                   </li>
                 ))}

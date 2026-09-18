@@ -3,7 +3,7 @@ import { Mic, FileText, Search, Lock, LayoutGrid, Zap } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: 'KARA — Dossier patient vocal',
+  title: 'KARA · Dossier patient vocal',
   description:
     'KARA est un système de dossier patient vocal pour les structures médicales en Afrique de l\'Ouest. 100% on-premise.',
 }
@@ -106,8 +106,8 @@ export default function KaraPage() {
               Les antécédents d&apos;un patient sont introuvables en urgence.
             </p>
             <p>
-              KARA résout ce problème avec la voix, l&apos;interface la plus naturelle
-              qui soit pour un soignant en pleine consultation.
+              KARA résout ce problème avec la voix, une interface naturelle pour un
+              soignant en pleine consultation.
             </p>
           </div>
         </div>
