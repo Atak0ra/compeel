@@ -116,7 +116,7 @@ export default function HomePage() {
               }`}
             >
               <div>
-                <span className="text-sm font-mono text-accent">{step}</span>
+                <span className="font-serif text-xl text-accent">{step}</span>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
@@ -161,10 +161,9 @@ export default function HomePage() {
           </div>
           <Link
             href="/realisations"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-border px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex shrink-0 items-center rounded border border-border px-5 py-2.5 text-sm text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             Voir les réalisations
-            <span>→</span>
           </Link>
         </div>
       </section>
