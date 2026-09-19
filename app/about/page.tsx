@@ -17,7 +17,7 @@ export default function AboutPage() {
             À propos
           </p>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
-            Un studio africain.
+            Architectures pour problèmes réels.
           </h1>
         </div>
         <ScrollCue />
@@ -33,18 +33,13 @@ export default function AboutPage() {
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
             <p>
-              Compeel a été fondé en 2016 avec Alexis Sambou et Beny Marel Pambou. L&apos;idée était simple :
+              Compeel a été fondé en 2016. L&apos;idée était simple :
               construire des outils technologiques qui répondent aux réalités africaines,
               pas aux fantasmes qu&apos;on projette sur elles depuis l&apos;extérieur.
             </p>
             <p>
-              On a travaillé ensemble pendant quelques années. On a exploré, prototypé,
-              cherché. Puis la vie a imposé une pause. Six ans.
-            </p>
-            <p>
-              Alex n&apos;est plus là pour voir la suite. Cette absence est réelle,
-              et elle est présente dans chaque ligne de code qu&apos;on écrit aujourd&apos;hui.
-              Marel, lui, a pris une autre route.
+              On a travaillé, exploré, prototypé, cherché. Puis la vie a imposé une pause.
+              Six ans.
             </p>
           </div>
         </div>
