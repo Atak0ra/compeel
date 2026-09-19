@@ -3,7 +3,8 @@
 ## Ce qu'est ce projet
 
 Compeel est un studio technologique africain fondé par Williams de Souza.
-Site vitrine du studio et de son produit — KARA — avec un blog personnel.
+Site du studio et de ses produits : KARA, Alexis et Dame Justice.
+Positionnement : studio créateur de produits, pas ESN ni catalogue de prestations.
 Déployé sur Vercel. Domaine : compeel.com
 
 ---
@@ -51,13 +52,13 @@ compeel/
 ### Palette de couleurs
 
 ```
-Background principal : #0F0F0F ou #111111 (noir profond)
-Background secondaire : #1A1A1A (noir léger)
-Texte principal      : #F5F0E8 (blanc cassé chaud)
-Texte secondaire     : #9A9A9A (gris doux)
+Background principal : #F5F4F0 (clair chaud)
+Background secondaire : #EEECEA (surface)
+Texte principal      : #1A1A1A
+Texte secondaire     : #6B6560
 Accent principal     : #C17F3F (terracotta/ocre africain)
 Accent secondaire    : #8B5E3C (brun chaud)
-Bordures subtiles    : #2A2A2A
+Bordures subtiles    : #D8D5D0
 ```
 
 ### Typographie
@@ -69,6 +70,11 @@ Bordures subtiles    : #2A2A2A
 
 ### Composants
 
+- Aperçus HTML/CSS autorisés : KARA vert profond, Alexis clair/violet, Dame Justice clair/rouge brique.
+- Ces identités restent dans les aperçus produit ; Compeel conserve sa palette terracotta.
+- Les écrans imaginés sont signalés comme vues illustratives ; aucune donnée réelle ni métrique inventée présentée comme résultat.
+- Aperçus lisibles sur mobile, jamais masqués pour contourner un problème de mise en page.
+- Contenu visible par défaut, même sans JavaScript ; les animations ne conditionnent pas la lecture.
 - Pas de bordures colorées sur les cartes
 - Pas de gradients agressifs
 - Pas de couleurs criardes

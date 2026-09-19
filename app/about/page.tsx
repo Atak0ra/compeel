@@ -1,148 +1,41 @@
 import type { Metadata } from 'next'
-import { BookOpen, Building2, Compass, Feather, HeartHandshake, MapPin, ShieldAlert } from 'lucide-react'
-import ScrollCue from '@/components/ScrollCue'
-import FadeIn from '@/components/FadeIn'
-import Watermark from '@/components/Watermark'
-
-const principes = [
-  {
-    icon: MapPin,
-    title: 'Terrain d\'abord',
-    text: 'On construit à partir de ce qu\'on observe, pas de ce qu\'on imagine. Chaque produit commence par une frustration réelle.',
-  },
-  {
-    icon: ShieldAlert,
-    title: 'Contraintes réelles',
-    text: 'Connectivité limitée, infrastructure fragile, données sensibles. On conçoit pour ces contraintes, pas malgré elles.',
-  },
-  {
-    icon: Feather,
-    title: 'Sobriété',
-    text: 'Pas de features inutiles. Pas de complexité pour impressionner. Des outils qui font une chose, bien.',
-  },
-  {
-    icon: HeartHandshake,
-    title: 'Honnêteté',
-    text: 'On dit ce qu\'on fait. On ne promet pas ce qu\'on ne peut pas livrer. On construit ce qui est utile.',
-  },
-]
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
+import { projects } from '@/lib/projects'
 
 export const metadata: Metadata = {
-  title: 'À propos',
-  description:
-    'Compeel est un studio d\'ingénierie et de conception logicielle ancré en Afrique, qui construit des architectures sur-mesure pour des environnements exigeants.',
+  title: 'Le studio',
+  description: 'Compeel, studio technologique africain fondé en 2016 par Williams de Souza. Notre histoire et les convictions derrière KARA, Alexis et Dame Justice.',
 }
 
 export default function AboutPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6">
-      {/* Header */}
-      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <Watermark
-          icons={[
-            { icon: Building2, className: '-right-6 top-16 opacity-[0.08]', size: 220 },
-            { icon: Compass, className: 'left-0 bottom-24 opacity-[0.07]', size: 160 },
-          ]}
-        />
-        <div className="relative max-w-2xl">
-          <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
-              <Building2 size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">
-              À propos
-            </p>
-          </div>
-          <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
-            Architectures pour problèmes réels.
-          </h1>
+    <div className="page-shell">
+      <header className="py-12 sm:py-20">
+        <p className="mb-5 text-sm text-accent-deep">Le studio</p>
+        <h1 className="font-serif text-5xl sm:text-6xl">Compeel.</h1>
+        <p className="mt-6 max-w-3xl text-2xl leading-snug sm:text-3xl">Créer des produits à partir des réalités que l&apos;on connaît.</p>
+      </header>
+      <section className="section-space grid gap-8 border-t border-border md:grid-cols-[1fr_2fr]">
+        <div><h2 className="font-serif text-3xl">Williams de SOUZA</h2><p className="mt-3 text-base text-muted">co-Fondateur de Compeel</p></div>
+        <div className="max-w-2xl space-y-6 text-lg leading-relaxed">
+          <p>Nous avons fondé Compeel en 2016 avec une idée simple : construire des outils technologiques qui répondent aux réalités africaines, plutôt qu&apos;à ce que l&apos;on imagine d&apos;elles de loin.</p>
+          <p className="text-muted">Nous avons exploré, prototypé, cherché. Puis la vie a imposé une pause de six ans. Le studio reprend avec une conviction plus précise : partir d&apos;un usage, en comprendre les contraintes et développer un produit qui y répond.</p>
+          <p className="text-muted">Aujourd&apos;hui, ce travail prend trois formes : KARA pour la mémoire clinique, Alexis pour le développement logiciel et Dame Justice pour la recherche juridique.</p>
         </div>
-        <ScrollCue />
       </section>
-
-      <div className="border-t border-border" />
-
-      {/* Story */}
-      <section className="py-24">
-        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
-              <BookOpen size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">Histoire</p>
-          </div>
-          <div className="space-y-6 text-base text-muted leading-relaxed">
-            <p>
-              Compeel a été fondé en 2016. L&apos;idée était simple :
-              construire des outils technologiques qui répondent aux réalités africaines,
-              pas aux fantasmes qu&apos;on projette sur elles depuis l&apos;extérieur.
-            </p>
-            <p>
-              On a travaillé, exploré, prototypé, cherché. Puis la vie a imposé une pause.
-              Six ans.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* Aujourd'hui */}
-      <section className="py-24">
-        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
-              <Compass size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">Aujourd&apos;hui</p>
-          </div>
-          <div className="space-y-6 text-base text-muted leading-relaxed">
-            <p>
-              Le studio reprend. Avec une vision plus claire, une méthode plus précise,
-              et une conviction renforcée par six ans de recul.
-            </p>
-            <p>
-              Compeel conçoit des architectures logicielles sur-mesure pour des frictions de terrain
-              réelles : conformité réglementaire, flux financiers, intégration de systèmes hétérogènes.
-              Dans des domaines comme la santé, la mobilité, le droit.
-            </p>
-            <p>
-              Certaines de nos réalisations utilisent la voix parce que le problème l&apos;exige.
-              D&apos;autres non. Ce qui ne change pas, c&apos;est le point de départ : un vrai problème,
-              observé de l&apos;intérieur.
-            </p>
-            <p>
-              L&apos;Afrique de l&apos;Ouest a des contraintes réelles et des besoins que la tech globale
-              ignore systématiquement. Pas par malveillance, par ignorance. Personne ne construit pour
-              ce marché parce que personne ne le connaît de l&apos;intérieur.
-            </p>
-            <p>
-              Nous, si.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* Principes */}
-      <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">Principes</p>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2">
-            {principes.map(({ icon: Icon, title, text }) => (
-              <FadeIn key={title} className="space-y-3">
-                <div className="flex h-8 w-8 items-center justify-center rounded border border-accent/30 bg-background">
-                  <Icon size={16} className="text-accent-deep" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-sm font-medium text-foreground">{title}</h3>
-                <p className="text-sm text-muted leading-relaxed">{text}</p>
-              </FadeIn>
-            ))}
-          </div>
+      <section className="section-space border-t border-border">
+        <div className="mb-10 grid gap-5 md:grid-cols-[1fr_2fr]"><h2 className="font-serif text-3xl">Ce qui nous guide.</h2><p className="max-w-xl text-lg leading-relaxed text-muted">Les convictions du studio se lisent dans les produits. Elles doivent correspondre à des décisions concrètes.</p></div>
+        <div className="grid gap-9 md:grid-cols-3">
+          <div><p className="mb-4 text-sm text-accent-deep">KARA</p><h3 className="mb-3 text-xl">Respecter le terrain</h3><p className="text-base leading-relaxed text-muted">Une voix plutôt qu&apos;un formulaire. Un serveur local plutôt qu&apos;une dépendance à un cloud externe. La conception commence avec les contraintes des soignants.</p></div>
+          <div><p className="mb-4 text-sm text-accent-deep">Alexis</p><h3 className="mb-3 text-xl">Laisser le contrôle</h3><p className="text-base leading-relaxed text-muted">Automatiser le travail ne signifie pas supprimer le jugement. Spécification, vérifications et validation humaine encadrent le développement.</p></div>
+          <div><p className="mb-4 text-sm text-accent-deep">Dame Justice</p><h3 className="mb-3 text-xl">Montrer ses sources</h3><p className="text-base leading-relaxed text-muted">Une réponse juridique ne vaut pas sans contexte. Pouvoir revenir au document fait partie du produit, pas d&apos;une note de bas de page.</p></div>
         </div>
+      </section>
+      <section className="section-space border-t border-border">
+        <h2 className="mb-8 font-serif text-3xl">Ce que nous construisons.</h2>
+        <div className="divide-y divide-border">{projects.map(project => <Link key={project.id} href={project.href} className="flex flex-wrap items-center justify-between gap-4 py-6 hover:text-accent-deep"><span className="font-serif text-2xl">{project.name}</span><span className="flex items-center gap-3 text-base">{project.domain}<ArrowUpRight size={18} aria-hidden="true" /></span></Link>)}</div>
+        <Link href="/#contact" className="button-primary mt-9">Échanger avec le studio<ArrowUpRight size={18} aria-hidden="true" /></Link>
       </section>
     </div>
   )

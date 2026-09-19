@@ -20,5 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.7,
     },
+    ...['kara', 'alexis', 'damejustice'].map(slug => ({
+      url: `https://compeel.com/${slug}`,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
   ]
 }

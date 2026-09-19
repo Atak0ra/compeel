@@ -32,6 +32,15 @@
     box-sizing: border-box;
   }
 
+  :focus-visible {
+    outline: 2px solid #8B5E3C;
+    outline-offset: 4px;
+  }
+
+  h1, h2, h3, p, a, figcaption {
+    overflow-wrap: break-word;
+  }
+
   ::selection {
     background-color: #C17F3F;
     color: #F5F4F0;
@@ -39,6 +48,18 @@
 }
 
 @layer utilities {
+  .page-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .section-space {
+    @apply py-12 sm:py-20;
+  }
+
+  .button-primary {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded bg-accent-deep px-5 py-3 text-base text-white transition-colors hover:bg-foreground;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -48,9 +69,8 @@
   }
 
   .fade-in {
-    opacity: 0;
-    transform: translateY(16px);
-    transition: opacity 500ms ease-out, transform 500ms ease-out;
+    opacity: 1;
+    transform: none;
   }
 
   .fade-in-visible {

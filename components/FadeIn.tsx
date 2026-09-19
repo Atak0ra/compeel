@@ -16,6 +16,11 @@ export default function FadeIn({
     const node = ref.current
     if (!node) return
 
+    if (typeof IntersectionObserver === 'undefined') {
+      setVisible(true)
+      return
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -26,7 +31,14 @@ export default function FadeIn({
       { threshold: 0.15 }
     )
     observer.observe(node)
-    return () => observer.disconnect()
+
+    // Filet de sécurité : le texte ne doit jamais rester invisible si l'observer ne se déclenche pas.
+    const fallback = setTimeout(() => setVisible(true), 1500)
+
+    return () => {
+      observer.disconnect()
+      clearTimeout(fallback)
+    }
   }, [])
 
   return (

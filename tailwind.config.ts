@@ -24,9 +24,9 @@ const config: Config = {
         mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
-        '5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        '6xl': ['3.75rem', { lineHeight: '1.05', letterSpacing: '-0.025em' }],
-        '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.03em' }],
+        '5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '0' }],
+        '6xl': ['3.75rem', { lineHeight: '1.05', letterSpacing: '0' }],
+        '7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '0' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -65,8 +65,8 @@ const config: Config = {
             '--tw-prose-pre-bg': '#EEECEA',
             '--tw-prose-th-borders': '#D8D5D0',
             '--tw-prose-td-borders': '#D8D5D0',
-            h1: { fontFamily: 'var(--font-dm-serif), Georgia, serif', letterSpacing: '-0.02em' },
-            h2: { fontFamily: 'var(--font-dm-serif), Georgia, serif', letterSpacing: '-0.01em' },
+            h1: { fontFamily: 'var(--font-dm-serif), Georgia, serif', letterSpacing: '0' },
+            h2: { fontFamily: 'var(--font-dm-serif), Georgia, serif', letterSpacing: '0' },
             h3: { fontFamily: 'var(--font-dm-serif), Georgia, serif' },
             a: {
               color: '#C17F3F',

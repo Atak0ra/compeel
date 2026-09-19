@@ -1,209 +1,27 @@
 import type { Metadata } from 'next'
-import { AlertCircle, Mic, FileText, Search, Lock, LayoutGrid, Send, ShieldCheck, Zap, Stethoscope } from 'lucide-react'
-import JsonLd from '@/components/JsonLd'
-import ScrollCue from '@/components/ScrollCue'
-import FadeIn from '@/components/FadeIn'
-import Watermark from '@/components/Watermark'
+import ProductStory from '@/components/ProductStory'
+import { projects } from '@/lib/projects'
 
-export const metadata: Metadata = {
-  title: 'KARA · Dossier patient vocal',
-  description:
-    'KARA est un système de dossier patient vocal pour les structures médicales en Afrique de l\'Ouest. 100% on-premise.',
-}
-
-const karaSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: 'KARA',
-  description:
-    "Système de dossier patient vocal pour les structures médicales en Afrique de l'Ouest. Transcription automatique, recherche en langage naturel. 100% on-premise.",
-  brand: {
-    '@type': 'Organization',
-    name: 'Compeel',
-  },
-  category: 'Logiciel médical',
-  url: 'https://compeel.com/kara',
-}
-
-const features = [
-  {
-    icon: Mic,
-    title: 'Enregistrement vocal',
-    description:
-      'Chaque soignant enregistre sa voix directement sur le dossier du patient. Pas de clavier, pas de formulaire. Juste la voix.',
-  },
-  {
-    icon: FileText,
-    title: 'Transcription automatique',
-    description:
-      'Tout est transcrit automatiquement en temps réel. Les notes vocales deviennent du texte structuré, consultable et archivé.',
-  },
-  {
-    icon: Search,
-    title: 'Recherche en langage naturel',
-    description:
-      'Retrouvez n\'importe quelle information dans les dossiers en posant une question simple. "Patients diabétiques vus ce mois". KARA répond.',
-  },
-  {
-    icon: Lock,
-    title: 'Tout reste chez vous',
-    description:
-      'Aucune donnée ne quitte la structure. KARA tourne entièrement sur vos serveurs locaux. Conformité totale avec les exigences de confidentialité médicale.',
-  },
-  {
-    icon: LayoutGrid,
-    title: 'Dossier centralisé',
-    description:
-      'Tous les soignants d\'une structure accèdent au même dossier patient. Fin des informations dispersées entre services.',
-  },
-  {
-    icon: Zap,
-    title: 'Faible infrastructure',
-    description:
-      'Conçu pour fonctionner avec une connectivité limitée et du matériel standard. Pas besoin de serveurs cloud ou de connexion permanente.',
-  },
-]
+export const metadata: Metadata = { title: 'KARA · Mémoire clinique vocale', description: projects[0].description }
 
 export default function KaraPage() {
-  return (
-    <div className="mx-auto max-w-5xl px-6">
-      <JsonLd data={karaSchema} />
-      {/* Hero */}
-      <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <Watermark
-          icons={[
-            { icon: Stethoscope, className: '-right-6 top-12 opacity-[0.08]', size: 220 },
-            { icon: Mic, className: 'left-0 bottom-20 opacity-[0.07]', size: 150 },
-          ]}
-        />
-        <div className="relative max-w-3xl">
-          <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
-              <Stethoscope size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">
-              Réalisation · Santé
-            </p>
-          </div>
-          <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
-            KARA
-          </h1>
-          <p className="text-xl text-muted leading-relaxed mb-6">
-            Le dossier patient qui s&apos;écoute.
-          </p>
-          <p className="text-base text-muted leading-relaxed max-w-2xl">
-            KARA est un système de dossier patient vocal pour les structures médicales
-            en Afrique de l&apos;Ouest. Chaque soignant enregistre sa voix sur le dossier
-            d&apos;un patient. Tout est transcrit automatiquement, centralisé et consultable
-            en langage naturel.
-          </p>
-        </div>
-        <ScrollCue />
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* Problème */}
-      <section className="py-24">
-        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
-              <AlertCircle size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <p className="text-xs uppercase tracking-widest text-accent-deep">Le problème</p>
-          </div>
-          <div className="space-y-6 text-base text-muted leading-relaxed">
-            <p>
-              Dans la plupart des structures médicales en Afrique de l&apos;Ouest,
-              les dossiers patients sont encore sur papier. Quand ils sont numérisés,
-              c&apos;est souvent dans des tableurs Excel ou des logiciels inadaptés.
-            </p>
-            <p>
-              Les soignants passent un temps précieux à remplir des formulaires
-              au lieu de soigner. Les informations se perdent entre les services.
-              Les antécédents d&apos;un patient sont introuvables en urgence.
-            </p>
-            <p>
-              KARA résout ce problème avec la voix, une interface naturelle pour un
-              soignant en pleine consultation.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* Features */}
-      <section className="py-24">
-        <p className="mb-12 text-xs uppercase tracking-widest text-accent-deep">
-          Fonctionnalités
-        </p>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map(({ icon: Icon, title, description }) => (
-            <FadeIn
-              key={title}
-              className="rounded border border-border bg-surface p-6 space-y-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-subtle"
-            >
-              <div className="flex h-7 w-7 items-center justify-center rounded border border-accent/30 bg-background">
-                <Icon size={14} className="text-accent-deep" strokeWidth={1.5} />
-              </div>
-              <h3 className="text-sm font-medium text-foreground">{title}</h3>
-              <p className="text-sm text-muted leading-relaxed">{description}</p>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* On-premise highlight */}
-      <section className="py-24">
-        <FadeIn className="rounded border border-border border-l-4 border-l-accent bg-surface p-10 sm:p-12">
-          <div className="mb-4 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
-            <ShieldCheck size={18} className="text-accent-deep" strokeWidth={1.5} />
-          </div>
-          <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">
-            Confidentialité
-          </p>
-          <h2 className="font-serif text-2xl sm:text-3xl text-foreground mb-6 max-w-xl">
-            Aucune donnée médicale ne quitte votre structure.
-          </h2>
-          <p className="text-sm text-muted leading-relaxed max-w-2xl">
-            Aucune donnée ne sort de vos murs. Le modèle de transcription, la base de données,
-            le moteur de recherche, tout tourne sur vos serveurs locaux.
-            Pas de cloud, pas de synchronisation externe, pas de risque de fuite.
-            Vos patients vous font confiance. Nous respectons cette confiance.
-          </p>
-        </FadeIn>
-      </section>
-
-      <div className="border-t border-border" />
-
-      {/* CTA */}
-      <section className="py-24">
-        <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
-              <Send size={18} className="text-accent-deep" strokeWidth={1.5} />
-            </div>
-            <h2 className="font-serif text-2xl text-foreground mb-2">
-              Déployer KARA dans votre structure
-            </h2>
-            <p className="text-sm text-muted">
-              Démonstration, installation et support disponibles.
-            </p>
-          </div>
-          <a
-            href="https://kara.compeel.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded border border-accent bg-accent px-6 py-3 text-sm text-background transition-colors hover:border-accent-deep hover:bg-accent-deep"
-          >
-            En savoir plus
-            <span>↗</span>
-          </a>
-        </FadeIn>
-      </section>
-    </div>
-  )
+  return <ProductStory
+    project={projects[0]}
+    introduction="Les observations se dispersent entre papier, fichiers et transmissions orales. KARA part d'un geste simple : enregistrer sa voix sur le dossier du patient, puis retrouver cette information avec son contexte."
+    decisions={[
+      { title: 'La voix comme point de départ', text: 'Le soignant dicte ses observations depuis le navigateur de son téléphone. La note vocale reste associée au dossier.' },
+      { title: 'Une mémoire partagée', text: 'Les transcriptions et les documents se retrouvent dans le même historique, consultable par les soignants de la structure.' },
+      { title: 'Un hébergement local', text: 'Transcription et recherche sont conçues pour fonctionner sur le serveur de la structure, sans externalisation des données médicales.' },
+    ]}
+    boundary="Le parcours de l'information, à l'intérieur de la structure médicale."
+    steps={[
+      { title: 'Dicter', text: 'Une observation vocale est enregistrée sur le dossier patient.' },
+      { title: 'Transcrire', text: 'La note devient un compte-rendu structuré, après traitement local.' },
+      { title: 'Centraliser', text: 'Le compte-rendu rejoint les documents et l’historique du dossier.' },
+      { title: 'Retrouver', text: 'Le soignant consulte un dossier ou recherche une information.' },
+    ]}
+    limitation="L'hébergement local ne remplace pas la gestion des accès, les sauvegardes ni la vérification des transcriptions par les soignants. Les conditions de déploiement sont à étudier avec chaque structure."
+    action="Découvrir KARA"
+    demo="https://demo-kara.compeel.com/"
+  />
 }
