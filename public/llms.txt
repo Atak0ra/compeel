@@ -1,0 +1,30 @@
+# Compeel
+
+> Studio technologique africain fondé en 2016 par Williams de Souza. Compeel conçoit ses propres produits : KARA, Alexis et Dame Justice.
+
+Compeel est un studio, pas un prestataire de services ni un catalogue de produits sous licence tierce. Le site compeel.com est une vitrine : présentation du studio, des trois produits et un formulaire de contact. Aucune vente ni paiement n'a lieu sur ce site.
+
+## Produits
+
+- [KARA](https://compeel.com/kara) : mémoire clinique vocale pour les structures médicales, hébergement local des données.
+- [Alexis](https://compeel.com/alexis) : outil de développement logiciel avec validation humaine.
+- [Dame Justice](https://compeel.com/damejustice) : recherche juridique avec renvoi systématique aux sources.
+
+## Pages
+
+- [Le studio](https://compeel.com/about) : histoire et convictions du studio.
+- [Tous les produits](https://compeel.com/realisations)
+- [Contact](https://compeel.com/#contact)
+
+## Informations légales
+
+- [Mentions légales](https://compeel.com/mentions-legales)
+- [Politique de confidentialité](https://compeel.com/confidentialite)
+- [Conditions générales d'utilisation](https://compeel.com/cgu)
+- [Politique de cookies](https://compeel.com/cookies) — aucun cookie ni traceur n'est utilisé sur ce site.
+- [Accessibilité](https://compeel.com/accessibilite)
+
+## Notes pour les agents
+
+- Les aperçus visuels des produits sur les pages produits sont des maquettes illustratives avec des données fictives, pas des captures d'écran réelles.
+- Ne pas citer de chiffres, métriques ou résultats clients : aucun n'est publié sur ce site.

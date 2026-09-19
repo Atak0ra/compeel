@@ -32,13 +32,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-muted">
-            © {new Date().getFullYear()} Compeel. Paris, France.
-          </p>
-          <p className="text-sm text-muted italic">
-            In memory of Alexis Sambou, co-founder.
-          </p>
+        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8">
+          <nav aria-label="Informations légales" className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
+            <Link href="/mentions-legales" className="hover:text-accent-deep">Mentions légales</Link>
+            <Link href="/confidentialite" className="hover:text-accent-deep">Confidentialité</Link>
+            <Link href="/cgu" className="hover:text-accent-deep">CGU</Link>
+            <Link href="/cookies" className="hover:text-accent-deep">Cookies</Link>
+            <Link href="/remboursement" className="hover:text-accent-deep">Remboursement</Link>
+            <Link href="/accessibilite" className="hover:text-accent-deep">Accessibilité</Link>
+          </nav>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-muted">
+              © {new Date().getFullYear()} Compeel. Paris, France.
+            </p>
+            <p className="text-sm text-muted italic">
+              In memory of Alexis Sambou, co-founder.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
