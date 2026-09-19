@@ -1,5 +1,31 @@
 import type { Metadata } from 'next'
+import { BookOpen, Building2, Compass, Feather, HeartHandshake, MapPin, ShieldAlert } from 'lucide-react'
 import ScrollCue from '@/components/ScrollCue'
+import FadeIn from '@/components/FadeIn'
+import Watermark from '@/components/Watermark'
+
+const principes = [
+  {
+    icon: MapPin,
+    title: 'Terrain d\'abord',
+    text: 'On construit à partir de ce qu\'on observe, pas de ce qu\'on imagine. Chaque produit commence par une frustration réelle.',
+  },
+  {
+    icon: ShieldAlert,
+    title: 'Contraintes réelles',
+    text: 'Connectivité limitée, infrastructure fragile, données sensibles. On conçoit pour ces contraintes, pas malgré elles.',
+  },
+  {
+    icon: Feather,
+    title: 'Sobriété',
+    text: 'Pas de features inutiles. Pas de complexité pour impressionner. Des outils qui font une chose, bien.',
+  },
+  {
+    icon: HeartHandshake,
+    title: 'Honnêteté',
+    text: 'On dit ce qu\'on fait. On ne promet pas ce qu\'on ne peut pas livrer. On construit ce qui est utile.',
+  },
+]
 
 export const metadata: Metadata = {
   title: 'À propos',
@@ -12,10 +38,21 @@ export default function AboutPage() {
     <div className="mx-auto max-w-5xl px-6">
       {/* Header */}
       <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
-            À propos
-          </p>
+        <Watermark
+          icons={[
+            { icon: Building2, className: '-right-6 top-16 opacity-[0.08]', size: 220 },
+            { icon: Compass, className: 'left-0 bottom-24 opacity-[0.07]', size: 160 },
+          ]}
+        />
+        <div className="relative max-w-2xl">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Building2 size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">
+              À propos
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight">
             Architectures pour problèmes réels.
           </h1>
@@ -27,8 +64,11 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
+        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
+              <BookOpen size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <p className="text-xs uppercase tracking-widest text-accent-deep">Histoire</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
@@ -42,15 +82,18 @@ export default function AboutPage() {
               Six ans.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
 
       {/* Aujourd'hui */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
+        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
+              <Compass size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <p className="text-xs uppercase tracking-widest text-accent-deep">Aujourd&apos;hui</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
@@ -77,7 +120,7 @@ export default function AboutPage() {
               Nous, si.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
@@ -89,28 +132,14 @@ export default function AboutPage() {
             <p className="text-xs uppercase tracking-widest text-accent-deep">Principes</p>
           </div>
           <div className="grid gap-8 sm:grid-cols-2">
-            {[
-              {
-                title: 'Terrain d\'abord',
-                text: 'On construit à partir de ce qu\'on observe, pas de ce qu\'on imagine. Chaque produit commence par une frustration réelle.',
-              },
-              {
-                title: 'Contraintes réelles',
-                text: 'Connectivité limitée, infrastructure fragile, données sensibles. On conçoit pour ces contraintes, pas malgré elles.',
-              },
-              {
-                title: 'Sobriété',
-                text: 'Pas de features inutiles. Pas de complexité pour impressionner. Des outils qui font une chose, bien.',
-              },
-              {
-                title: 'Honnêteté',
-                text: 'On dit ce qu\'on fait. On ne promet pas ce qu\'on ne peut pas livrer. On construit ce qui est utile.',
-              },
-            ].map(({ title, text }) => (
-              <div key={title} className="space-y-2">
+            {principes.map(({ icon: Icon, title, text }) => (
+              <FadeIn key={title} className="space-y-3">
+                <div className="flex h-8 w-8 items-center justify-center rounded border border-accent/30 bg-background">
+                  <Icon size={16} className="text-accent-deep" strokeWidth={1.5} />
+                </div>
                 <h3 className="text-sm font-medium text-foreground">{title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{text}</p>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>

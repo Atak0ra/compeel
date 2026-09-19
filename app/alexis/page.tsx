@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
-import { Bot } from 'lucide-react'
+import { Bot, Cpu, FileText, GitBranch, LayoutDashboard, ListChecks, Send, User, Users } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import ScrollCue from '@/components/ScrollCue'
+import FadeIn from '@/components/FadeIn'
+import Watermark from '@/components/Watermark'
 
 export const metadata: Metadata = {
   title: 'Alexis · Agent de développement',
@@ -26,18 +28,21 @@ const alexisSchema = {
 const pipeline = [
   {
     step: '01',
+    icon: FileText,
     title: 'Du ticket à la spécification',
     description:
       'Alexis lit le ticket (titre, description, contexte), rédige une spécification technique détaillée, puis décompose le travail en étapes concrètes avant de commencer à coder.',
   },
   {
     step: '02',
+    icon: Cpu,
     title: 'Exécution testée, état persisté',
     description:
       'L\'agent écrit le code, lance les tests et itère jusqu\'à ce que tout passe. Chaque étape est persistée : si un run est interrompu ou échoue, Alexis reprend au dernier état stable plutôt que de tout recommencer depuis le début.',
   },
   {
     step: '03',
+    icon: GitBranch,
     title: 'Livraison sur votre dépôt',
     description:
       'Le code est livré sur votre dépôt GitHub ou GitLab. Avec ou sans relecture avant mise en ligne, selon vos réglages. Le coût du ticket est tracé et visible dans le tableau de bord.',
@@ -46,14 +51,17 @@ const pipeline = [
 
 const useCases = [
   {
+    icon: User,
     label: 'Solopreneur multi-projets',
     text: 'Vous gérez plusieurs dépôts en parallèle. Alexis prend en charge les tickets bien cadrés pendant que vous vous concentrez sur ce qui demande votre attention directe.',
   },
   {
+    icon: Users,
     label: 'Agence : paralléliser les tickets',
     text: 'Plusieurs projets clients, plusieurs backlogs. Un seul tableau de bord pour suivre l\'avancement et les coûts, projet par projet.',
   },
   {
+    icon: ListChecks,
     label: 'Tâches de dev bien définies',
     text: 'Alexis est efficace sur des tickets avec un périmètre clair : ajout de fonctionnalité, correction de bug, refactoring ciblé. Pas un outil pour des specs floues.',
   },
@@ -65,7 +73,13 @@ export default function AlexisPage() {
       <JsonLd data={alexisSchema} />
       {/* Hero */}
       <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <div className="max-w-3xl">
+        <Watermark
+          icons={[
+            { icon: Bot, className: '-right-6 top-12 opacity-[0.08]', size: 220 },
+            { icon: GitBranch, className: 'left-0 bottom-20 opacity-[0.07]', size: 150 },
+          ]}
+        />
+        <div className="relative max-w-3xl">
           <div className="mb-6 flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
               <Bot size={18} className="text-accent-deep" strokeWidth={1.5} />
@@ -98,21 +112,24 @@ export default function AlexisPage() {
           Pipeline technique
         </p>
         <div>
-          {pipeline.map(({ step, title, description }, index) => (
-            <div
+          {pipeline.map(({ step, icon: Icon, title, description }, index) => (
+            <FadeIn
               key={step}
               className={`grid gap-8 py-10 sm:grid-cols-[64px_1fr] ${
                 index < pipeline.length - 1 ? 'border-b border-border' : ''
               }`}
             >
-              <div>
+              <div className="flex items-center gap-3 sm:flex-col sm:items-start sm:gap-4">
                 <span className="font-serif text-xl text-accent">{step}</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded border border-accent/30 bg-background">
+                  <Icon size={16} className="text-accent-deep" strokeWidth={1.5} />
+                </div>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
                 <p className="text-sm text-muted leading-relaxed">{description}</p>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -121,8 +138,11 @@ export default function AlexisPage() {
 
       {/* Exemple */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-2">
+        <FadeIn className="grid gap-16 sm:grid-cols-2">
           <div>
+            <div className="mb-4 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <LayoutDashboard size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">Exemple</p>
             <h2 className="font-serif text-2xl text-foreground mb-4">
               Du ticket au code livré
@@ -174,7 +194,7 @@ export default function AlexisPage() {
               </div>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
@@ -185,11 +205,14 @@ export default function AlexisPage() {
           Cas d&apos;usage
         </p>
         <div className="grid gap-4 sm:grid-cols-3">
-          {useCases.map(({ label, text }) => (
-            <div key={label} className="rounded border border-border bg-surface p-6 transition-colors hover:border-accent/40">
-              <p className="mb-3 text-xs uppercase tracking-wider text-foreground font-medium">{label}</p>
+          {useCases.map(({ icon: Icon, label, text }) => (
+            <FadeIn key={label} className="rounded border border-border bg-surface p-6 space-y-3 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-subtle">
+              <div className="flex h-7 w-7 items-center justify-center rounded border border-accent/30 bg-background">
+                <Icon size={14} className="text-accent-deep" strokeWidth={1.5} />
+              </div>
+              <p className="text-xs uppercase tracking-wider text-foreground font-medium">{label}</p>
               <p className="text-sm text-muted leading-relaxed">{text}</p>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -198,8 +221,11 @@ export default function AlexisPage() {
 
       {/* CTA */}
       <section className="py-24">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Send size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <h2 className="font-serif text-2xl text-foreground mb-2">
               Essayer Alexis sur votre projet
             </h2>
@@ -216,7 +242,7 @@ export default function AlexisPage() {
             Accéder à Alexis
             <span>↗</span>
           </a>
-        </div>
+        </FadeIn>
       </section>
     </div>
   )

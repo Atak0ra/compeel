@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
-import { Bot, Scale, Stethoscope } from 'lucide-react'
+import { Bot, Layers, Scale, Stethoscope } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import ScrollCue from '@/components/ScrollCue'
+import FadeIn from '@/components/FadeIn'
+import Watermark from '@/components/Watermark'
 
 export const metadata: Metadata = {
   title: 'Réalisations',
@@ -67,10 +69,22 @@ export default function RealisationsPage() {
 
       {/* Hero */}
       <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <div className="max-w-2xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
-            Réalisations
-          </p>
+        <Watermark
+          icons={[
+            { icon: Scale, className: '-right-4 top-10 opacity-[0.08]', size: 200 },
+            { icon: Bot, className: 'right-1/4 bottom-16 opacity-[0.06]', size: 130 },
+            { icon: Stethoscope, className: 'left-0 top-1/3 opacity-[0.06]', size: 150 },
+          ]}
+        />
+        <div className="relative max-w-2xl">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Layers size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">
+              Réalisations
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Des architectures livrées pour des frictions de terrain réelles.
           </h1>
@@ -87,7 +101,7 @@ export default function RealisationsPage() {
       {realisations.map(({ domain, title, constat, solution, architecture, icon: Icon }, index) => (
         <div key={title}>
           <section className="py-24">
-            <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+            <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
               <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
                 {Icon && (
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
@@ -117,7 +131,7 @@ export default function RealisationsPage() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </section>
           {index < realisations.length - 1 && <div className="border-t border-border" />}
         </div>

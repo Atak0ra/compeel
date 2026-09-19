@@ -3,18 +3,12 @@
 ## Ce qu'est ce projet
 
 Compeel est un studio technologique africain fondé par Williams de Souza.
-Site vitrine du studio et de ses deux produits — KUMA et KARA — avec un blog personnel.
+Site vitrine du studio et de son produit — KARA — avec un blog personnel.
 Déployé sur Vercel. Domaine : compeel.com
 
 ---
 
-## Les deux produits
-
-**KUMA**
-API de détection d'intention vocale en Mina et Ewe.
-Pipeline : audio Mina/Ewe → Whisper ASR → transcription française → LLM → JSON structuré.
-Cas d'usage principal : mobilité urbaine à Lomé, Togo (Gozem, livraison).
-En production sur : kuma.compeel.prcomo
+## Le produit
 
 **KARA**
 Système de dossier patient vocal pour les structures médicales en Afrique de l'Ouest.
@@ -40,7 +34,6 @@ compeel/
 ├── app/
 │   ├── page.tsx              → Homepage
 │   ├── about/page.tsx        → À propos
-│   ├── kuma/page.tsx         → Page KUMA
 │   ├── kara/page.tsx         → Page KARA
 │   ├── blog/page.tsx         → Liste des articles
 │   └── blog/[slug]/page.tsx  → Article individuel
@@ -82,12 +75,23 @@ Bordures subtiles    : #2A2A2A
 - Beaucoup d'espace blanc (padding généreux)
 - Ombres subtiles seulement si nécessaire
 
+### Animations
+
+Autorisées si sobres et fonctionnelles — elles servent la lisibilité, jamais la décoration.
+
+- Transitions courtes (150–300ms), easing simple, pas d'effet bounce/spring
+- Fade-in / slide léger au scroll, hover states discrets, micro-interactions sur clic
+- Pas de librairie d'illustration animée (Lottie stock, clipart type unDraw/Storyset)
+- Pas de parallax lourd, pas d'auto-play en boucle, pas d'animation qui retarde la lecture du contenu
+- En cas de doute sur une animation — demander confirmation
+
 ### Interdit
 
 - Vert vif ou couleurs saturées
 - Cartes avec fond coloré
 - Trop d'éléments sur une même page
-- Animations lourdes ou inutiles
+- Animations lourdes, inutiles, ou qui distraient du contenu
+- Illustrations stock génériques (unDraw, Storyset, Blush) — hors palette et identité visuelle du site
 
 ---
 

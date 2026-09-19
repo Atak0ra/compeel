@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Briefcase, Cpu, Layers, Search, Send, ShieldCheck, Target } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import ContactForm from '@/components/ContactForm'
 import ScrollCue from '@/components/ScrollCue'
+import FadeIn from '@/components/FadeIn'
+import HeroVisual from '@/components/HeroVisual'
 
 export const metadata: Metadata = {
   title: 'Compeel · Studio d\'ingénierie logicielle',
@@ -22,16 +25,19 @@ const websiteSchema = {
 const methode = [
   {
     step: '01',
+    icon: Search,
     title: 'Diagnostiquer',
     text: 'On isole la contrainte exacte (réglementaire, financière, opérationnelle) directement chez ceux qui la subissent. Pas de brief générique.',
   },
   {
     step: '02',
+    icon: Layers,
     title: 'Architecturer',
     text: 'Chaque contrainte devient une décision de conception assumée : conformité, routage des flux, résistance à la rupture réseau. L\'architecture se pense avant que le code ne s\'écrive.',
   },
   {
     step: '03',
+    icon: ShieldCheck,
     title: 'Industrialiser',
     text: 'Sécurité, montée en charge, résilience terrain. Un système qui tient en production, pas un prototype qui impressionne en démo.',
   },
@@ -44,10 +50,16 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <div className="max-w-3xl">
-          <p className="mb-6 text-xs uppercase tracking-widest text-accent-deep">
-            Studio d&apos;ingénierie logicielle
-          </p>
+        <HeroVisual />
+        <div className="relative max-w-3xl">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Cpu size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
+            <p className="text-xs uppercase tracking-widest text-accent-deep">
+              Studio d&apos;ingénierie logicielle
+            </p>
+          </div>
           <h1 className="font-serif text-5xl sm:text-6xl text-foreground leading-tight mb-8">
             Nous concevons des architectures logicielles pour des environnements exigeants.
           </h1>
@@ -79,8 +91,11 @@ export default function HomePage() {
 
       {/* Manifeste */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
+        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
+              <Target size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <p className="text-xs uppercase tracking-widest text-accent-deep">Manifeste</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed max-w-2xl">
@@ -99,7 +114,7 @@ export default function HomePage() {
               temps.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
@@ -110,21 +125,24 @@ export default function HomePage() {
           Notre méthode
         </p>
         <div>
-          {methode.map(({ step, title, text }, index) => (
-            <div
+          {methode.map(({ step, icon: Icon, title, text }, index) => (
+            <FadeIn
               key={step}
               className={`grid gap-8 py-10 sm:grid-cols-[64px_1fr] ${
                 index < methode.length - 1 ? 'border-b border-border' : ''
               }`}
             >
-              <div>
+              <div className="flex items-center gap-3 sm:flex-col sm:items-start sm:gap-4">
                 <span className="font-serif text-xl text-accent">{step}</span>
+                <div className="flex h-8 w-8 items-center justify-center rounded border border-accent/30 bg-background">
+                  <Icon size={16} className="text-accent-deep" strokeWidth={1.5} />
+                </div>
               </div>
               <div>
                 <h3 className="mb-3 text-base font-medium text-foreground">{title}</h3>
                 <p className="text-sm text-muted leading-relaxed max-w-xl">{text}</p>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -133,9 +151,14 @@ export default function HomePage() {
 
       {/* Réalisations teaser */}
       <section className="py-24">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <FadeIn className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="mb-2 text-xs uppercase tracking-widest text-accent-deep">Réalisations</p>
+            <div className="mb-3 flex items-center gap-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+                <Briefcase size={18} className="text-accent-deep" strokeWidth={1.5} />
+              </div>
+              <p className="text-xs uppercase tracking-widest text-accent-deep">Réalisations</p>
+            </div>
             <h2 className="font-serif text-2xl text-foreground max-w-lg">
               Ce que cette méthode donne, en production.
             </h2>
@@ -146,14 +169,17 @@ export default function HomePage() {
           >
             Voir les réalisations
           </Link>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-accent/30" />
 
       {/* CTA final */}
       <section id="contact" className="py-24 scroll-mt-24">
-        <div className="max-w-2xl">
+        <FadeIn className="max-w-2xl">
+          <div className="mb-4 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+            <Send size={18} className="text-accent-deep" strokeWidth={1.5} />
+          </div>
           <h2 className="font-serif text-3xl text-foreground leading-snug mb-4">
             Un projet d&apos;envergure à structurer ?
           </h2>
@@ -162,7 +188,7 @@ export default function HomePage() {
             plutôt que dans un outil de plus. Parlons du problème avant de parler de solution.
           </p>
           <ContactForm />
-        </div>
+        </FadeIn>
       </section>
     </div>
   )

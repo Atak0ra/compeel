@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
-import { Mic, FileText, Search, Lock, LayoutGrid, Zap, Stethoscope } from 'lucide-react'
+import { AlertCircle, Mic, FileText, Search, Lock, LayoutGrid, Send, ShieldCheck, Zap, Stethoscope } from 'lucide-react'
 import JsonLd from '@/components/JsonLd'
 import ScrollCue from '@/components/ScrollCue'
+import FadeIn from '@/components/FadeIn'
+import Watermark from '@/components/Watermark'
 
 export const metadata: Metadata = {
   title: 'KARA · Dossier patient vocal',
@@ -68,7 +70,13 @@ export default function KaraPage() {
       <JsonLd data={karaSchema} />
       {/* Hero */}
       <section className="relative flex min-h-[calc(100vh-61px)] flex-col justify-center py-20">
-        <div className="max-w-3xl">
+        <Watermark
+          icons={[
+            { icon: Stethoscope, className: '-right-6 top-12 opacity-[0.08]', size: 220 },
+            { icon: Mic, className: 'left-0 bottom-20 opacity-[0.07]', size: 150 },
+          ]}
+        />
+        <div className="relative max-w-3xl">
           <div className="mb-6 flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
               <Stethoscope size={18} className="text-accent-deep" strokeWidth={1.5} />
@@ -97,8 +105,11 @@ export default function KaraPage() {
 
       {/* Problème */}
       <section className="py-24">
-        <div className="grid gap-16 sm:grid-cols-[1fr_2fr]">
-          <div>
+        <FadeIn className="grid gap-16 sm:grid-cols-[1fr_2fr]">
+          <div className="flex items-start gap-3 sm:flex-col sm:gap-4">
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded border border-accent/30 bg-background">
+              <AlertCircle size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <p className="text-xs uppercase tracking-widest text-accent-deep">Le problème</p>
           </div>
           <div className="space-y-6 text-base text-muted leading-relaxed">
@@ -117,7 +128,7 @@ export default function KaraPage() {
               soignant en pleine consultation.
             </p>
           </div>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
@@ -129,16 +140,16 @@ export default function KaraPage() {
         </p>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {features.map(({ icon: Icon, title, description }) => (
-            <div
+            <FadeIn
               key={title}
-              className="rounded border border-border bg-surface p-6 space-y-4 transition-colors hover:border-accent/40"
+              className="rounded border border-border bg-surface p-6 space-y-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-subtle"
             >
               <div className="flex h-7 w-7 items-center justify-center rounded border border-accent/30 bg-background">
                 <Icon size={14} className="text-accent-deep" strokeWidth={1.5} />
               </div>
               <h3 className="text-sm font-medium text-foreground">{title}</h3>
               <p className="text-sm text-muted leading-relaxed">{description}</p>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </section>
@@ -147,7 +158,10 @@ export default function KaraPage() {
 
       {/* On-premise highlight */}
       <section className="py-24">
-        <div className="rounded border border-border border-l-4 border-l-accent bg-surface p-10 sm:p-12">
+        <FadeIn className="rounded border border-border border-l-4 border-l-accent bg-surface p-10 sm:p-12">
+          <div className="mb-4 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+            <ShieldCheck size={18} className="text-accent-deep" strokeWidth={1.5} />
+          </div>
           <p className="mb-4 text-xs uppercase tracking-widest text-accent-deep">
             Confidentialité
           </p>
@@ -160,15 +174,18 @@ export default function KaraPage() {
             Pas de cloud, pas de synchronisation externe, pas de risque de fuite.
             Vos patients vous font confiance. Nous respectons cette confiance.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       <div className="border-t border-border" />
 
       {/* CTA */}
       <section className="py-24">
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <FadeIn className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div>
+            <div className="mb-3 flex h-9 w-9 items-center justify-center rounded border border-accent/30 bg-background">
+              <Send size={18} className="text-accent-deep" strokeWidth={1.5} />
+            </div>
             <h2 className="font-serif text-2xl text-foreground mb-2">
               Déployer KARA dans votre structure
             </h2>
@@ -185,7 +202,7 @@ export default function KaraPage() {
             En savoir plus
             <span>↗</span>
           </a>
-        </div>
+        </FadeIn>
       </section>
     </div>
   )
