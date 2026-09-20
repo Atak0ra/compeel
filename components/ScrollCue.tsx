@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react'
 
 export default function ScrollCue() {
   function handleClick() {
-    window.scrollBy({ top: window.innerHeight - 61, behavior: 'smooth' })
+    document.getElementById('produits')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (

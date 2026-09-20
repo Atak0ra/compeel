@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import ProductShowcase from '@/components/ProductShowcase'
+import TrustedBy from '@/components/TrustedBy'
+import ScrollCue from '@/components/ScrollCue'
 import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
@@ -14,15 +16,17 @@ export default function HomePage() {
   return (
     <div className="page-shell">
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Compeel', url: 'https://compeel.com', description: 'Studio technologique africain. KARA, Alexis et Dame Justice.' }} />
-      <header className="pb-12 pt-12 sm:pb-16 sm:pt-20">
+      <header className="relative flex min-h-[calc(100dvh-70px)] flex-col justify-center py-12">
         <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted"><p>Studio technologique africain</p><p>Indépendant. Depuis 2016.</p></div>
         <h1 className="my-6 font-serif text-[72px] leading-none sm:my-8 sm:text-[112px] lg:text-[144px]">Compeel<span className="text-accent-deep">.</span></h1>
         <div className="grid gap-6 md:grid-cols-[2fr_1fr] md:items-end">
           <p className="max-w-2xl text-2xl leading-snug sm:text-3xl">Nous imaginons et développons nos propres produits. Ancrés dans les réalités africaines.</p>
           <a href="#produits" className="inline-flex min-h-11 items-center gap-3 justify-self-start text-base md:justify-self-end">Découvrir les produits<ArrowDown size={18} aria-hidden="true" /></a>
         </div>
+        <ScrollCue />
       </header>
-      <section id="produits" className="scroll-mt-24" aria-labelledby="products-heading">
+      <TrustedBy />
+      <section id="produits" className="section-space scroll-mt-24 border-t border-border" aria-labelledby="products-heading">
         <div className="flex flex-wrap items-baseline justify-between gap-4 pb-6"><h2 id="products-heading" className="font-serif text-2xl">Les produits du studio</h2><p className="text-sm text-muted">Santé, logiciel et droit.</p></div>
         <ProductShowcase />
       </section>
