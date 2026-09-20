@@ -21,12 +21,12 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel · Studio technologique africain',
+    default: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
     template: '%s · Compeel',
   },
   description:
-    'Un studio technologique africain qui conçoit ses propres produits : KARA, Alexis et Dame Justice.',
-  keywords: ['Compeel', 'KARA', 'Alexis', 'Dame Justice', 'studio technologique', 'Afrique'],
+    "Compeel est un studio d'ingénierie logicielle sur-mesure. Nous concevons KARA, Alexis et Dame Justice, trois produits ancrés dans les réalités africaines.",
+  keywords: ['Compeel', 'ingénierie logicielle sur-mesure', 'KARA', 'Alexis', 'Dame Justice', 'studio technologique', 'Afrique'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -34,14 +34,14 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel · Studio technologique africain',
+    title: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
     description:
-      'KARA, Alexis et Dame Justice. Des produits conçus par un studio technologique africain.',
+      "Ingénierie logicielle sur-mesure. KARA, Alexis et Dame Justice, conçus par le studio Compeel.",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel · Studio technologique africain',
-    description: 'KARA, Alexis et Dame Justice. Des produits conçus par un studio technologique africain.',
+    title: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
+    description: "Ingénierie logicielle sur-mesure. KARA, Alexis et Dame Justice, conçus par le studio Compeel.",
   },
   robots: {
     index: true,
@@ -55,7 +55,7 @@ const organizationSchema = {
   name: 'Compeel',
   url: 'https://compeel.com',
   description:
-    'Studio technologique africain, créateur de KARA, Alexis et Dame Justice.',
+    "Studio d'ingénierie logicielle sur-mesure, créateur de KARA, Alexis et Dame Justice.",
   founder: {
     '@type': 'Person',
     name: 'Williams de Souza',

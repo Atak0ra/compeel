@@ -5,7 +5,7 @@ import ProductShowcase from '@/components/ProductShowcase'
 import JsonLd from '@/components/JsonLd'
 import { projects } from '@/lib/projects'
 
-export const metadata: Metadata = { title: 'Nos produits', description: 'Découvrez KARA, Alexis et Dame Justice : trois produits conçus et développés par le studio Compeel.' }
+export const metadata: Metadata = { title: 'Nos produits', description: 'Découvrez KARA, Alexis et Dame Justice : trois produits conçus et développés par le studio Compeel.', alternates: { canonical: '/realisations' } }
 
 export default function ProductsPage() {
   return (

@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Mentions légales',
   description: 'Mentions légales de compeel.com : éditeur, hébergement, propriété intellectuelle et droit applicable.',
+  alternates: { canonical: '/mentions-legales' },
 }
 
 export default function MentionsLegalesPage() {

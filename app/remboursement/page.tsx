@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Politique de remboursement',
   description: "compeel.com ne propose aucune vente en ligne : cette page précise ce que cela implique.",
+  alternates: { canonical: '/remboursement' },
 }
 
 export default function RemboursementPage() {

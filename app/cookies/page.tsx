@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Politique de cookies',
   description: "compeel.com n'utilise aucun cookie ni traceur.",
+  alternates: { canonical: '/cookies' },
 }
 
 export default function CookiesPage() {

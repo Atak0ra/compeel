@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ProductStory from '@/components/ProductStory'
 import { projects } from '@/lib/projects'
 
-export const metadata: Metadata = { title: 'KARA · Mémoire clinique vocale', description: projects[0].description }
+export const metadata: Metadata = { title: 'KARA · Mémoire clinique vocale', description: projects[0].description, alternates: { canonical: '/kara' } }
 
 export default function KaraPage() {
   return <ProductStory

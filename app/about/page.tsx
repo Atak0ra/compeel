@@ -4,8 +4,9 @@ import { ArrowUpRight } from 'lucide-react'
 import { projects } from '@/lib/projects'
 
 export const metadata: Metadata = {
-  title: 'Le studio',
-  description: 'Compeel, studio technologique africain fondé en 2016 par Williams de Souza. Notre histoire et les convictions derrière KARA, Alexis et Dame Justice.',
+  title: 'Le studio et son histoire',
+  description: "Fondé en 2016, le studio Compeel est reparti d'une conviction précise : partir d'un usage réel plutôt que d'un produit pensé de loin. Histoire, équipe et convictions.",
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {
@@ -13,7 +14,7 @@ export default function AboutPage() {
     <div className="page-shell">
       <header className="py-12 sm:py-20">
         <p className="mb-5 text-sm text-accent-deep">Le studio</p>
-        <h1 className="font-serif text-5xl sm:text-6xl">Compeel.</h1>
+        <h1 className="font-serif text-5xl sm:text-6xl">Notre histoire.</h1>
         <p className="mt-6 max-w-3xl text-2xl leading-snug sm:text-3xl">Créer des produits à partir des réalités que l&apos;on connaît.</p>
       </header>
       <section className="section-space grid gap-8 border-t border-border md:grid-cols-[1fr_2fr]">
@@ -21,7 +22,7 @@ export default function AboutPage() {
         <div className="max-w-2xl space-y-6 text-lg leading-relaxed">
           <p>Nous avons fondé Compeel en 2016 avec une idée simple : construire des outils technologiques qui répondent aux réalités africaines, plutôt qu&apos;à ce que l&apos;on imagine d&apos;elles de loin.</p>
           <p className="text-muted">Nous avons exploré, prototypé, cherché. Puis la vie a imposé une pause de six ans. Le studio reprend avec une conviction plus précise : partir d&apos;un usage, en comprendre les contraintes et développer un produit qui y répond.</p>
-          <p className="text-muted">Aujourd&apos;hui, ce travail prend trois formes : KARA pour la mémoire clinique, Alexis pour le développement logiciel et Dame Justice pour la recherche juridique.</p>
+          <p className="text-muted">Ce travail, c&apos;est de l&apos;ingénierie logicielle sur-mesure : construire un système à partir d&apos;une contrainte réelle plutôt que d&apos;adapter un produit générique. Aujourd&apos;hui, il prend trois formes : KARA pour la mémoire clinique, Alexis pour le développement logiciel et Dame Justice pour la recherche juridique.</p>
         </div>
       </section>
       <section className="section-space border-t border-border">

@@ -4,7 +4,7 @@
 
 Compeel est un studio technologique africain fondé par Williams de Souza.
 Site du studio et de ses produits : KARA, Alexis et Dame Justice.
-Positionnement : studio créateur de produits, pas ESN ni catalogue de prestations.
+Positionnement : studio d'ingénierie logicielle sur-mesure, créateur de ses propres produits (KARA, Alexis, Dame Justice) — pas un catalogue de prestations générique.
 Déployé sur Vercel. Domaine : compeel.com
 
 ---

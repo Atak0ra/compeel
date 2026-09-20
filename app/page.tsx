@@ -8,16 +8,17 @@ import ScrollCue from '@/components/ScrollCue'
 import JsonLd from '@/components/JsonLd'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Compeel · Studio technologique africain' },
-  description: 'Compeel conçoit ses propres produits : KARA pour la mémoire clinique, Alexis pour le développement logiciel et Dame Justice pour la recherche juridique.',
+  title: { absolute: "Compeel · Studio d'ingénierie logicielle sur-mesure" },
+  description: "Compeel est un studio d'ingénierie logicielle sur-mesure. Nous concevons nos propres produits : KARA pour la mémoire clinique, Alexis pour le développement logiciel et Dame Justice pour la recherche juridique.",
+  alternates: { canonical: '/' },
 }
 
 export default function HomePage() {
   return (
     <div className="page-shell">
-      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Compeel', url: 'https://compeel.com', description: 'Studio technologique africain. KARA, Alexis et Dame Justice.' }} />
+      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Compeel', url: 'https://compeel.com', description: "Studio d'ingénierie logicielle sur-mesure. KARA, Alexis et Dame Justice." }} />
       <header className="relative flex min-h-[calc(100dvh-70px)] flex-col justify-center py-12">
-        <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted"><p>Studio technologique africain</p><p>Indépendant. Depuis 2016.</p></div>
+        <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted"><p>Studio d&apos;ingénierie logicielle sur-mesure</p><p>Indépendant. Depuis 2016.</p></div>
         <h1 className="my-6 font-serif text-[72px] leading-none sm:my-8 sm:text-[112px] lg:text-[144px]">Compeel<span className="text-accent-deep">.</span></h1>
         <div className="grid gap-6 md:grid-cols-[2fr_1fr] md:items-end">
           <p className="max-w-2xl text-2xl leading-snug sm:text-3xl">Nous imaginons et développons nos propres produits. Ancrés dans les réalités africaines.</p>

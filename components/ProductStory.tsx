@@ -32,7 +32,7 @@ export default function ProductStory({ project, introduction, decisions, steps, 
       <div className="max-w-4xl"><ProductPreview id={project.id} /></div>
       <section className="section-space grid gap-7 md:grid-cols-[1fr_2fr]">
         <h2 className="font-serif text-3xl">Le point de départ</h2>
-        <div><p className="max-w-2xl text-lg leading-relaxed text-muted">{introduction}</p><p className="mt-6 text-sm text-accent-deep">Pour {project.audience.toLocaleLowerCase('fr')}.</p></div>
+        <div><p className="max-w-2xl text-lg leading-relaxed text-muted">{introduction}</p><p className="mt-6 text-sm text-accent-deep">Pour {project.audience.toLocaleLowerCase('fr')}. Conçu par le <Link href="/about" className="underline underline-offset-4 hover:text-foreground">studio Compeel</Link>.</p></div>
       </section>
       <section className="section-space border-t border-border">
         <h2 className="mb-10 font-serif text-3xl sm:text-4xl">Des choix de conception.</h2>

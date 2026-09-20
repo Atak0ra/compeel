@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Accessibilité',
   description: "Déclaration d'accessibilité de compeel.com : engagements, mesures prises et contact pour signaler un défaut.",
+  alternates: { canonical: '/accessibilite' },
 }
 
 export default function AccessibilitePage() {

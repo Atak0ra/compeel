@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ProductStory from '@/components/ProductStory'
 import { projects } from '@/lib/projects'
 
-export const metadata: Metadata = { title: 'Alexis · Agent de développement', description: projects[1].description }
+export const metadata: Metadata = { title: 'Alexis · Agent de développement', description: projects[1].description, alternates: { canonical: '/alexis' } }
 
 export default function AlexisPage() {
   return <ProductStory

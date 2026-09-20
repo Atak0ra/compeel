@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: "Conditions générales d'utilisation",
   description: "Conditions d'utilisation du site compeel.com : accès, contenu, liens tiers et responsabilité.",
+  alternates: { canonical: '/cgu' },
 }
 
 export default function CGUPage() {

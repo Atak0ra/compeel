@@ -4,6 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Politique de confidentialité',
   description: 'Comment compeel.com collecte, utilise et protège les données transmises via le formulaire de contact, conformément au RGPD.',
+  alternates: { canonical: '/confidentialite' },
 }
 
 export default function ConfidentialitePage() {
