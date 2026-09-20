@@ -25,7 +25,6 @@ export default function HomePage() {
         </div>
         <ScrollCue />
       </header>
-      <TrustedBy />
       <section id="produits" className="section-space scroll-mt-24 border-t border-border" aria-labelledby="products-heading">
         <div className="flex flex-wrap items-baseline justify-between gap-4 pb-6"><h2 id="products-heading" className="font-serif text-2xl">Les produits du studio</h2><p className="text-sm text-muted">Santé, logiciel et droit.</p></div>
         <ProductShowcase />
@@ -38,6 +37,7 @@ export default function HomePage() {
           <Link href="/about" className="mt-8 inline-flex min-h-11 items-center gap-2 border-b border-foreground text-base">Rencontrer le studio<ArrowUpRight size={18} aria-hidden="true" /></Link>
         </div>
       </section>
+      <TrustedBy />
       <section id="contact" className="section-space grid scroll-mt-24 gap-10 border-t border-border md:grid-cols-2">
         <div><p className="mb-4 text-sm text-accent-deep">Contact</p><h2 className="font-serif text-4xl">Parlons de ce<br />qui vous intéresse.</h2><p className="mt-6 max-w-md text-base leading-relaxed text-muted">Découvrir un produit, l&apos;adopter dans votre structure ou échanger avec le studio. Écrivez-nous.</p></div>
         <ContactForm />
