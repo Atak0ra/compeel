@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Le laboratoire</p>
+        <p className="mb-5 text-sm text-accent">Le laboratoire</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Notre histoire.</h1>
         <p className="mt-6 max-w-3xl text-2xl leading-snug sm:text-3xl">Un laboratoire indépendant, une pratique exigeante de l&apos;ingénierie.</p>
       </header>
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <section className="section-space border-t border-border">
         <h2 className="mb-4 font-sans text-3xl">Compeel Labs.</h2>
         <p className="mb-8 max-w-2xl text-base leading-relaxed text-muted">En parallèle des missions clients, le Labs accueille les produits nés de la recherche du laboratoire.</p>
-        <div className="divide-y divide-border">{projects.map(project => <Link key={project.id} href={project.href} className="flex flex-wrap items-center justify-between gap-4 py-6 hover:text-accent-deep"><span className="font-sans text-2xl">{project.name}</span><span className="flex items-center gap-3 text-base">{project.domain}<ArrowUpRight size={18} aria-hidden="true" /></span></Link>)}</div>
+        <div className="divide-y divide-border">{projects.map(project => <Link key={project.id} href={project.href} className="flex flex-wrap items-center justify-between gap-4 py-6 hover:text-foreground"><span className="font-sans text-2xl">{project.name}</span><span className="flex items-center gap-3 text-base">{project.domain}<ArrowUpRight size={18} aria-hidden="true" /></span></Link>)}</div>
         <Link href="/#contact" className="button-primary mt-9">Échanger avec le laboratoire<ArrowUpRight size={18} aria-hidden="true" /></Link>
       </section>
     </div>

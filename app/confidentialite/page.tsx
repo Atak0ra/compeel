@@ -11,7 +11,7 @@ export default function ConfidentialitePage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Vie privée</p>
+        <p className="mb-5 text-sm text-accent">Vie privée</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Politique de confidentialité.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           Dernière mise à jour : 19 septembre 2026. Compeel collecte le minimum de données nécessaires, uniquement
@@ -23,7 +23,7 @@ export default function ConfidentialitePage() {
         <h2 className="mb-5 font-sans text-2xl">Responsable de traitement</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Williams de Souza (Compeel) est responsable du traitement des données décrites ici. Contact :{' '}
-          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>.
+          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-foreground">williams.stanley.desouza@gmail.com</a>.
         </p>
       </section>
 
@@ -89,7 +89,7 @@ export default function ConfidentialitePage() {
         <h2 className="mb-5 font-sans text-2xl">Cookies</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           compeel.com n&apos;utilise aucun cookie ni traceur. Détails sur la{' '}
-          <Link href="/cookies" className="underline underline-offset-4 hover:text-accent-deep">politique de cookies</Link>.
+          <Link href="/cookies" className="underline underline-offset-4 hover:text-foreground">politique de cookies</Link>.
         </p>
       </section>
 
@@ -99,11 +99,11 @@ export default function ConfidentialitePage() {
           <p>
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, de
             limitation, d&apos;opposition et de portabilité sur vos données. Pour l&apos;exercer, écrivez à{' '}
-            <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>.
+            <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-foreground">williams.stanley.desouza@gmail.com</a>.
           </p>
           <p>
             Vous pouvez également introduire une réclamation auprès de la CNIL (
-            <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-accent-deep">cnil.fr</a>
+            <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">cnil.fr</a>
             ) si vous estimez que vos droits ne sont pas respectés.
           </p>
         </div>

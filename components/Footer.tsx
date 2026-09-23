@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Link
               href="/"
-              className="font-sans text-3xl font-medium text-accent-deep"
+              className="font-sans text-3xl font-medium text-accent"
             >
               Compeel
             </Link>
@@ -21,13 +21,13 @@ export default function Footer() {
           {/* Links */}
           <div className="flex flex-col gap-2">
             <p className="text-sm text-muted mb-1">Compeel</p>
-            <Link href="/realisations" className="inline-flex min-h-11 items-center text-base hover:text-accent-deep">
+            <Link href="/realisations" className="inline-flex min-h-11 items-center text-base hover:text-foreground">
               Compeel Labs
             </Link>
-            <Link href="/about" className="inline-flex min-h-11 items-center text-base hover:text-accent-deep">
+            <Link href="/about" className="inline-flex min-h-11 items-center text-base hover:text-foreground">
               Le laboratoire
             </Link>
-            <Link href="/#contact" className="inline-flex min-h-11 items-center text-base hover:text-accent-deep">Contact</Link>
+            <Link href="/#contact" className="inline-flex min-h-11 items-center text-base hover:text-foreground">Contact</Link>
           </div>
         </div>
 
@@ -35,12 +35,12 @@ export default function Footer() {
         <div className="mt-12 flex flex-col gap-6 pt-8 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex flex-col gap-4">
             <nav aria-label="Informations légales" className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
-              <Link href="/mentions-legales" className="hover:text-accent-deep">Mentions légales</Link>
-              <Link href="/confidentialite" className="hover:text-accent-deep">Confidentialité</Link>
-              <Link href="/cgu" className="hover:text-accent-deep">CGU</Link>
-              <Link href="/cookies" className="hover:text-accent-deep">Cookies</Link>
-              <Link href="/remboursement" className="hover:text-accent-deep">Remboursement</Link>
-              <Link href="/accessibilite" className="hover:text-accent-deep">Accessibilité</Link>
+              <Link href="/mentions-legales" className="hover:text-foreground">Mentions légales</Link>
+              <Link href="/confidentialite" className="hover:text-foreground">Confidentialité</Link>
+              <Link href="/cgu" className="hover:text-foreground">CGU</Link>
+              <Link href="/cookies" className="hover:text-foreground">Cookies</Link>
+              <Link href="/remboursement" className="hover:text-foreground">Remboursement</Link>
+              <Link href="/accessibilite" className="hover:text-foreground">Accessibilité</Link>
             </nav>
             <p className="text-sm text-muted">
               © {new Date().getFullYear()} Compeel. Paris, France.

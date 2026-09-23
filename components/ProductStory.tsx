@@ -21,7 +21,7 @@ export default function ProductStory({ project, introduction, decisions, steps, 
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: project.name, description: project.description, applicationCategory: project.domain, url: `https://compeel.com${project.href}`, creator: { '@type': 'Organization', name: 'Compeel' } }} />
       <header className="py-12 sm:py-16">
         <Link href="/realisations" className="mb-8 inline-flex min-h-11 items-center gap-2 text-base text-muted hover:text-foreground"><ArrowLeft size={16} aria-hidden="true" />Compeel Labs</Link>
-        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-3"><h1 className="font-sans text-5xl sm:text-7xl">{project.name}</h1><p className="text-sm text-accent-deep">{project.domain} · {project.access}</p></div>
+        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-3"><h1 className="font-sans text-5xl sm:text-7xl">{project.name}</h1><p className="text-sm text-accent">{project.domain} · {project.access}</p></div>
         <p className="mt-6 max-w-2xl text-2xl leading-snug sm:text-3xl">{project.headline}</p>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{project.description}</p>
         <div className="mt-8 flex flex-wrap items-center gap-5">
@@ -42,7 +42,7 @@ export default function ProductStory({ project, introduction, decisions, steps, 
         <h2 className="font-sans text-3xl sm:text-4xl">Du besoin au résultat.</h2>
         <p className="mb-8 mt-4 text-base text-muted">{boundary}</p>
         <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => <li key={step.title} className="border-t border-border pt-5"><div className="mb-4 flex items-center justify-between text-accent-deep"><span className="text-sm">Étape {index + 1}</span>{index < steps.length - 1 && <ArrowRight size={18} aria-hidden="true" />}</div><h3 className="mb-3 text-lg font-medium">{step.title}</h3><p className="text-base leading-relaxed text-muted">{step.text}</p></li>)}
+          {steps.map((step, index) => <li key={step.title} className="border-t border-border pt-5"><div className="mb-4 flex items-center justify-between text-accent"><span className="text-sm">Étape {index + 1}</span>{index < steps.length - 1 && <ArrowRight size={18} aria-hidden="true" />}</div><h3 className="mb-3 text-lg font-medium">{step.title}</h3><p className="text-base leading-relaxed text-muted">{step.text}</p></li>)}
         </ol>
         <p className="mt-9 max-w-3xl text-sm leading-relaxed text-muted">{limitation}</p>
       </section>

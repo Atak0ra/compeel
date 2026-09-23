@@ -37,7 +37,7 @@ export default function Nav() {
       <nav aria-label="Navigation principale" className="page-shell flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-3">
         <Link
           href="/"
-          className="inline-flex min-h-11 items-center font-sans text-2xl font-medium text-accent-deep"
+          className="inline-flex min-h-11 items-center font-sans text-2xl font-medium text-accent"
         >
           Compeel<span className="text-metal">.</span>
         </Link>
@@ -52,7 +52,7 @@ export default function Nav() {
                   aria-current={isActive ? 'page' : undefined}
                   className={`inline-flex min-h-11 items-center text-sm transition-colors ${
                     isActive
-                      ? 'text-accent-deep underline underline-offset-8'
+                      ? 'text-accent underline underline-offset-8'
                       : 'text-muted hover:text-foreground'
                   }`}
                 >

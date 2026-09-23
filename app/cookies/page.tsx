@@ -11,7 +11,7 @@ export default function CookiesPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Cookies</p>
+        <p className="mb-5 text-sm text-accent">Cookies</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Politique de cookies.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
@@ -46,7 +46,7 @@ export default function CookiesPage() {
         <h2 className="mb-5 font-sans text-2xl">Voir aussi</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Pour le détail des données collectées via le formulaire de contact, consultez la{' '}
-          <Link href="/confidentialite" className="underline underline-offset-4 hover:text-accent-deep">politique de confidentialité</Link>.
+          <Link href="/confidentialite" className="underline underline-offset-4 hover:text-foreground">politique de confidentialité</Link>.
         </p>
       </section>
     </div>

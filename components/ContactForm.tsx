@@ -41,7 +41,7 @@ export default function ContactForm() {
   if (status === 'success') {
     return (
       <div role="status" className="py-6">
-        <p className="text-base text-accent-deep font-medium mb-1">Message envoyé.</p>
+        <p className="text-base text-accent font-medium mb-1">Message envoyé.</p>
         <p className="text-base text-muted">On vous répond directement à {email}.</p>
       </div>
     )
@@ -60,7 +60,7 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-background px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 
@@ -75,7 +75,7 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-background px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 
@@ -89,7 +89,7 @@ export default function ContactForm() {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-background px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 

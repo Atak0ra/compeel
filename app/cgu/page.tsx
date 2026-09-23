@@ -11,7 +11,7 @@ export default function CGUPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Conditions</p>
+        <p className="mb-5 text-sm text-accent">Conditions</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Conditions générales d&apos;utilisation.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
@@ -47,7 +47,7 @@ export default function CGUPage() {
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           En utilisant le formulaire de contact, vous vous engagez à fournir des informations exactes et à ne pas
           l&apos;utiliser à des fins abusives (spam, contenu illicite). Voir la{' '}
-          <Link href="/confidentialite" className="underline underline-offset-4 hover:text-accent-deep">politique de confidentialité</Link> pour le traitement de vos données.
+          <Link href="/confidentialite" className="underline underline-offset-4 hover:text-foreground">politique de confidentialité</Link> pour le traitement de vos données.
         </p>
       </section>
 
@@ -63,7 +63,7 @@ export default function CGUPage() {
       <section className="section-space border-t border-border">
         <h2 className="mb-5 font-sans text-2xl">Propriété intellectuelle</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Voir les <Link href="/mentions-legales" className="underline underline-offset-4 hover:text-accent-deep">mentions légales</Link> pour les droits relatifs aux contenus du site.
+          Voir les <Link href="/mentions-legales" className="underline underline-offset-4 hover:text-foreground">mentions légales</Link> pour les droits relatifs aux contenus du site.
         </p>
       </section>
 

@@ -10,7 +10,7 @@ export default function MentionsLegalesPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Informations légales</p>
+        <p className="mb-5 text-sm text-accent">Informations légales</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Mentions légales.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
@@ -25,7 +25,7 @@ export default function MentionsLegalesPage() {
             sera formellement créée.
           </p>
           <p>Ville : Paris, France.</p>
-          <p>Contact : <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a></p>
+          <p>Contact : <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-foreground">williams.stanley.desouza@gmail.com</a></p>
           <p>Directeur de la publication : Williams de SOUZA.</p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function MentionsLegalesPage() {
             440 N Barranca Avenue #4133<br />
             Covina, CA 91723<br />
             États-Unis<br />
-            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-accent-deep">vercel.com</a>
+            <a href="https://vercel.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground">vercel.com</a>
           </p>
         </div>
       </section>

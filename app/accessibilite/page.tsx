@@ -10,7 +10,7 @@ export default function AccessibilitePage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Accessibilité</p>
+        <p className="mb-5 text-sm text-accent">Accessibilité</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Déclaration d&apos;accessibilité.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
@@ -58,7 +58,7 @@ export default function AccessibilitePage() {
         <h2 className="mb-5 font-sans text-2xl">Signaler un problème</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Si une partie du site ne vous est pas accessible, écrivez à{' '}
-          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>{' '}
+          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-foreground">williams.stanley.desouza@gmail.com</a>{' '}
           en décrivant le problème rencontré. Nous nous engageons à répondre dans un délai raisonnable.
         </p>
       </section>

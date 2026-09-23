@@ -10,7 +10,7 @@ export default function RemboursementPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent-deep">Remboursement</p>
+        <p className="mb-5 text-sm text-accent">Remboursement</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Politique de remboursement.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
@@ -34,7 +34,7 @@ export default function RemboursementPage() {
         <h2 className="mb-5 font-sans text-2xl">Une question ?</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Pour toute question sur un produit, écrivez à{' '}
-          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>.
+          <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-foreground">williams.stanley.desouza@gmail.com</a>.
         </p>
       </section>
     </div>
