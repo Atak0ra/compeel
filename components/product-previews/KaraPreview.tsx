@@ -18,7 +18,7 @@ export default function KaraPreview() {
             </div>
             <div className="min-w-0 space-y-5 p-5 sm:p-7">
               <div className="flex items-start justify-between gap-3">
-                <div><p className="text-sm text-[#bfd5c9]">Dossier de démonstration</p><p className="mt-1 font-serif text-2xl">M John Doe</p></div>
+                <div><p className="text-sm text-[#bfd5c9]">Dossier de démonstration</p><p className="mt-1 font-sans text-2xl">M John Doe</p></div>
                 <UserRound size={25} className="shrink-0 text-[#9bd1b6]" />
               </div>
               <div className="flex flex-wrap gap-5 border-b border-[#315046] pb-3 text-sm"><span className="text-[#b6e5cc]">Observations</span><span className="text-[#bfd5c9]">Documents</span></div>
