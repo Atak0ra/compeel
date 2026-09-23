@@ -5,17 +5,15 @@
 @layer base {
   :root {
     --site-nav-height: 116px;
-    --color-paper: #F8F8F4;
-    --color-surface: #ECEEE8;
-    --color-surface-deep: #DCE3DE;
-    --color-ink: #202D2B;
-    --color-muted: #57635E;
-    --color-clay: #A34E35;
-    --color-clay-deep: #873E2B;
-    --color-patina: #365D57;
-    --color-rule: #CDD2C9;
-    --font-inter: var(--font-studio), sans-serif;
-    --font-dm-serif: var(--font-editorial), serif;
+    --color-bg: #0B1220;
+    --color-surface: #131C2E;
+    --color-surface-deep: #1B2740;
+    --color-ink: #F9FAFB;
+    --color-muted: #94A3B8;
+    --color-accent: #3B82F6;
+    --color-accent-deep: #2563EB;
+    --color-metal: #CBD5E1;
+    --color-rule: #26324A;
   }
 
   html {
@@ -40,7 +38,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-clay);
+    outline: 2px solid var(--color-accent);
     outline-offset: 4px;
   }
 
@@ -53,8 +51,8 @@
   }
 
   ::selection {
-    background-color: var(--color-clay-deep);
-    color: var(--color-paper);
+    background-color: var(--color-accent-deep);
+    color: var(--color-ink);
   }
 }
 
@@ -73,7 +71,7 @@
   }
 
   .button-primary {
-    @apply inline-flex min-h-11 items-center justify-center gap-3 rounded-sm bg-accent-deep px-5 py-3 text-base text-white transition-colors hover:bg-foreground;
+    @apply inline-flex min-h-11 items-center justify-center gap-3 rounded-sm bg-accent-deep px-5 py-3 text-base text-white transition-colors hover:bg-foreground hover:text-background;
   }
 
   .text-balance {
@@ -82,16 +80,6 @@
 
   .text-pretty {
     text-wrap: pretty;
-  }
-
-  .fade-in {
-    opacity: 1;
-    transform: none;
-  }
-
-  .fade-in-visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -109,13 +97,5 @@
 @media (prefers-reduced-motion: no-preference) {
   .scroll-cue-icon {
     animation: scroll-cue 2s ease-in-out 3;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .fade-in {
-    opacity: 1;
-    transform: none;
-    transition: none;
   }
 }
