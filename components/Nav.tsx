@@ -52,7 +52,7 @@ export default function Nav() {
                   aria-current={isActive ? 'page' : undefined}
                   className={`inline-flex min-h-11 items-center text-sm transition-colors ${
                     isActive
-                      ? 'text-accent underline underline-offset-8'
+                      ? 'text-accent-deep underline underline-offset-8'
                       : 'text-muted hover:text-foreground'
                   }`}
                 >

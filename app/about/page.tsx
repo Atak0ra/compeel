@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent">Le laboratoire</p>
+        <p className="mb-5 text-sm text-accent-deep">Le laboratoire</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Notre histoire.</h1>
         <p className="mt-6 max-w-3xl text-2xl leading-snug sm:text-3xl">Un laboratoire indépendant, une pratique exigeante de l&apos;ingénierie.</p>
       </header>

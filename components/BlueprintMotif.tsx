@@ -3,9 +3,9 @@ export default function BlueprintMotif({ variant }: { variant: 'hero' }) {
     return (
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 h-full w-full opacity-40"
+        className="pointer-events-none absolute right-0 top-0 hidden h-[55%] w-[38%] max-w-[420px] opacity-30 md:block"
         viewBox="0 0 600 400"
-        preserveAspectRatio="xMaxYMid slice"
+        preserveAspectRatio="xMaxYMin meet"
       >
         <g stroke="var(--color-ink)" strokeWidth="1" fill="none">
           <line x1="420" y1="40" x2="580" y2="40" />

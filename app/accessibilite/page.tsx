@@ -10,7 +10,7 @@ export default function AccessibilitePage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent">Accessibilité</p>
+        <p className="mb-5 text-sm text-accent-deep">Accessibilité</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Déclaration d&apos;accessibilité.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>

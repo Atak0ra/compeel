@@ -43,7 +43,7 @@ export default function HomePage() {
         <div className="page-shell py-20 lg:py-32">
           <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
             <div><p className="mb-5 font-mono text-sm text-metal">02 / Méthode</p><h2 id="engineering-heading" className="font-sans text-4xl font-normal leading-tight">Méthode d&apos;ingénierie.</h2></div>
-            <div><p className="max-w-2xl text-xl leading-relaxed">On construit chez Compeel des systèmes qui peuvent être compris, exploités et transmis. Chaque système livré a été vérifié en conditions réelles avant sa mise en production.</p><Link href="/about" className="mt-5 inline-flex min-h-11 items-center gap-2 text-base text-accent">Rencontrer le laboratoire<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+            <div><p className="max-w-2xl text-xl leading-relaxed">On construit chez Compeel des systèmes qui peuvent être compris, exploités et transmis. Chaque système livré a été vérifié en conditions réelles avant sa mise en production.</p><Link href="/about" className="mt-5 inline-flex min-h-11 items-center gap-2 text-base text-accent-deep">Rencontrer le laboratoire<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
           </div>
           <div className="mt-16 space-y-16 lg:mt-20 lg:space-y-20">
             {[
@@ -69,14 +69,14 @@ export default function HomePage() {
       </section>
       <section id="contact" className="scroll-mt-36 bg-surface">
         <div className="page-shell grid gap-12 py-20 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:gap-20 lg:py-32">
-        <div><p className="mb-6 font-mono text-sm text-accent">04 / Prendre contact</p><h2 className="max-w-md font-sans text-4xl font-normal leading-tight text-accent sm:text-5xl">Discuter d&apos;un projet<span className="text-foreground">.</span></h2><p className="mt-6 max-w-sm text-base leading-relaxed text-muted">Écrivez. On répond avec une lecture technique du problème, pas un devis générique.</p></div>
+        <div><p className="mb-6 font-mono text-sm text-accent-deep">04 / Prendre contact</p><h2 className="max-w-md font-sans text-4xl font-normal leading-tight text-accent sm:text-5xl">Discuter d&apos;un projet<span className="text-foreground">.</span></h2><p className="mt-6 max-w-sm text-base leading-relaxed text-muted">Écrivez. On répond avec une lecture technique du problème, pas un devis générique.</p></div>
         <ContactForm />
         </div>
       </section>
       <section id="labs" className="scroll-mt-36" aria-labelledby="labs-heading">
         <div className="page-shell grid gap-8 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12 lg:py-24">
           <div><p className="mb-3 font-mono text-sm text-metal">05 / Ce qui en sort</p><h2 id="labs-heading" className="font-sans text-2xl font-normal">Compeel Labs</h2></div>
-          <div><p className="max-w-xl text-base leading-relaxed text-muted">L&apos;espace où la recherche devient produit. Trois produits, une seule discipline : ne rien livrer qui n&apos;ait pas été vérifié.</p><Link href="/realisations" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-metal">Explorer le Labs<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+          <div><p className="max-w-xl text-base leading-relaxed text-muted">L&apos;espace où la recherche devient produit. Trois produits, une discipline commune : vérifier avant de livrer.</p><Link href="/realisations" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-metal">Explorer le Labs<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
         </div>
       </section>
     </div>

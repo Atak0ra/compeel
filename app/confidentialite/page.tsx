@@ -11,7 +11,7 @@ export default function ConfidentialitePage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent">Vie privée</p>
+        <p className="mb-5 text-sm text-accent-deep">Vie privée</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Politique de confidentialité.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           Dernière mise à jour : 19 septembre 2026. Compeel collecte le minimum de données nécessaires, uniquement

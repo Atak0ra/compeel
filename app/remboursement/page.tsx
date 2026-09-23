@@ -10,7 +10,7 @@ export default function RemboursementPage() {
   return (
     <div className="page-shell">
       <header className="py-12 sm:py-20">
-        <p className="mb-5 text-sm text-accent">Remboursement</p>
+        <p className="mb-5 text-sm text-accent-deep">Remboursement</p>
         <h1 className="font-sans text-5xl sm:text-6xl">Politique de remboursement.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
