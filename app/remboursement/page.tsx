@@ -11,12 +11,12 @@ export default function RemboursementPage() {
     <div className="page-shell">
       <header className="py-12 sm:py-20">
         <p className="mb-5 text-sm text-accent-deep">Remboursement</p>
-        <h1 className="font-serif text-5xl sm:text-6xl">Politique de remboursement.</h1>
+        <h1 className="font-sans text-5xl sm:text-6xl">Politique de remboursement.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Aucune vente sur compeel.com</h2>
+        <h2 className="mb-5 font-sans text-2xl">Aucune vente sur compeel.com</h2>
         <div className="max-w-2xl space-y-4 text-base leading-relaxed text-muted">
           <p>
             compeel.com ne propose aucun paiement, abonnement ou achat en ligne. Aucune transaction n&apos;a lieu sur ce
@@ -31,7 +31,7 @@ export default function RemboursementPage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Une question ?</h2>
+        <h2 className="mb-5 font-sans text-2xl">Une question ?</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Pour toute question sur un produit, écrivez à{' '}
           <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>.

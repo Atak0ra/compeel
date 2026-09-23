@@ -12,12 +12,12 @@ export default function CookiesPage() {
     <div className="page-shell">
       <header className="py-12 sm:py-20">
         <p className="mb-5 text-sm text-accent-deep">Cookies</p>
-        <h1 className="font-serif text-5xl sm:text-6xl">Politique de cookies.</h1>
+        <h1 className="font-sans text-5xl sm:text-6xl">Politique de cookies.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Dernière mise à jour : 19 septembre 2026.</p>
       </header>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Aucun cookie sur ce site</h2>
+        <h2 className="mb-5 font-sans text-2xl">Aucun cookie sur ce site</h2>
         <div className="max-w-2xl space-y-4 text-base leading-relaxed text-muted">
           <p>
             Un cookie est un petit fichier déposé dans votre navigateur, généralement utilisé pour la mesure
@@ -34,7 +34,7 @@ export default function CookiesPage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Si cela change</h2>
+        <h2 className="mb-5 font-sans text-2xl">Si cela change</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Si un outil de mesure d&apos;audience ou tout autre traceur non essentiel venait à être ajouté, cette page
           serait mise à jour et un bandeau de consentement serait mis en place avant tout dépôt de cookie, conformément
@@ -43,7 +43,7 @@ export default function CookiesPage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Voir aussi</h2>
+        <h2 className="mb-5 font-sans text-2xl">Voir aussi</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Pour le détail des données collectées via le formulaire de contact, consultez la{' '}
           <Link href="/confidentialite" className="underline underline-offset-4 hover:text-accent-deep">politique de confidentialité</Link>.

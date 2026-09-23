@@ -12,7 +12,7 @@ export default function ConfidentialitePage() {
     <div className="page-shell">
       <header className="py-12 sm:py-20">
         <p className="mb-5 text-sm text-accent-deep">Vie privée</p>
-        <h1 className="font-serif text-5xl sm:text-6xl">Politique de confidentialité.</h1>
+        <h1 className="font-sans text-5xl sm:text-6xl">Politique de confidentialité.</h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
           Dernière mise à jour : 19 septembre 2026. Compeel collecte le minimum de données nécessaires, uniquement
           via le formulaire de contact.
@@ -20,7 +20,7 @@ export default function ConfidentialitePage() {
       </header>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Responsable de traitement</h2>
+        <h2 className="mb-5 font-sans text-2xl">Responsable de traitement</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Williams de Souza (Compeel) est responsable du traitement des données décrites ici. Contact :{' '}
           <a href="mailto:williams.stanley.desouza@gmail.com" className="underline underline-offset-4 hover:text-accent-deep">williams.stanley.desouza@gmail.com</a>.
@@ -28,7 +28,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Données collectées</h2>
+        <h2 className="mb-5 font-sans text-2xl">Données collectées</h2>
         <div className="max-w-2xl space-y-4 text-base leading-relaxed text-muted">
           <p>
             compeel.com ne dispose d&apos;aucun compte utilisateur et ne collecte aucune donnée personnelle en dehors
@@ -49,7 +49,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Finalité et base légale</h2>
+        <h2 className="mb-5 font-sans text-2xl">Finalité et base légale</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Les données du formulaire servent uniquement à répondre à la demande envoyée. La base légale est le
           consentement : vous transmettez ces informations volontairement en soumettant le formulaire.
@@ -57,7 +57,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Destinataires et sous-traitants</h2>
+        <h2 className="mb-5 font-sans text-2xl">Destinataires et sous-traitants</h2>
         <div className="max-w-2xl space-y-3 text-base leading-relaxed text-muted">
           <p>Le message est lu uniquement par Williams de Souza. Deux prestataires techniques interviennent pour l&apos;acheminer :</p>
           <ul className="list-disc space-y-2 pl-5">
@@ -78,7 +78,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Durée de conservation</h2>
+        <h2 className="mb-5 font-sans text-2xl">Durée de conservation</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Les données transmises via le formulaire sont conservées le temps nécessaire pour traiter la demande, puis
           supprimées dans un délai raisonnable, n&apos;excédant pas 3 ans en l&apos;absence d&apos;échange donnant suite.
@@ -86,7 +86,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Cookies</h2>
+        <h2 className="mb-5 font-sans text-2xl">Cookies</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           compeel.com n&apos;utilise aucun cookie ni traceur. Détails sur la{' '}
           <Link href="/cookies" className="underline underline-offset-4 hover:text-accent-deep">politique de cookies</Link>.
@@ -94,7 +94,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Vos droits</h2>
+        <h2 className="mb-5 font-sans text-2xl">Vos droits</h2>
         <div className="max-w-2xl space-y-3 text-base leading-relaxed text-muted">
           <p>
             Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, de
@@ -110,7 +110,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Sécurité</h2>
+        <h2 className="mb-5 font-sans text-2xl">Sécurité</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Le site est servi en HTTPS et hébergé sur une infrastructure sécurisée (Vercel). Aucune base de données de
           contacts n&apos;est constituée sur le site lui-même.
@@ -118,7 +118,7 @@ export default function ConfidentialitePage() {
       </section>
 
       <section className="section-space border-t border-border">
-        <h2 className="mb-5 font-serif text-2xl">Modifications</h2>
+        <h2 className="mb-5 font-sans text-2xl">Modifications</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Cette politique peut évoluer, notamment si de nouveaux outils (mesure d&apos;audience, par exemple) étaient
           ajoutés au site. La date de mise à jour en haut de page reflète la version en vigueur.
