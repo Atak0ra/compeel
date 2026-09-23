@@ -60,20 +60,20 @@ Il n'y a actuellement pas de blog ni de contenu MDX sur le site.
 ### Palette de couleurs
 
 ```
-Fond principal (bg)        : #0B1220 (bleu marine désaturé, très sombre)
-Surface                    : #131C2E
-Surface profonde           : #1B2740
-Texte principal (ink)      : #F9FAFB
-Texte secondaire (muted)   : #94A3B8
-Accent (cyan industriel)   : #3B82F6
+Fond principal (bg)        : #F7F8FA (blanc cassé)
+Surface                    : #FFFFFF
+Surface profonde           : #EEF1F5
+Texte principal (ink)      : #0B1220 (bleu marine)
+Texte secondaire (muted)   : #5B6472
+Accent (bleu)               : #3B82F6
 Accent profond              : #2563EB
-Métal (traits techniques)  : #CBD5E1
-Bordures / filets (rule)   : #26324A
+Métal (traits techniques)  : #475569
+Bordures / filets (rule)   : #E2E5EA
 ```
 
 Ces valeurs sont définies comme variables CSS dans `app/globals.css` (`--color-*`) et exposées à Tailwind via `tailwind.config.ts` (`background`, `surface`, `foreground`, `muted`, `accent`, `accent-deep`, `metal`, `border`). Toujours utiliser ces tokens Tailwind plutôt que des couleurs en dur.
 
-Identité sombre, froide, technique — esprit Skunkworks / infra critique. Compeel n'est pas une agence créative : le design inspire la rigueur et la solidité, pas la décoration.
+Identité claire, sobre, technique — documentation d'ingénierie plutôt que decorum SaaS. Fond clair, un seul accent bleu, motif géométrique fin en ponctuation (jamais décoratif au sens illustratif). Compeel n'est pas une agence créative : le design inspire la rigueur et la solidité, pas la décoration.
 
 Identités produit (aperçus HTML/CSS uniquement, palette système Compeel inchangée par ailleurs) : KARA vert (`#10B981`), Alexis violet (`#8B5CF6`), Dame Justice rouge brique (`#A34E35`, réemploi de l'ancien accent Compeel).
 
@@ -98,6 +98,7 @@ Identités produit (aperçus HTML/CSS uniquement, palette système Compeel incha
 - Pas de couleurs criardes
 - Beaucoup d'espace blanc (padding généreux)
 - Ombres subtiles seulement si nécessaire
+- Motif géométrique "blueprint" (`components/BlueprintMotif.tsx`) : traits fins, un seul aplat `accent-deep` par composition, usage sparse (hero homepage uniquement pour l'instant, pas de répétition systématique par section)
 
 ### Animations
 
@@ -169,9 +170,10 @@ Cette ligne est non négociable. Elle doit apparaître sur toutes les pages, dan
 
 ## Ton du contenu
 
-Le site parle en première personne — c'est Williams qui s'exprime.
+Voix "on" collective (le laboratoire), sauf la page /about qui garde le "je" pour la bio personnelle de Williams.
 Ton : direct, honnête, humain. Pas de jargon marketing.
 Pas de superlatifs vides ("révolutionnaire", "disruptif", "game-changing").
+Pas de clôture absolutiste ("rien ne sort qui n'ait pas..."), pas de titre de section dramatique ou en forme de défi — factuel et descriptif.
 Les produits sont présentés avec leurs vraies fonctionnalités, pas des promesses.
 
 ---
