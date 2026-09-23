@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react'
 
 const links = [
   { href: '/#references', label: 'Références' },
-  { href: '/about', label: 'Le studio' },
+  { href: '/about', label: 'Le laboratoire' },
   { href: '/realisations', label: 'Labs' },
   { href: '/#contact', label: 'Contact' },
 ]
@@ -37,9 +37,9 @@ export default function Nav() {
       <nav aria-label="Navigation principale" className="page-shell flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-3">
         <Link
           href="/"
-          className="inline-flex min-h-11 items-center font-serif text-2xl font-medium text-accent-deep"
+          className="inline-flex min-h-11 items-center font-sans text-2xl font-medium text-accent-deep"
         >
-          Compeel<span className="text-patina">.</span>
+          Compeel<span className="text-metal">.</span>
         </Link>
 
         <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:gap-x-8">
