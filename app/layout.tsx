@@ -1,32 +1,33 @@
 import type { Metadata } from 'next'
-import { Inter, DM_Serif_Display } from 'next/font/google'
+import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
 
-const inter = Inter({
+const studioSans = IBM_Plex_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-studio',
   display: 'swap',
 })
 
-const dmSerif = DM_Serif_Display({
+const studioSerif = IBM_Plex_Serif({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-dm-serif',
+  weight: ['400', '500', '600'],
+  variable: '--font-editorial',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
+    default: 'Compeel · Ingénierie logicielle et IA appliquée',
     template: '%s · Compeel',
   },
   description:
-    "Compeel est un studio d'ingénierie logicielle sur-mesure. Nous concevons KARA, Alexis et Dame Justice, trois produits ancrés dans les réalités africaines.",
-  keywords: ['Compeel', 'ingénierie logicielle sur-mesure', 'KARA', 'Alexis', 'Dame Justice', 'studio technologique', 'Afrique'],
+    "Compeel est un studio indépendant d'ingénierie logicielle et d'IA appliquée. Architecture, systèmes backend et intégration IA pour les entreprises.",
+  keywords: ['Compeel', 'ingénierie logicielle', 'architecture logicielle', 'backend', 'IA appliquée', 'fintech'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -34,14 +35,14 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
+    title: 'Compeel · Ingénierie logicielle et IA appliquée',
     description:
-      "Ingénierie logicielle sur-mesure. KARA, Alexis et Dame Justice, conçus par le studio Compeel.",
+      "Studio indépendant. Architecture logicielle, systèmes backend et IA appliquée pour les entreprises.",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel · Studio d\'ingénierie logicielle sur-mesure',
-    description: "Ingénierie logicielle sur-mesure. KARA, Alexis et Dame Justice, conçus par le studio Compeel.",
+    title: 'Compeel · Ingénierie logicielle et IA appliquée',
+    description: "Studio indépendant. Architecture logicielle, systèmes backend et IA appliquée pour les entreprises.",
   },
   robots: {
     index: true,
@@ -55,7 +56,7 @@ const organizationSchema = {
   name: 'Compeel',
   url: 'https://compeel.com',
   description:
-    "Studio d'ingénierie logicielle sur-mesure, créateur de KARA, Alexis et Dame Justice.",
+    "Studio indépendant d'ingénierie logicielle et d'IA appliquée. Compeel Labs accueille les travaux de R&D et les produits internes.",
   founder: {
     '@type': 'Person',
     name: 'Williams de Souza',
@@ -72,7 +73,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${dmSerif.variable}`}>
+    <html lang="fr" className={`${studioSans.variable} ${studioSerif.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <a href="#contenu" className="sr-only z-[60] bg-white p-4 text-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Aller au contenu</a>
         <JsonLd data={organizationSchema} />

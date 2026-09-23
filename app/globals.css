@@ -4,13 +4,22 @@
 
 @layer base {
   :root {
-    --font-inter: 'Inter', system-ui, sans-serif;
-    --font-dm-serif: 'DM Serif Display', Georgia, serif;
+    --site-nav-height: 116px;
+    --color-paper: #F8F8F4;
+    --color-surface: #ECEEE8;
+    --color-surface-deep: #DCE3DE;
+    --color-ink: #202D2B;
+    --color-muted: #57635E;
+    --color-clay: #A34E35;
+    --color-clay-deep: #873E2B;
+    --color-patina: #365D57;
+    --color-rule: #CDD2C9;
+    --font-inter: var(--font-studio), sans-serif;
+    --font-dm-serif: var(--font-editorial), serif;
   }
 
   html {
-    background-color: #F5F4F0;
-    color: #1A1A1A;
+    @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -23,9 +32,7 @@
   }
 
   body {
-    background-color: #F5F4F0;
-    color: #1A1A1A;
-    font-family: var(--font-inter), system-ui, sans-serif;
+    @apply bg-background font-sans text-foreground;
   }
 
   * {
@@ -33,7 +40,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid #8B5E3C;
+    outline: 2px solid var(--color-clay);
     outline-offset: 4px;
   }
 
@@ -41,13 +48,22 @@
     overflow-wrap: break-word;
   }
 
+  h1, h2, h3 {
+    @apply font-semibold;
+  }
+
   ::selection {
-    background-color: #C17F3F;
-    color: #F5F4F0;
+    background-color: var(--color-clay-deep);
+    color: var(--color-paper);
   }
 }
 
 @layer utilities {
+  .home-hero {
+    height: calc(100vh - var(--site-nav-height));
+    height: calc(100dvh - var(--site-nav-height));
+  }
+
   .page-shell {
     @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
   }
@@ -57,7 +73,7 @@
   }
 
   .button-primary {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded bg-accent-deep px-5 py-3 text-base text-white transition-colors hover:bg-foreground;
+    @apply inline-flex min-h-11 items-center justify-center gap-3 rounded-sm bg-accent-deep px-5 py-3 text-base text-white transition-colors hover:bg-foreground;
   }
 
   .text-balance {
@@ -76,6 +92,23 @@
   .fade-in-visible {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (min-width: 640px) {
+  :root {
+    --site-nav-height: 68px;
+  }
+}
+
+@keyframes scroll-cue {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-cue-icon {
+    animation: scroll-cue 2s ease-in-out 3;
   }
 }
 

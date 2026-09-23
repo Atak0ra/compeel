@@ -40,7 +40,7 @@ export default function ContactForm() {
 
   if (status === 'success') {
     return (
-      <div role="status" className="border-t border-border py-6">
+      <div role="status" className="py-6">
         <p className="text-base text-accent-deep font-medium mb-1">Message envoyé.</p>
         <p className="text-base text-muted">On vous répond directement à {email}.</p>
       </div>

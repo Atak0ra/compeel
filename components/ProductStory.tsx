@@ -20,7 +20,7 @@ export default function ProductStory({ project, introduction, decisions, steps, 
     <div className="page-shell">
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: project.name, description: project.description, applicationCategory: project.domain, url: `https://compeel.com${project.href}`, creator: { '@type': 'Organization', name: 'Compeel' } }} />
       <header className="py-12 sm:py-16">
-        <Link href="/realisations" className="mb-8 inline-flex min-h-11 items-center gap-2 text-sm text-muted hover:text-foreground"><ArrowLeft size={16} aria-hidden="true" />Tous les produits</Link>
+        <Link href="/realisations" className="mb-8 inline-flex min-h-11 items-center gap-2 text-base text-muted hover:text-foreground"><ArrowLeft size={16} aria-hidden="true" />Compeel Labs</Link>
         <div className="flex flex-wrap items-baseline gap-x-6 gap-y-3"><h1 className="font-serif text-5xl sm:text-7xl">{project.name}</h1><p className="text-sm text-accent-deep">{project.domain} · {project.access}</p></div>
         <p className="mt-6 max-w-2xl text-2xl leading-snug sm:text-3xl">{project.headline}</p>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">{project.description}</p>
@@ -32,7 +32,7 @@ export default function ProductStory({ project, introduction, decisions, steps, 
       <div className="max-w-4xl"><ProductPreview id={project.id} /></div>
       <section className="section-space grid gap-7 md:grid-cols-[1fr_2fr]">
         <h2 className="font-serif text-3xl">Le point de départ</h2>
-        <div><p className="max-w-2xl text-lg leading-relaxed text-muted">{introduction}</p><p className="mt-6 text-sm text-accent-deep">Pour {project.audience.toLocaleLowerCase('fr')}. Conçu par le <Link href="/about" className="underline underline-offset-4 hover:text-foreground">studio Compeel</Link>.</p></div>
+        <div><p className="max-w-2xl text-lg leading-relaxed text-muted">{introduction}</p><p className="mt-6 text-base text-muted">Pour {project.audience.toLocaleLowerCase('fr')}. Un produit de <Link href="/realisations" className="underline underline-offset-4 hover:text-foreground">Compeel Labs</Link>.</p></div>
       </section>
       <section className="section-space border-t border-border">
         <h2 className="mb-10 font-serif text-3xl sm:text-4xl">Des choix de conception.</h2>
