@@ -2,29 +2,32 @@
 
 ## Ce qu'est ce projet
 
-Compeel est un studio technologique africain fondé par Williams de Souza.
-Site du studio et de ses produits : KARA, Alexis et Dame Justice.
-Positionnement : studio d'ingénierie logicielle sur-mesure, créateur de ses propres produits (KARA, Alexis, Dame Justice) — pas un catalogue de prestations générique.
+Compeel est un laboratoire d'ingénierie technologique africain fondé par Williams de Souza.
+Site du laboratoire et de ses produits : KARA, Alexis et Dame Justice.
+Positionnement : laboratoire de R&D qui expérimente et conçoit de la rupture technique. Les missions d'ingénierie sur-mesure (comme celles réalisées pour VersusFinance et Crpay) financent la recherche du laboratoire ; cette recherche devient des produits scalables (KARA, Alexis, Dame Justice). On ne vend pas du code au kilomètre, on finance l'innovation.
 Déployé sur Vercel. Domaine : compeel.com
 
 ---
 
-## Le produit
+## Les produits
 
-**KARA**
-Système de dossier patient vocal pour les structures médicales en Afrique de l'Ouest.
-Les soignants enregistrent leur voix sur les dossiers patients. Tout est transcrit, centralisé et consultable.
-100% on-premise. Aucune donnée ne quitte la structure médicale.
+**KARA** — mémoire clinique vocale pour les structures médicales en Afrique de l'Ouest. Les soignants enregistrent leur voix sur les dossiers patients ; tout est transcrit, centralisé et consultable. 100% on-premise, aucune donnée ne quitte la structure médicale.
+
+**Alexis** — outil de développement logiciel avec validation humaine à chaque étape (cadrage, vérification, historique), autour du dépôt de code.
+
+**Dame Justice** — recherche juridique pour les professionnels du droit togolais et OHADA, avec renvoi systématique aux sources.
+
+Ces produits vivent dans un espace distinct des missions clients : Compeel Labs (`/realisations`).
 
 ---
 
 ## Stack technique
 
-- **Framework** : Next.js 14 avec App Router
-- **Styles** : Tailwind CSS uniquement — pas d'autre librairie CSS
-- **Blog** : MDX avec frontmatter (titre, date, description, tags)
-- **Déploiement** : Vercel — structure statique optimisée
-- **Langue** : TypeScript
+- **Framework** : Next.js 16 (App Router), React 18, TypeScript strict (pas de `any`)
+- **Styles** : Tailwind CSS 3 uniquement — pas d'autre librairie CSS, pas de composants UI tiers
+- **Icônes** : lucide-react
+- **Emailing** : Resend, via `app/api/contact/route.ts` (formulaire de contact)
+- **Déploiement** : Vercel — build statique (`next build`), pages prerendered
 
 ---
 
@@ -33,17 +36,22 @@ Les soignants enregistrent leur voix sur les dossiers patients. Tout est transcr
 ```
 compeel/
 ├── app/
-│   ├── page.tsx              → Homepage
-│   ├── about/page.tsx        → À propos
-│   ├── kara/page.tsx         → Page KARA
-│   ├── blog/page.tsx         → Liste des articles
-│   └── blog/[slug]/page.tsx  → Article individuel
-├── posts/                    → Articles MDX
-│   └── premier-article.mdx
-├── components/               → Composants réutilisables
-├── lib/                      → Utilitaires MDX
-└── public/                   → Assets statiques
+│   ├── page.tsx                    → Homepage
+│   ├── layout.tsx                  → Layout racine (Nav, Footer, metadata, JSON-LD)
+│   ├── globals.css                 → Design tokens (variables CSS) + utilitaires Tailwind
+│   ├── about/page.tsx               → Le laboratoire
+│   ├── kara/, alexis/, damejustice/ → Pages produits (via ProductStory)
+│   ├── realisations/page.tsx        → Compeel Labs (via ProductShowcase)
+│   ├── api/contact/route.ts         → Endpoint du formulaire de contact (Resend)
+│   ├── sitemap.ts, robots.ts        → SEO technique
+│   └── mentions-legales/, cgu/, confidentialite/, cookies/, remboursement/, accessibilite/ → Pages légales
+├── components/                      → Composants réutilisables (Nav, Footer, TrustedBy, ProductStory,
+│                                       ProductShowcase, ContactForm, JsonLd, ScrollCue, HeroVisual, Watermark)
+├── lib/                             → Données typées (clients.ts, projects.ts)
+└── public/                          → Assets statiques (logos, images)
 ```
+
+Il n'y a actuellement pas de blog ni de contenu MDX sur le site.
 
 ---
 
@@ -52,17 +60,27 @@ compeel/
 ### Palette de couleurs
 
 ```
-Background principal : #F5F4F0 (clair chaud)
-Background secondaire : #EEECEA (surface)
-Texte principal      : #1A1A1A
-Texte secondaire     : #6B6560
-Accent principal     : #C17F3F (terracotta/ocre africain)
-Accent secondaire    : #8B5E3C (brun chaud)
-Bordures subtiles    : #D8D5D0
+Fond principal (bg)        : #0B1220 (bleu marine désaturé, très sombre)
+Surface                    : #131C2E
+Surface profonde           : #1B2740
+Texte principal (ink)      : #F9FAFB
+Texte secondaire (muted)   : #94A3B8
+Accent (cyan industriel)   : #3B82F6
+Accent profond              : #2563EB
+Métal (traits techniques)  : #CBD5E1
+Bordures / filets (rule)   : #26324A
 ```
+
+Ces valeurs sont définies comme variables CSS dans `app/globals.css` (`--color-*`) et exposées à Tailwind via `tailwind.config.ts` (`background`, `surface`, `foreground`, `muted`, `accent`, `accent-deep`, `metal`, `border`). Toujours utiliser ces tokens Tailwind plutôt que des couleurs en dur.
+
+Identité sombre, froide, technique — esprit Skunkworks / infra critique. Compeel n'est pas une agence créative : le design inspire la rigueur et la solidité, pas la décoration.
+
+Identités produit (aperçus HTML/CSS uniquement, palette système Compeel inchangée par ailleurs) : KARA vert (`#10B981`), Alexis violet (`#8B5CF6`), Dame Justice rouge brique (`#A34E35`, réemploi de l'ancien accent Compeel).
 
 ### Typographie
 
+- IBM Plex Sans pour tout le texte (titres et corps) — pas de serif, nulle part.
+- JetBrains Mono pour les labels techniques, extraits de code, légendes techniques des aperçus produit.
 - Titres : grande taille, poids fort, beaucoup d'espace
 - Corps : lisible, jamais en dessous de 16px
 - Hiérarchie claire : H1 > H2 > body > caption
@@ -93,7 +111,9 @@ Autorisées si sobres et fonctionnelles — elles servent la lisibilité, jamais
 
 ### Interdit
 
-- Vert vif ou couleurs saturées
+- Vert fluo, rose fuchsia, rouge vif, couleurs néon ou saturées
+- Terracotta comme couleur système (réservé à l'identité Dame Justice uniquement)
+- Gradients agressifs
 - Cartes avec fond coloré
 - Trop d'éléments sur une même page
 - Animations lourdes, inutiles, ou qui distraient du contenu
@@ -101,22 +121,9 @@ Autorisées si sobres et fonctionnelles — elles servent la lisibilité, jamais
 
 ---
 
-## Blog — Comment ajouter un article
+## Contenu — Pas de blog actuellement
 
-Créer un fichier `.mdx` dans `/posts/` avec ce frontmatter :
-
-```mdx
----
-title: "Titre de l'article"
-date: "2026-06-01"
-description: "Description courte pour le SEO"
-tags: ["kuma", "afrique", "ia"]
----
-
-Contenu en Markdown ici...
-```
-
-Push sur GitHub → Vercel déploie automatiquement. Pas de CMS, pas d'interface admin.
+Le site n'a pas de blog ni de contenu MDX. Les pages sont des composants `.tsx` statiques dans `app/`. Toute future section éditoriale doit suivre le même modèle (page App Router + composants dans `components/`), sans introduire de nouvelle dépendance de contenu (MDX, CMS) sans validation explicite.
 
 ---
 
