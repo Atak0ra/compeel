@@ -60,7 +60,7 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full rounded border border-border bg-white px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 
@@ -75,7 +75,7 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full rounded border border-border bg-white px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 
@@ -89,12 +89,12 @@ export default function ContactForm() {
           rows={5}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full rounded border border-border bg-white px-3 py-3 text-base text-foreground focus:border-accent-deep"
+          className="w-full rounded border border-border bg-surface px-3 py-3 text-base text-foreground focus:border-accent-deep"
         />
       </div>
 
       {status === 'error' && (
-        <p role="alert" className="text-base text-red-700">{errorMessage}</p>
+        <p role="alert" className="text-base text-red-400">{errorMessage}</p>
       )}
 
       <button
