@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { IBM_Plex_Sans, IBM_Plex_Serif } from 'next/font/google'
+import { IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
@@ -12,22 +12,22 @@ const studioSans = IBM_Plex_Sans({
   display: 'swap',
 })
 
-const studioSerif = IBM_Plex_Serif({
+const studioMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-editorial',
+  variable: '--font-technical',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel · Ingénierie logicielle et IA appliquée',
+    default: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
     template: '%s · Compeel',
   },
   description:
-    "Compeel est un studio indépendant d'ingénierie logicielle et d'IA appliquée. Architecture, systèmes backend et intégration IA pour les entreprises.",
-  keywords: ['Compeel', 'ingénierie logicielle', 'architecture logicielle', 'backend', 'IA appliquée', 'fintech'],
+    "Compeel est un laboratoire indépendant d'ingénierie logicielle et d'IA appliquée. Les missions financent la recherche ; la recherche devient produits.",
+  keywords: ['Compeel', 'laboratoire', 'ingénierie logicielle', 'architecture logicielle', 'backend', 'IA appliquée', 'fintech'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel · Ingénierie logicielle et IA appliquée',
+    title: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
     description:
-      "Studio indépendant. Architecture logicielle, systèmes backend et IA appliquée pour les entreprises.",
+      "Laboratoire indépendant. Les missions financent la recherche ; la recherche devient produits.",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel · Ingénierie logicielle et IA appliquée',
-    description: "Studio indépendant. Architecture logicielle, systèmes backend et IA appliquée pour les entreprises.",
+    title: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
+    description: "Laboratoire indépendant. Les missions financent la recherche ; la recherche devient produits.",
   },
   robots: {
     index: true,
@@ -56,7 +56,7 @@ const organizationSchema = {
   name: 'Compeel',
   url: 'https://compeel.com',
   description:
-    "Studio indépendant d'ingénierie logicielle et d'IA appliquée. Compeel Labs accueille les travaux de R&D et les produits internes.",
+    "Laboratoire indépendant d'ingénierie logicielle et d'IA appliquée. Compeel Labs accueille les produits nés de la recherche du laboratoire.",
   founder: {
     '@type': 'Person',
     name: 'Williams de Souza',
@@ -73,9 +73,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${studioSans.variable} ${studioSerif.variable}`}>
+    <html lang="fr" className={`${studioSans.variable} ${studioMono.variable}`}>
       <body className="min-h-screen bg-background text-foreground antialiased">
-        <a href="#contenu" className="sr-only z-[60] bg-white p-4 text-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Aller au contenu</a>
+        <a href="#contenu" className="sr-only z-[60] bg-foreground p-4 text-background focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Aller au contenu</a>
         <JsonLd data={organizationSchema} />
         <Nav />
         <main id="contenu" tabIndex={-1}>{children}</main>
