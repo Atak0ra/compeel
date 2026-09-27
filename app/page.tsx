@@ -1,14 +1,13 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import JsonLd from '@/components/JsonLd'
 import HeroBlueprint from '@/components/HeroBlueprint'
-import VersusFinancePreview from '@/components/VersusFinancePreview'
+import CaseStudyCarousel from '@/components/CaseStudyCarousel'
 
 export const metadata: Metadata = {
   title: { absolute: 'Compeel · Conception de systèmes logiciels résilients' },
-  description: "Laboratoire d'ingénierie logicielle indépendant. Analyse des contraintes, ingénierie des flux et robustesse en production.",
+  description: 'Compeel conçoit des architectures distribuées taillées pour tenir sous charge, encaisser le trafic et tourner en production sans faillir.',
   alternates: { canonical: '/' },
 }
 
@@ -16,12 +15,6 @@ const approche = [
   { number: '01', title: 'Analyse des contraintes.', text: 'Étude des volumes, des flux et des limites opérationnelles avant toute conception. Zéro architecture théorique hors-sol.' },
   { number: '02', title: 'Ingénierie des flux.', text: "Maîtrise de l'asynchronisme, de la distribution et de l'intégrité des données pour éliminer les points de rupture." },
   { number: '03', title: 'Livraison et robustesse.', text: 'Du design initial à la mise en production, chaque brique est calibrée pour résister à la charge réelle.' },
-]
-
-const preuve = [
-  { label: 'Le problème', text: "L'interrogation de volumes massifs de données financières ou opérationnelles exige traditionnellement des requêtes complexes, des interfaces lourdes ou des équipes d'analystes dédiées." },
-  { label: 'La solution', text: 'Conception d’un moteur d’orchestration sémantique traduisant instantanément une question métier en français (écrit ou oral) en requêtes structurées, couplé à une génération dynamique de graphiques.' },
-  { label: 'Le résultat', text: 'Un assistant décisionnel accessible sans friction technique, restituant immédiatement la métrique et la visualisation correspondante.' },
 ]
 
 export default function HomePage() {
@@ -37,6 +30,7 @@ export default function HomePage() {
           </div>
           <div className="mt-7 max-w-4xl">
             <h1 className="text-balance text-4xl font-medium uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Conception de systèmes logiciels résilients.</h1>
+            <p className="mt-6 max-w-2xl text-balance text-xl leading-relaxed text-muted sm:text-2xl">Compeel conçoit des architectures distribuées taillées pour tenir sous charge, encaisser le trafic et tourner en production sans faillir.</p>
             <a href="#contact" className="button-primary mt-8">Soumettre un projet<ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
         </div>
@@ -66,20 +60,9 @@ export default function HomePage() {
       <section id="preuve" aria-labelledby="preuve-heading" className="section-anchor border-y border-border bg-surface">
         <div className="page-shell py-16 sm:py-24">
           <p className="section-label">02 / Preuve de terrain</p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
-            <Image src="/logos/versus-finances-tech.png" alt="VersusFinance" width={640} height={181} className="h-8 w-auto sm:h-9" />
-            <h2 id="preuve-heading" className="section-title">Pilotage financier conversationnel.</h2>
-          </div>
-          <div className="mt-12 grid gap-px border border-metal bg-border sm:grid-cols-3">
-            {preuve.map(item => (
-              <div key={item.label} className="bg-background p-6 sm:p-7">
-                <p className="font-mono text-xs uppercase tracking-widest text-accent-deep">{item.label}</p>
-                <p className="mt-4 text-base leading-relaxed text-muted">{item.text}</p>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10">
-            <VersusFinancePreview />
+          <h2 id="preuve-heading" className="sr-only">Preuve de terrain</h2>
+          <div className="mt-6">
+            <CaseStudyCarousel />
           </div>
         </div>
       </section>
