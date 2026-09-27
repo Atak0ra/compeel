@@ -36,8 +36,6 @@ const AUTOPLAY_MS = 6000
 export default function CaseStudyCarousel() {
   const [index, setIndex] = useState(0)
   const [paused, setPaused] = useState(false)
-  const study = caseStudies[index]
-  const Preview = study.Preview
   const go = (next: number) => setIndex((next + caseStudies.length) % caseStudies.length)
 
   useEffect(() => {
@@ -51,37 +49,50 @@ export default function CaseStudyCarousel() {
   return (
     <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-x-5 gap-y-3">
-          {'src' in study.logo ? (
-            <Image src={study.logo.src} alt={study.logo.alt} width={640} height={181} className="h-8 w-auto sm:h-9" />
-          ) : (
-            <span className="font-mono text-xl font-bold tracking-tight text-accent-deep">{study.logo.text}</span>
-          )}
-          <h2 className="section-title">{study.title}</h2>
-        </div>
-        <div className="flex items-center gap-3">
-          <p className="font-mono text-xs text-metal" aria-live="polite">{index + 1} / {caseStudies.length}</p>
-          <div className="flex gap-1">
-            <button type="button" onClick={() => go(index - 1)} aria-label="Réalisation précédente" className="flex h-9 w-9 items-center justify-center border border-metal text-metal hover:border-accent-deep hover:text-accent-deep">
-              <ChevronLeft size={16} aria-hidden="true" />
-            </button>
-            <button type="button" onClick={() => go(index + 1)} aria-label="Réalisation suivante" className="flex h-9 w-9 items-center justify-center border border-metal text-metal hover:border-accent-deep hover:text-accent-deep">
-              <ChevronRight size={16} aria-hidden="true" />
-            </button>
-          </div>
+        <p className="font-mono text-xs text-metal" aria-live="polite">{index + 1} / {caseStudies.length}</p>
+        <div className="flex gap-1">
+          <button type="button" onClick={() => go(index - 1)} aria-label="Réalisation précédente" className="flex h-9 w-9 items-center justify-center border border-metal text-metal hover:border-accent-deep hover:text-accent-deep">
+            <ChevronLeft size={16} aria-hidden="true" />
+          </button>
+          <button type="button" onClick={() => go(index + 1)} aria-label="Réalisation suivante" className="flex h-9 w-9 items-center justify-center border border-metal text-metal hover:border-accent-deep hover:text-accent-deep">
+            <ChevronRight size={16} aria-hidden="true" />
+          </button>
         </div>
       </div>
 
-      <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-10">
-        <div className="flex flex-col gap-px border border-metal bg-border">
-          {study.pillars.map(item => (
-            <div key={item.label} className="flex flex-1 flex-col bg-background p-6 sm:p-7">
-              <p className="font-mono text-xs uppercase tracking-widest text-accent-deep">{item.label}</p>
-              <p className="mt-4 text-base leading-relaxed text-muted">{item.text}</p>
-            </div>
-          ))}
+      <div className="mt-6 overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {caseStudies.map(s => {
+            const SlidePreview = s.Preview
+            return (
+              <div key={s.id} className="w-full shrink-0">
+                <div className="flex items-center gap-x-5 gap-y-3">
+                  {'src' in s.logo ? (
+                    <Image src={s.logo.src} alt={s.logo.alt} width={640} height={181} className="h-8 w-auto sm:h-9" />
+                  ) : (
+                    <span className="font-mono text-xl font-bold tracking-tight text-accent-deep">{s.logo.text}</span>
+                  )}
+                  <h2 className="section-title">{s.title}</h2>
+                </div>
+
+                <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-10">
+                  <div className="flex flex-col gap-px border border-metal bg-border">
+                    {s.pillars.map(item => (
+                      <div key={item.label} className="flex flex-1 flex-col bg-background p-6 sm:p-7">
+                        <p className="font-mono text-xs uppercase tracking-widest text-accent-deep">{item.label}</p>
+                        <p className="mt-4 text-base leading-relaxed text-muted">{item.text}</p>
+                      </div>
+                    ))}
+                  </div>
+                  <SlidePreview />
+                </div>
+              </div>
+            )
+          })}
         </div>
-        <Preview />
       </div>
 
       <div className="mt-6 flex justify-center gap-2">
