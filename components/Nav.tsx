@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
 const links = [
-  { href: '/#methode', label: 'Approche' },
-  { href: '/#preuve', label: 'Preuve de terrain' },
+  { href: '/#references', label: 'Références' },
+  { href: '/about', label: 'Le laboratoire' },
+  { href: '/realisations', label: 'Labs' },
   { href: '/#contact', label: 'Contact' },
 ]
 
@@ -32,7 +33,7 @@ export default function Nav() {
   }, [])
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 border-b border-border bg-background">
+    <header ref={headerRef} className="sticky top-0 z-50 bg-background">
       <nav aria-label="Navigation principale" className="page-shell flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-3">
         <Link
           href="/"
@@ -43,7 +44,7 @@ export default function Nav() {
 
         <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:gap-x-8">
           {links.map(({ href, label }) => {
-            const isActive = pathname === href
+            const isActive = pathname === href || (href === '/realisations' && ['/kara', '/alexis', '/damejustice'].includes(pathname))
             return (
               <li key={href}>
                 <Link

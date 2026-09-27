@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer>
       <div className="page-shell py-12">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           {/* Left */}
@@ -14,15 +14,15 @@ export default function Footer() {
               Compeel
             </Link>
             <p className="text-base text-muted max-w-xs">
-              Racines africaines. Exigence de terrain.<br />Laboratoire indépendant d&apos;ingénierie des systèmes.
+              Racines africaines. Regard global.<br />Laboratoire d&apos;ingénierie logicielle et IA.
             </p>
           </div>
 
           {/* Links */}
           <div className="flex flex-col gap-2">
             <p className="text-sm text-muted mb-1">Compeel</p>
-            <Link href="/#methode" className="inline-flex min-h-11 items-center text-base hover:text-foreground">
-              Approche d&apos;ingénierie
+            <Link href="/realisations" className="inline-flex min-h-11 items-center text-base hover:text-foreground">
+              Compeel Labs
             </Link>
             <Link href="/about" className="inline-flex min-h-11 items-center text-base hover:text-foreground">
               Le laboratoire
