@@ -22,12 +22,12 @@ const studioMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://compeel.com'),
   title: {
-    default: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
+    default: 'Compeel · Laboratoire indépendant d’ingénierie des systèmes',
     template: '%s · Compeel',
   },
   description:
-    "Compeel est un laboratoire indépendant d'ingénierie logicielle et d'IA appliquée. Les missions financent la recherche ; la recherche devient produits.",
-  keywords: ['Compeel', 'laboratoire', 'ingénierie logicielle', 'architecture logicielle', 'backend', 'IA appliquée', 'fintech'],
+    "Laboratoire indépendant d’ingénierie des systèmes. Architecture, résilience des flux, vérification en conditions dégradées et transmission de la maîtrise.",
+  keywords: ['Compeel', 'laboratoire indépendant', 'ingénierie des systèmes', 'architecture', 'résilience', 'distribution asynchrone'],
   authors: [{ name: 'Compeel' }],
   creator: 'Compeel',
   openGraph: {
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: 'https://compeel.com',
     siteName: 'Compeel',
-    title: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
+    title: 'Compeel · Laboratoire indépendant d’ingénierie des systèmes',
     description:
-      "Laboratoire indépendant. Les missions financent la recherche ; la recherche devient produits.",
+      "Des systèmes qui tiennent. En production. Sous charge. Dans le temps.",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compeel · Laboratoire d\'ingénierie logicielle et IA',
-    description: "Laboratoire indépendant. Les missions financent la recherche ; la recherche devient produits.",
+    title: 'Compeel · Laboratoire indépendant d’ingénierie des systèmes',
+    description: "Des systèmes qui tiennent. En production. Sous charge. Dans le temps.",
   },
   robots: {
     index: true,
@@ -56,7 +56,7 @@ const organizationSchema = {
   name: 'Compeel',
   url: 'https://compeel.com',
   description:
-    "Laboratoire indépendant d'ingénierie logicielle et d'IA appliquée. Compeel Labs accueille les produits nés de la recherche du laboratoire.",
+    "Laboratoire indépendant d’ingénierie des systèmes. Conception d’architectures, résilience des flux et maîtrise de l’exploitation.",
   founder: {
     '@type': 'Person',
     name: 'Williams de Souza',

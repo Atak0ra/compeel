@@ -1,14 +1,14 @@
 # Compeel
 
-> Studio indépendant d'ingénierie logicielle et d'IA appliquée fondé en 2016 par Williams de Souza.
+> Laboratoire indépendant d'ingénierie logicielle et d'IA appliquée fondé en 2016 par Williams de Souza.
 
-Compeel accompagne les entreprises en architecture logicielle, systèmes backend et intégration IA. Le fondateur a un parcours de Staff Engineer chez OCTO Technology. Le studio a livré des missions pour VersusFinance et Crpay, dans la fintech. Aucun résultat chiffré ni détail de mission n'est publié ici.
+Compeel est un laboratoire qui expérimente et conçoit de la rupture technique. Les missions d'ingénierie (architecture logicielle, systèmes backend, intégration IA) financent la recherche du laboratoire ; cette recherche devient des produits qui vivent seuls. Le fondateur a un parcours de Staff Engineer chez OCTO Technology. Le laboratoire a livré des missions pour VersusFinance et Crpay, dans la fintech. Aucun résultat chiffré ni détail de mission n'est publié ici.
 
-Le site présente l'activité du studio, ses références et un formulaire de contact. Aucune vente ni paiement n'a lieu sur ce site.
+Le site présente l'activité du laboratoire, ses références et un formulaire de contact. Aucune vente ni paiement n'a lieu sur ce site.
 
 ## Compeel Labs
 
-Compeel Labs regroupe la R&D et les produits internes, dans un espace distinct des missions clients. Ces produits ne sont pas des références clients.
+Compeel Labs regroupe les produits nés de la recherche du laboratoire, dans un espace distinct des missions clients. Ces produits ne sont pas des références clients.
 
 - [KARA](https://compeel.com/kara) : mémoire clinique vocale pour les structures médicales, hébergement local des données.
 - [Alexis](https://compeel.com/alexis) : outil de développement logiciel avec validation humaine.
@@ -16,7 +16,7 @@ Compeel Labs regroupe la R&D et les produits internes, dans un espace distinct d
 
 ## Pages
 
-- [Le studio](https://compeel.com/about) : histoire et convictions du studio.
+- [Le laboratoire](https://compeel.com/about) : histoire et convictions du laboratoire.
 - [Références clients](https://compeel.com/#references)
 - [Compeel Labs](https://compeel.com/realisations)
 - [Contact](https://compeel.com/#contact)

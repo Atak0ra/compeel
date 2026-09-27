@@ -1,82 +1,97 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
-import TrustedBy from '@/components/TrustedBy'
 import JsonLd from '@/components/JsonLd'
-import ScrollCue from '@/components/ScrollCue'
-import BlueprintMotif from '@/components/BlueprintMotif'
+import HeroBlueprint from '@/components/HeroBlueprint'
+import VersusFinancePreview from '@/components/VersusFinancePreview'
 
 export const metadata: Metadata = {
-  title: { absolute: "Compeel · Laboratoire d'ingénierie logicielle et IA" },
-  description: "Laboratoire indépendant d'ingénierie logicielle et d'IA appliquée. Les missions financent la recherche ; la recherche devient produits. Références fintech : VersusFinance et Crpay.",
+  title: { absolute: 'Compeel · Conception de systèmes logiciels résilients' },
+  description: "Laboratoire d'ingénierie logicielle indépendant. Analyse des contraintes, ingénierie des flux et robustesse en production.",
   alternates: { canonical: '/' },
 }
+
+const approche = [
+  { number: '01', title: 'Analyse des contraintes.', text: 'Étude des volumes, des flux et des limites opérationnelles avant toute conception. Zéro architecture théorique hors-sol.' },
+  { number: '02', title: 'Ingénierie des flux.', text: "Maîtrise de l'asynchronisme, de la distribution et de l'intégrité des données pour éliminer les points de rupture." },
+  { number: '03', title: 'Livraison et robustesse.', text: 'Du design initial à la mise en production, chaque brique est calibrée pour résister à la charge réelle.' },
+]
+
+const preuve = [
+  { label: 'Le problème', text: "L'interrogation de volumes massifs de données financières ou opérationnelles exige traditionnellement des requêtes complexes, des interfaces lourdes ou des équipes d'analystes dédiées." },
+  { label: 'La solution', text: 'Conception d’un moteur d’orchestration sémantique traduisant instantanément une question métier en français (écrit ou oral) en requêtes structurées, couplé à une génération dynamique de graphiques.' },
+  { label: 'Le résultat', text: 'Un assistant décisionnel accessible sans friction technique, restituant immédiatement la métrique et la visualisation correspondante.' },
+]
 
 export default function HomePage() {
   return (
     <div>
-      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Compeel', url: 'https://compeel.com', description: "Laboratoire indépendant d'ingénierie logicielle et d'IA appliquée." }} />
-      <header className="home-hero relative flex flex-col gap-4 overflow-hidden pb-6">
-        <BlueprintMotif variant="hero" />
-        <div className="page-shell relative flex min-h-0 flex-1 flex-col overflow-y-auto">
-          <div className="mx-auto my-auto w-full max-w-5xl shrink-0 py-4 sm:py-6">
-            <h1 className="font-sans text-[64px] font-normal leading-none text-accent sm:text-[104px] lg:text-[144px]">Compeel<span className="text-metal">.</span></h1>
-            <div className="mt-12 grid items-start gap-6 sm:mt-16 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
-              <div>
-                <p className="font-mono text-sm text-metal">Laboratoire d&apos;ingénierie logicielle &amp; IA / Depuis 2016</p>
-              </div>
-              <div className="min-w-0 max-w-xl">
-                <p className="font-sans text-3xl leading-tight sm:text-4xl">On conçoit des systèmes qui tiennent — en production, sous charge, dans le temps.</p>
-                <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2">
-                  <a href="#contact" className="button-primary">Discuter d&apos;une mission<ArrowUpRight size={18} aria-hidden="true" /></a>
-                  <a href="#labs" className="inline-flex min-h-11 items-center gap-2 text-base text-metal">Voir Compeel Labs<ArrowUpRight size={18} aria-hidden="true" /></a>
-                </div>
-              </div>
-            </div>
+      <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Compeel', url: 'https://compeel.com', description: 'Laboratoire indépendant d’ingénierie des systèmes.' }} />
+      <header className="home-hero relative flex flex-col overflow-hidden border-b border-border">
+        <HeroBlueprint />
+        <div className="page-shell relative z-10 flex flex-1 flex-col justify-center gap-3">
+          <div className="flex flex-wrap justify-between gap-3 font-mono text-xs uppercase tracking-widest text-metal">
+            <p>Compeel / Laboratoire d&apos;ingénierie logicielle</p>
+            <p className="hidden sm:block">Architectures distribuées &amp; systèmes critiques</p>
+          </div>
+          <div className="mt-7 max-w-4xl">
+            <h1 className="text-balance text-4xl font-medium uppercase leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">Conception de systèmes logiciels résilients.</h1>
+            <a href="#contact" className="button-primary mt-8">Soumettre un projet<ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
         </div>
-        <ScrollCue />
+        <a href="#methode" aria-label="Défiler vers la suite" className="relative z-10 flex min-h-11 items-center justify-center pb-8 text-metal">
+          <ArrowDown className="scroll-cue-icon" size={26} aria-hidden="true" />
+        </a>
       </header>
-      <TrustedBy />
-      <section aria-labelledby="engineering-heading">
-        <div className="page-shell py-20 lg:py-32">
-          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
-            <div><p className="mb-5 font-mono text-sm text-metal">02 / Méthode</p><h2 id="engineering-heading" className="font-sans text-4xl font-normal leading-tight">Méthode d&apos;ingénierie.</h2></div>
-            <div><p className="max-w-2xl text-xl leading-relaxed">On construit chez Compeel des systèmes qui peuvent être compris, exploités et transmis. Chaque système livré a été vérifié en conditions réelles avant sa mise en production.</p><Link href="/about" className="mt-5 inline-flex min-h-11 items-center gap-2 text-base text-accent-deep">Rencontrer le laboratoire<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+
+      <section id="methode" aria-labelledby="method-heading" className="section-anchor border-t border-border bg-surface">
+        <div className="page-shell py-16 sm:py-24">
+          <div className="grid gap-6 md:grid-cols-[1fr_2fr] md:gap-12">
+            <p className="section-label">01 / L&apos;approche</p>
+            <h2 id="method-heading" className="section-title">Ce que fait le labo.</h2>
           </div>
-          <div className="mt-16 space-y-16 lg:mt-20 lg:space-y-20">
-            {[
-              { title: 'On prend les problèmes durs.', label: 'Missions d’ingénierie', text: 'Architecture, backend critique, IA appliquée. Des contextes où la fiabilité n’est pas négociable.' },
-              { title: 'On en tire de la R&D.', label: 'Laboratoire', text: 'Ce qu’on apprend en production alimente ce qu’on explore au labo. Expérimenter vite, documenter les arbitrages.' },
-              { title: 'On extrait des produits.', label: 'Scalabilité', text: 'Quand une recherche tient la route, elle devient un produit qui vit seul.' },
-            ].map(item => (
-              <div key={item.title} className="grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
-                <div><h3 className="font-sans text-2xl font-normal">{item.title}</h3></div>
-                <div className="space-y-3"><p className="text-base font-medium text-metal">{item.label}</p><p className="max-w-xl text-base leading-relaxed text-muted">{item.text}</p></div>
-              </div>
+          <div className="mt-12 border-t border-metal">
+            {approche.map(item => (
+              <article key={item.number} className="grid gap-4 border-b border-border py-7 md:grid-cols-[48px_1fr_1.3fr] md:gap-8">
+                <span className="font-mono text-sm text-accent-deep">{item.number}</span>
+                <h3 className="max-w-xs text-2xl font-medium leading-tight">{item.title}</h3>
+                <p className="max-w-xl text-base leading-relaxed text-muted">{item.text}</p>
+              </article>
             ))}
           </div>
         </div>
       </section>
-      <section aria-labelledby="model-heading">
-        <div className="page-shell py-20 lg:py-32">
-          <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12">
-            <div><p className="mb-5 font-mono text-sm text-metal">03 / Le moteur</p><h2 id="model-heading" className="font-sans text-4xl font-normal leading-tight">Terrain → Recherche<br />→ Produit.</h2></div>
-            <div><p className="max-w-2xl text-xl leading-relaxed">Une mission d&apos;ingénierie n&apos;est jamais un one-shot. Chaque système livré à un client — fintech, paiement, infrastructure critique — nourrit une base de compétences que le laboratoire réinvestit. Pas de levée pour financer une idée non testée. Ce qui devient produit a déjà survécu à un système en production.</p></div>
+
+      <section id="preuve" aria-labelledby="preuve-heading" className="section-anchor border-y border-border bg-surface">
+        <div className="page-shell py-16 sm:py-24">
+          <p className="section-label">02 / Preuve de terrain</p>
+          <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+            <Image src="/logos/versus-finances-tech.png" alt="VersusFinance" width={640} height={181} className="h-8 w-auto sm:h-9" />
+            <h2 id="preuve-heading" className="section-title">Pilotage financier conversationnel.</h2>
+          </div>
+          <div className="mt-12 grid gap-px border border-metal bg-border sm:grid-cols-3">
+            {preuve.map(item => (
+              <div key={item.label} className="bg-background p-6 sm:p-7">
+                <p className="font-mono text-xs uppercase tracking-widest text-accent-deep">{item.label}</p>
+                <p className="mt-4 text-base leading-relaxed text-muted">{item.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <VersusFinancePreview />
           </div>
         </div>
       </section>
-      <section id="contact" className="scroll-mt-36 bg-surface">
-        <div className="page-shell grid gap-12 py-20 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] md:gap-20 lg:py-32">
-        <div><p className="mb-6 font-mono text-sm text-accent-deep">04 / Prendre contact</p><h2 className="max-w-md font-sans text-4xl font-normal leading-tight text-accent sm:text-5xl">Discuter d&apos;un projet<span className="text-foreground">.</span></h2><p className="mt-6 max-w-sm text-base leading-relaxed text-muted">Écrivez. On répond avec une lecture technique du problème, pas un devis générique.</p></div>
-        <ContactForm />
-        </div>
-      </section>
-      <section id="labs" className="scroll-mt-36" aria-labelledby="labs-heading">
-        <div className="page-shell grid gap-8 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] md:gap-12 lg:py-24">
-          <div><p className="mb-3 font-mono text-sm text-metal">05 / Ce qui en sort</p><h2 id="labs-heading" className="font-sans text-2xl font-normal">Compeel Labs</h2></div>
-          <div><p className="max-w-xl text-base leading-relaxed text-muted">L&apos;espace où la recherche devient produit. Trois produits, une discipline commune : vérifier avant de livrer.</p><Link href="/realisations" className="mt-3 inline-flex min-h-11 items-center gap-2 text-base text-metal">Explorer le Labs<ArrowUpRight size={18} aria-hidden="true" /></Link></div>
+
+      <section id="contact" aria-labelledby="contact-heading" className="section-anchor">
+        <div className="page-shell grid gap-10 py-16 md:grid-cols-2 md:gap-20 sm:py-24">
+          <div>
+            <p className="section-label">03 / Contact</p>
+            <h2 id="contact-heading" className="section-title mt-6">Contacter le labo.</h2>
+            <p className="mt-6 max-w-md text-lg leading-relaxed text-muted">Pour étudier une architecture, refondre un flux critique ou concevoir un système sur-mesure.</p>
+          </div>
+          <ContactForm />
         </div>
       </section>
     </div>

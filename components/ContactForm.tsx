@@ -66,7 +66,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="email" className="mb-2 block text-base text-muted">
-          Email
+          Adresse email
         </label>
         <input
           id="email"
@@ -81,12 +81,12 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="message" className="mb-2 block text-base text-muted">
-          Message
+          Description technique du besoin
         </label>
         <textarea
           id="message"
           required
-          rows={5}
+          rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           className="w-full rounded border border-metal bg-background px-3 py-3 text-base text-foreground focus:border-accent-deep"
@@ -94,7 +94,7 @@ export default function ContactForm() {
       </div>
 
       {status === 'error' && (
-        <p role="alert" className="text-base text-red-600">{errorMessage}</p>
+        <p role="alert" className="border-l-2 border-metal pl-3 text-base text-foreground">{errorMessage}</p>
       )}
 
       <button

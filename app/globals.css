@@ -57,6 +57,23 @@
 }
 
 @layer utilities {
+  .blueprint-grid {
+    background-image: linear-gradient(to right, var(--color-rule) 1px, transparent 1px), linear-gradient(to bottom, var(--color-rule) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .section-anchor {
+    scroll-margin-top: calc(var(--site-nav-height) + 20px);
+  }
+
+  .section-label {
+    @apply font-mono text-xs uppercase tracking-widest text-metal;
+  }
+
+  .section-title {
+    @apply text-3xl font-medium leading-tight sm:text-4xl lg:text-5xl;
+  }
+
   .home-hero {
     height: calc(100vh - var(--site-nav-height));
     height: calc(100dvh - var(--site-nav-height));
