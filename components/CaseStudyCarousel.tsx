@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import CaseStudyCard from './CaseStudyCard'
 import VersusFinancePreview from './VersusFinancePreview'
 import CrpayPreview from './CrpayPreview'
 
@@ -10,23 +10,19 @@ const caseStudies = [
   {
     id: 'versusfinance',
     logo: { src: '/logos/versus-finances-tech.png', alt: 'VersusFinance' },
-    title: 'Pilotage financier conversationnel.',
-    pillars: [
-      { label: 'Le problème', text: "L'interrogation de volumes massifs de données financières ou opérationnelles exige traditionnellement des requêtes complexes, des interfaces lourdes ou des équipes d'analystes dédiées." },
-      { label: 'La solution', text: 'Conception d’un moteur d’orchestration sémantique traduisant instantanément une question métier en français (écrit ou oral) en requêtes structurées, couplé à une génération dynamique de graphiques.' },
-      { label: 'Le résultat', text: 'Un assistant décisionnel accessible sans friction technique, restituant immédiatement la métrique et la visualisation correspondante.' },
-    ],
+    badge: 'Fintech · Data',
+    title: 'VersusFinance',
+    description: 'Une interface conversationnelle qui transforme des requêtes en langage naturel en insights financiers en temps réel.',
+    checklist: ['NLP & Data Visualization', 'Architecture scalable', 'Utilisé en production'],
     Preview: VersusFinancePreview,
   },
   {
     id: 'crpay',
     logo: { text: 'CRPAY' },
-    title: 'Passerelle de paiement mobile money.',
-    pillars: [
-      { label: 'Le problème', text: "Encaisser des paiements mobile money (MTN, Orange…) exige normalement une intégration directe avec chaque opérateur télécom, un chantier redondant pour chaque marchand." },
-      { label: 'La solution', text: "Conception d'une passerelle API unique : authentification JWT, dispatch asynchrone des transactions vers le provider externe, traçabilité complète des échanges (requête, réponse, code HTTP) et accès scopé par rôle (interne, marchand, client)." },
-      { label: 'Le résultat', text: 'Une API unifiée pour encaisser sur plusieurs opérateurs, un historique consultable et filtrable par statut, montant et date, avec documentation Swagger pour les intégrateurs.' },
-    ],
+    badge: 'Paiement · Infrastructure',
+    title: 'CRPAY',
+    description: 'Une passerelle unique pour le mobile money : intégration multi-opérateurs, scoping par rôle et traçabilité complète.',
+    checklist: ['API unifiée', 'Traçabilité end-to-end', 'Haute disponibilité'],
     Preview: CrpayPreview,
   },
 ] as const
@@ -48,7 +44,7 @@ export default function CaseStudyCarousel() {
 
   return (
     <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-      <div className="flex flex-wrap items-center justify-between gap-4">
+      <div className="flex justify-end gap-3">
         <p className="font-mono text-xs text-metal" aria-live="polite">{index + 1} / {caseStudies.length}</p>
         <div className="flex gap-1">
           <button type="button" onClick={() => go(index - 1)} aria-label="Réalisation précédente" className="flex h-9 w-9 items-center justify-center border border-metal text-metal hover:border-accent-deep hover:text-accent-deep">
@@ -60,38 +56,23 @@ export default function CaseStudyCarousel() {
         </div>
       </div>
 
-      <div className="mt-6 overflow-hidden">
+      <div className="mt-4 overflow-hidden">
         <div
           className="flex transition-transform duration-500 ease-out motion-reduce:transition-none"
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
-          {caseStudies.map(s => {
-            const SlidePreview = s.Preview
-            return (
-              <div key={s.id} className="w-full shrink-0">
-                <div className="flex items-center gap-x-5 gap-y-3">
-                  {'src' in s.logo ? (
-                    <Image src={s.logo.src} alt={s.logo.alt} width={640} height={181} className="h-8 w-auto sm:h-9" />
-                  ) : (
-                    <span className="font-mono text-xl font-bold tracking-tight text-accent-deep">{s.logo.text}</span>
-                  )}
-                  <h2 className="section-title">{s.title}</h2>
-                </div>
-
-                <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-10">
-                  <div className="flex flex-col gap-px border border-metal bg-border">
-                    {s.pillars.map(item => (
-                      <div key={item.label} className="flex flex-1 flex-col bg-background p-6 sm:p-7">
-                        <p className="font-mono text-xs uppercase tracking-widest text-accent-deep">{item.label}</p>
-                        <p className="mt-4 text-base leading-relaxed text-muted">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                  <SlidePreview />
-                </div>
-              </div>
-            )
-          })}
+          {caseStudies.map(s => (
+            <div key={s.id} className="w-full shrink-0 px-1">
+              <CaseStudyCard
+                logo={s.logo}
+                badge={s.badge}
+                title={s.title}
+                description={s.description}
+                checklist={[...s.checklist]}
+                Preview={s.Preview}
+              />
+            </div>
+          ))}
         </div>
       </div>
 

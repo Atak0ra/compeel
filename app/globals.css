@@ -16,6 +16,18 @@
     --color-rule: #E2E5EA;
   }
 
+  :root[data-theme='dark'] {
+    --color-bg: #0A0E1A;
+    --color-surface: #0F1728;
+    --color-surface-deep: #141D33;
+    --color-ink: #F1F5F9;
+    --color-muted: #94A3B8;
+    --color-accent: #3B82F6;
+    --color-accent-deep: #60A5FA;
+    --color-metal: #64748B;
+    --color-rule: #1E293B;
+  }
+
   html {
     @apply bg-background text-foreground;
     -webkit-font-smoothing: antialiased;

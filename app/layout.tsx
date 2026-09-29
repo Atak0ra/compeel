@@ -82,7 +82,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${studioSans.variable} ${studioMono.variable}`}>
+    <html lang="fr" data-theme="dark" suppressHydrationWarning className={`${studioSans.variable} ${studioMono.variable}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('compeel-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="min-h-screen bg-background text-foreground antialiased">
         <a href="#contenu" className="sr-only z-[60] bg-foreground p-4 text-background focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Aller au contenu</a>
         <JsonLd data={organizationSchema} />

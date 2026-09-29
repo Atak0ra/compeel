@@ -3,10 +3,14 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef } from 'react'
+import { ArrowUpRight } from 'lucide-react'
+import ThemeToggle from './ThemeToggle'
 
 const links = [
+  { href: '/', label: 'Accueil' },
   { href: '/#methode', label: 'Approche' },
-  { href: '/#preuve', label: 'Preuve de terrain' },
+  { href: '/#preuve', label: 'Études de cas' },
+  { href: '/about', label: 'À propos' },
   { href: '/#contact', label: 'Contact' },
 ]
 
@@ -32,18 +36,19 @@ export default function Nav() {
   }, [])
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 border-b border-border bg-background">
-      <nav aria-label="Navigation principale" className="page-shell flex flex-wrap items-center justify-between gap-x-6 gap-y-1 py-3">
-        <Link
-          href="/"
-          className="inline-flex min-h-11 items-center font-sans text-2xl font-medium text-accent"
-        >
-          Compeel<span className="text-metal">.</span>
+    <header ref={headerRef} className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur">
+      <nav aria-label="Navigation principale" className="page-shell flex flex-wrap items-center justify-between gap-x-6 gap-y-2 py-3">
+        <Link href="/" className="flex min-h-11 items-center gap-2.5">
+          <span className="flex h-8 w-8 items-center justify-center rounded-md bg-accent-deep text-sm font-bold text-white">C</span>
+          <span className="flex flex-col leading-none">
+            <span className="font-sans text-lg font-medium text-foreground">Compeel</span>
+            <span className="hidden font-mono text-[10px] uppercase tracking-wider text-metal sm:block">Laboratoire d&apos;ingénierie logicielle</span>
+          </span>
         </Link>
 
-        <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:gap-x-8">
+        <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 sm:gap-x-6">
           {links.map(({ href, label }) => {
-            const isActive = pathname === href
+            const isActive = href === '/' ? pathname === '/' : pathname + '' === href
             return (
               <li key={href}>
                 <Link
@@ -61,6 +66,13 @@ export default function Nav() {
             )
           })}
         </ul>
+
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <a href="/#contact" className="button-primary hidden sm:inline-flex">
+            Discuter d&apos;un projet<ArrowUpRight size={16} aria-hidden="true" />
+          </a>
+        </div>
       </nav>
     </header>
   )

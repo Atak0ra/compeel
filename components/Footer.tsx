@@ -1,8 +1,16 @@
 import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-surface">
+    <footer className="border-t border-border">
+      <div className="border-b border-border bg-surface-2">
+        <div className="page-shell flex flex-wrap items-center justify-between gap-6 py-14">
+          <p className="max-w-lg text-2xl font-medium leading-tight sm:text-3xl">Des fondations solides pour ce qui compte demain.</p>
+          <a href="/#contact" className="button-primary">Discuter d&apos;un projet<ArrowUpRight size={18} aria-hidden="true" /></a>
+        </div>
+      </div>
+      <div className="bg-surface">
       <div className="page-shell py-12">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           {/* Left */}
@@ -50,6 +58,7 @@ export default function Footer() {
             In memory of Alexis Sambou, co-founder.
           </p>
         </div>
+      </div>
       </div>
     </footer>
   )
