@@ -10,6 +10,7 @@ const links = [
   { href: '/', label: 'Accueil' },
   { href: '/#methode', label: 'Approche' },
   { href: '/#preuve', label: 'Études de cas' },
+  { href: '/#labs', label: 'Labs' },
   { href: '/about', label: 'À propos' },
   { href: '/#contact', label: 'Contact' },
 ]

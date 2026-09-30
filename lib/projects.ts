@@ -21,17 +21,6 @@ export const projects = [
     access: 'Essai proposé',
     audience: 'Développeurs, indépendants et équipes produit',
   },
-  {
-    id: 'damejustice',
-    name: 'Dame Justice',
-    domain: 'Droit',
-    headline: 'Une réponse compte. Sa source aussi.',
-    description: 'Interroger le droit togolais et les textes OHADA avec leurs références. Un outil de recherche juridique, pas un substitut au jugement du professionnel.',
-    href: '/damejustice',
-    website: 'https://damejustice.vercel.app/',
-    access: 'Bêta fermée',
-    audience: 'Juristes, avocats et chercheurs',
-  },
 ] as const
 
 export type Project = typeof projects[number]

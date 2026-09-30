@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { ArrowDown, ArrowUpRight, Search, ShieldCheck, Share2 } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
+import LabsFlagship from '@/components/LabsFlagship'
 import JsonLd from '@/components/JsonLd'
 import HeroBlueprint from '@/components/HeroBlueprint'
 import CaseStudyCarousel from '@/components/CaseStudyCarousel'
@@ -113,6 +114,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <LabsFlagship />
 
       <section id="contact" aria-labelledby="contact-heading" className="section-anchor">
         <div className="page-shell grid gap-10 py-16 md:grid-cols-2 md:gap-20 sm:py-24">
