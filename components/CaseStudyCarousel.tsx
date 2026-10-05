@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import CaseStudyCard from './CaseStudyCard'
 import VersusFinancePreview from './VersusFinancePreview'
@@ -27,23 +27,12 @@ const caseStudies = [
   },
 ] as const
 
-const AUTOPLAY_MS = 6000
-
 export default function CaseStudyCarousel() {
   const [index, setIndex] = useState(0)
-  const [paused, setPaused] = useState(false)
   const go = (next: number) => setIndex((next + caseStudies.length) % caseStudies.length)
 
-  useEffect(() => {
-    if (paused) return
-    const id = setInterval(() => {
-      setIndex(current => (current + 1) % caseStudies.length)
-    }, AUTOPLAY_MS)
-    return () => clearInterval(id)
-  }, [paused])
-
   return (
-    <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+    <div>
       <div className="flex justify-end gap-3">
         <p className="font-mono text-xs text-metal" aria-live="polite">{index + 1} / {caseStudies.length}</p>
         <div className="flex gap-1">

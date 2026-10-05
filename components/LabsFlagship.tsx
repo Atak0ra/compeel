@@ -1,4 +1,6 @@
+import { ArrowDown } from 'lucide-react'
 import BetaForm from './BetaForm'
+import DameJusticePreview from './product-previews/DameJusticePreview'
 
 export default function LabsFlagship() {
   return (
@@ -11,56 +13,48 @@ export default function LabsFlagship() {
           Nos incubateurs d&apos;infrastructures logicielles et d&apos;IA appliquée aux secteurs à forte complexité.
         </p>
 
-        <article className="relative mt-12 overflow-hidden rounded-lg bg-[#0B1220] text-slate-100">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.07]"
-            aria-hidden="true"
-            style={{
-              backgroundImage:
-                'linear-gradient(#94A3B8 1px, transparent 1px), linear-gradient(90deg, #94A3B8 1px, transparent 1px)',
-              backgroundSize: '32px 32px',
-              maskImage: 'linear-gradient(to bottom right, black, transparent 70%)',
-              WebkitMaskImage: 'linear-gradient(to bottom right, black, transparent 70%)',
-            }}
-          />
+        <article className="mt-12 border-t border-border text-foreground">
+          <div className="grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)]">
+            <div className="min-w-0">
+              <p className="text-sm text-muted">Produit phare · Compeel Labs</p>
 
-          <div className="relative grid gap-12 p-6 sm:p-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:p-14">
-            <div>
-              <p className="text-sm text-slate-400">Projet phare, accès bêta fermée</p>
-
-              <h3 className="mt-4 text-4xl font-medium sm:text-6xl">DameJustice</h3>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-300">
+              <h3 className="mt-4 text-4xl font-medium sm:text-5xl lg:text-4xl xl:text-5xl">DameJustice</h3>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
                 Un assistant RAG souverain et hybride pour les cabinets juridiques. Vos dossiers restent sous le contrôle du cabinet, avec une recherche sémantique et lexicale et des réponses sourcées.
               </p>
 
               <div
-                className="mt-8 grid overflow-hidden rounded-md border border-slate-700 sm:grid-cols-2 sm:divide-x sm:divide-slate-700"
+                className="mt-8 grid border-y border-border"
                 aria-label="Double source : cabinet et corpus OHADA/CCJA"
               >
-                <div className="border-b border-slate-700 p-4 sm:border-b-0">
-                  <p className="text-sm text-slate-400">Source interne</p>
-                  <p className="mt-1 text-base text-white">Dossiers et documents du cabinet</p>
+                <div className="border-b border-border py-4">
+                  <p className="text-sm text-muted">Source interne</p>
+                  <p className="mt-1 text-base">Dossiers et documents du cabinet</p>
                 </div>
-                <div className="p-4">
-                  <p className="text-sm text-slate-400">Source externe</p>
-                  <p className="mt-1 text-base text-white">Corpus OHADA et CCJA</p>
+                <div className="py-4">
+                  <p className="text-sm text-muted">Source externe</p>
+                  <p className="mt-1 text-base">Corpus OHADA et CCJA</p>
                 </div>
               </div>
-              <p className="mt-3 text-sm text-slate-400">
+              <p className="mt-3 text-sm text-muted">
                 Les deux sources sont interrogées ensemble. Chaque réponse cite ses références.
               </p>
-
-
+              <a href="#damejustice-beta" className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-foreground py-2 text-base font-medium transition-colors hover:text-muted">
+                Demander un accès bêta<ArrowDown size={18} className="shrink-0" aria-hidden="true" />
+              </a>
             </div>
+            <DameJusticePreview />
+          </div>
 
-            <div className="self-start rounded-md border border-slate-700 p-6 sm:p-8">
-              <h4 className="text-2xl font-medium text-white">Demander un accès bêta</h4>
-              <p className="mt-2 text-sm leading-relaxed text-slate-400">
+          <div id="damejustice-beta" className="section-anchor grid gap-8 border-t border-border pt-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.8fr)] lg:gap-10">
+            <div>
+              <h4 className="text-2xl font-medium">Demander un accès bêta</h4>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 Les accès sont ouverts progressivement aux professionnels du droit.
               </p>
-              <div className="mt-6">
-                <BetaForm dark />
-              </div>
+            </div>
+            <div className="min-w-0 max-w-xl">
+              <BetaForm />
             </div>
           </div>
         </article>

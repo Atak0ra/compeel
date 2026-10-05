@@ -109,7 +109,7 @@ export default function HomePage() {
           <h2 id="preuve-heading" className="mt-4 text-3xl font-medium leading-tight sm:text-4xl">Des projets concrets.<br />Un impact réel.</h2>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Nous collaborons avec des équipes ambitieuses pour construire des produits critiques, utilisés en conditions réelles.</p>
 
-          <div className="mt-12 mx-auto max-w-2xl">
+          <div className="mt-12">
             <CaseStudyCarousel />
           </div>
         </div>
