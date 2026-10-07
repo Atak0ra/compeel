@@ -26,7 +26,7 @@ export default function DameJusticePreview() {
             </div>
             <div className="flex h-11 items-center justify-between gap-3 border-b border-[#cbd3df] bg-[#f6f8fb] px-3">
               <div className="flex items-center gap-2 rounded border border-[#cbd3df] bg-white px-2 py-1.5 text-[#67758b]">
-                <Search size={12} />Confidentialité · Souveraineté · Performance
+                <Search size={12} />Posez votre question…
               </div>
               <div className="flex items-center gap-3">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#278363]" />
@@ -45,7 +45,7 @@ export default function DameJusticePreview() {
               <aside className="flex flex-col border-r border-[#cbd3df] bg-[#f6f8fb]">
                 <div className="flex items-center gap-2 border-b border-[#d8dee7] px-3 py-4">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded bg-[#213c61] text-white"><Scale size={19} /></span>
-                  <div><p className="font-semibold">DameJustice</p><p className="text-[8px] text-[#67758b]">L&apos;IA au service du Droit</p></div>
+                  <p className="font-semibold">DameJustice</p>
                 </div>
                 <div className="space-y-1 px-2 py-3">
                   <p className="flex items-center gap-1.5 px-1 py-2"><FolderKanban size={12} />Mes affaires<span className="ml-auto text-[#67758b]">3</span><Plus size={10} /></p>
@@ -58,7 +58,7 @@ export default function DameJusticePreview() {
                 <div className="mt-auto space-y-3 border-t border-[#cbd3df] px-3 py-3 text-[9px]">
                   <p className="flex items-center gap-2"><Users size={12} />Comptes du cabinet</p>
                   <p className="flex items-center gap-2"><Settings size={12} />Paramètres du serveur</p>
-                  <p className="flex items-start gap-1.5 text-[8px] text-[#67758b]"><ShieldCheck size={11} className="shrink-0 text-[#278363]" /><span>DameJustice v1.0.0<br />Solution souveraine — 100 % locale</span></p>
+                  <p className="flex items-start gap-1.5 text-[8px] text-[#67758b]"><ShieldCheck size={11} className="shrink-0 text-[#278363]" /><span>DameJustice v1.0.0<br />Fonctionne sur le serveur du cabinet</span></p>
                 </div>
               </aside>
               <div className="min-w-0">

@@ -19,26 +19,27 @@ export default function LabsFlagship() {
               <p className="text-sm text-muted">Produit phare · Compeel Labs</p>
 
               <h3 className="mt-4 text-4xl font-medium sm:text-5xl lg:text-4xl xl:text-5xl">DameJustice</h3>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted">
-                Un assistant RAG souverain et hybride pour les cabinets juridiques. Vos dossiers restent sous le contrôle du cabinet, avec une recherche sémantique et lexicale et des réponses sourcées.
+              <p className="mt-5 text-2xl font-medium leading-snug">
+                Retrouvez ce que votre cabinet sait déjà.
+              </p>
+              <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted">
+                Posez votre question en langage courant. DameJustice cherche dans les documents de votre cabinet et vous montre les passages qui fondent chaque réponse. Vos documents restent chez vous.
               </p>
 
-              <div
-                className="mt-8 grid border-y border-border"
-                aria-label="Double source : cabinet et corpus OHADA/CCJA"
-              >
+              <dl className="mt-8 grid border-y border-border" aria-label="Ce que DameJustice apporte au cabinet">
                 <div className="border-b border-border py-4">
-                  <p className="text-sm text-muted">Source interne</p>
-                  <p className="mt-1 text-base">Dossiers et documents du cabinet</p>
+                  <dt className="text-base font-medium">Moins de temps à chercher</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted">Une clause déjà négociée, une consultation rendue il y a trois ans : vous les retrouvez en quelques secondes.</dd>
+                </div>
+                <div className="border-b border-border py-4">
+                  <dt className="text-base font-medium">Des réponses que vous pouvez vérifier</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted">Chaque réponse renvoie aux documents et aux extraits utilisés. Vous relisez la source avant de vous en servir.</dd>
                 </div>
                 <div className="py-4">
-                  <p className="text-sm text-muted">Source externe</p>
-                  <p className="mt-1 text-base">Corpus OHADA et CCJA</p>
+                  <dt className="text-base font-medium">Des documents qui ne quittent pas le cabinet</dt>
+                  <dd className="mt-1 text-sm leading-relaxed text-muted">DameJustice fonctionne sur un serveur installé chez vous. Vos documents ne sont envoyés à aucun service externe.</dd>
                 </div>
-              </div>
-              <p className="mt-3 text-sm text-muted">
-                Les deux sources sont interrogées ensemble. Chaque réponse cite ses références.
-              </p>
+              </dl>
               <a href="#damejustice-beta" className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-foreground py-2 text-base font-medium transition-colors hover:text-muted">
                 Demander un accès bêta<ArrowDown size={18} className="shrink-0" aria-hidden="true" />
               </a>
