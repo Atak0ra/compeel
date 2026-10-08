@@ -20,7 +20,7 @@ export default function CGUPage() {
         <h2 className="mb-5 font-sans text-2xl">Objet</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
           Les présentes conditions régissent l&apos;accès et l&apos;utilisation du site compeel.com, vitrine du laboratoire
-          Compeel et de ses produits KARA, Alexis et Dame Justice. La navigation sur le site vaut acceptation de ces
+          Compeel et de son produit Dame Justice. La navigation sur le site vaut acceptation de ces
           conditions.
         </p>
       </section>
@@ -54,8 +54,8 @@ export default function CGUPage() {
       <section className="section-space border-t border-border">
         <h2 className="mb-5 font-sans text-2xl">Liens vers des sites tiers</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Les liens vers les sites de KARA, Alexis et Dame Justice, ou vers leurs démonstrations, mènent à des
-          services distincts de compeel.com, avec leurs propres conditions. Compeel n&apos;est pas responsable de leur
+          Les liens vers le site de Dame Justice, ou vers sa démonstration, mènent à un service distinct de
+          compeel.com, avec ses propres conditions. Compeel n&apos;est pas responsable de leur
           contenu ni de leur disponibilité.
         </p>
       </section>

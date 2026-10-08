@@ -23,9 +23,9 @@ export default function RemboursementPage() {
             site : cette politique de remboursement ne s&apos;applique donc à rien, à ce jour.
           </p>
           <p>
-            KARA, Alexis et Dame Justice disposent chacun de leur propre site, où des conditions commerciales et de
-            remboursement spécifiques seront publiées si et quand une offre payante y sera proposée. Elles ne relèvent
-            pas de compeel.com.
+            Dame Justice dispose de son propre site, où des conditions commerciales et de remboursement
+            spécifiques seront publiées si et quand une offre payante y sera proposée. Elles ne relèvent pas de
+            compeel.com.
           </p>
         </div>
       </section>

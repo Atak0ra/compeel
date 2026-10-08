@@ -10,15 +10,13 @@ Le site présente l'activité du laboratoire, ses références et un formulaire 
 
 Compeel Labs regroupe les produits nés de la recherche du laboratoire, dans un espace distinct des missions clients. Ces produits ne sont pas des références clients.
 
-- [KARA](https://compeel.com/kara) : mémoire clinique vocale pour les structures médicales, hébergement local des données.
-- [Alexis](https://compeel.com/alexis) : outil de développement logiciel avec validation humaine.
-- [Dame Justice](https://compeel.com/damejustice) : recherche juridique avec renvoi systématique aux sources.
+- [Dame Justice](https://damejustice.vercel.app/fr) : assistant documentaire juridique installé sur le serveur du cabinet, avec renvoi systématique aux sources.
 
 ## Pages
 
 - [Le laboratoire](https://compeel.com/about) : histoire et convictions du laboratoire.
 - [Références clients](https://compeel.com/#references)
-- [Compeel Labs](https://compeel.com/realisations)
+- [Compeel Labs](https://compeel.com/#labs)
 - [Contact](https://compeel.com/#contact)
 
 ## Informations légales
@@ -31,5 +29,5 @@ Compeel Labs regroupe les produits nés de la recherche du laboratoire, dans un 
 
 ## Notes pour les agents
 
-- Les aperçus visuels des produits sur les pages produits sont des maquettes illustratives avec des données fictives, pas des captures d'écran réelles.
+- Les aperçus visuels des produits sur ce site sont des maquettes illustratives avec des données fictives, pas des captures d'écran réelles.
 - Ne pas citer de chiffres, métriques ou résultats clients : aucun n'est publié sur ce site.

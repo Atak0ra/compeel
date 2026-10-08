@@ -53,8 +53,8 @@ export default function MentionsLegalesPage() {
             autorisation préalable est interdite.
           </p>
           <p>
-            Les aperçus visuels des produits KARA, Alexis et Dame Justice présentés sur ce site sont des maquettes
-            illustratives, réalisées avec des données fictives.
+            L'aperçu visuel du produit Dame Justice présenté sur ce site est une maquette illustrative, réalisée avec
+            des données fictives.
           </p>
         </div>
       </section>
@@ -62,9 +62,9 @@ export default function MentionsLegalesPage() {
       <section className="section-space border-t border-border">
         <h2 className="mb-5 font-sans text-2xl">Liens vers des sites tiers</h2>
         <p className="max-w-2xl text-base leading-relaxed text-muted">
-          Ce site contient des liens vers les sites propres de KARA, Alexis et Dame Justice, ainsi que vers leurs
-          démonstrations. Ces sites sont distincts de compeel.com et peuvent être soumis à leurs propres conditions.
-          Compeel ne peut être tenu responsable de leur contenu ou de leur fonctionnement.
+          Ce site contient des liens vers le site propre de Dame Justice, ainsi que vers sa démonstration. Ce site est
+          distinct de compeel.com et peut être soumis à ses propres conditions. Compeel ne peut être tenu responsable
+          de son contenu ou de son fonctionnement.
         </p>
       </section>
 
